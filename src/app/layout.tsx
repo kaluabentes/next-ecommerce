@@ -1,6 +1,8 @@
 import { Poppins } from "next/font/google"
 
 import StyledComponentsRegistry from "./registry"
+import AppLayout from "./layouts/AppLayout/AppLayout"
+import Providers from "./providers"
 
 const font = Poppins({
   subsets: ["latin"],
@@ -20,7 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <Providers>
+            <AppLayout>{children}</AppLayout>
+          </Providers>
+        </StyledComponentsRegistry>
       </body>
     </html>
   )
