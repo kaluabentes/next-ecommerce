@@ -26,14 +26,13 @@ export const TopContainer = styled.div`
 export const IconButtonLabel = styled.p`
   margin: 0;
   color: rgba(255, 255, 255, 0.7);
-  font-size: ${rem(16)};
   font-size: ${rem(14)};
   font-weight: 500;
 `
 
 export const IconButton = styled.button`
   padding: 0;
-  font-size: ${rem(32)};
+  font-size: ${rem(28)};
   background: transparent;
   color: rgba(255, 255, 255, 0.7);
   border: 0;
@@ -51,6 +50,10 @@ export const IconButton = styled.button`
       color: white;
     }
   }
+
+  ${mediaQuery(css`
+    font-size: ${rem(32)};
+  `)}
 `
 
 export const IconGroup = styled.div`
@@ -72,6 +75,7 @@ export const LogoContainer = styled.div`
 
   ${mediaQuery(css`
     flex: initial;
+    margin-left: 0;
   `)}
 `
 

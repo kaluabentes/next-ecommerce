@@ -118,6 +118,7 @@ export const DropdownMenu = styled.div<{ $isOpen: boolean }>`
   display: flex;
   flex-direction: column;
   display: none;
+  z-index: 100;
 
   ${(props) =>
     props.$isOpen &&

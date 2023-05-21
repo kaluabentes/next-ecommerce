@@ -3,10 +3,12 @@ import styled, { css } from "styled-components"
 import rem from "@/utilities/styles/rem"
 
 import { IconButton } from "../Header.styles"
+import mediaQuery from "@/utilities/styles/mediaQuery"
 
 export const OuterContainer = styled(IconButton)<{ count: number }>`
   display: flex;
   align-items: center;
+  font-size: ${rem(28)};
 
   &:hover {
     color: white;
@@ -17,6 +19,10 @@ export const OuterContainer = styled(IconButton)<{ count: number }>`
     css`
       color: white;
     `}
+
+  ${mediaQuery(css`
+    font-size: ${rem(32)};
+  `)}
 `
 
 export const Container = styled.div`
