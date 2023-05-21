@@ -5,7 +5,7 @@ import mediaQuery from "@/utilities/styles/mediaQuery"
 
 export const Container = styled.header`
   padding: ${rem(16)} 0;
-  background: ${(props) => props.theme.colors.primary};
+  background: ${(props) => props.theme.colors.midnight};
   background: linear-gradient(
     180deg,
     ${(props) => props.theme.colors.midnight} 0%,
@@ -14,7 +14,7 @@ export const Container = styled.header`
   color: white;
 
   ${mediaQuery(css`
-    padding: ${rem(28)} ${rem(16)};
+    padding: ${rem(28)} 0;
   `)}
 `
 

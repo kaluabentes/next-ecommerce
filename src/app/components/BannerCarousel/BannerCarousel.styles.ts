@@ -48,7 +48,7 @@ export const Dot = styled.button<{ $isActive: boolean }>`
   ${(props) =>
     props.$isActive &&
     css`
-      background: ${props.theme.colors.primary};
+      background: rgba(0, 0, 0, 0.3);
       border-color: rgba(0, 0, 0, 0);
       transform: scale(1.2);
     `}
