@@ -1,6 +1,10 @@
 import rem from "@/utilities/styles/rem"
 import styled from "styled-components"
 
+export const OuterContainer = styled.div`
+  flex: 1;
+`
+
 export const Container = styled.div`
   display: flex;
   background: white;
@@ -8,6 +12,11 @@ export const Container = styled.div`
   overflow: hidden;
   margin-top: ${rem(16)};
   align-items: center;
+  max-width: 1000px;
+
+  @media (min-width: ${(props) => props.theme.breakpoints.large}) {
+    margin-top: 0;
+  }
 `
 
 export const Input = styled.input`
@@ -28,6 +37,7 @@ export const IconButton = styled.button`
   font-size: ${rem(28)};
   padding: 0 ${rem(12)};
   color: ${(props) => props.theme.colors.secondary};
+  cursor: pointer;
 `
 
 export const Separator = styled.div`

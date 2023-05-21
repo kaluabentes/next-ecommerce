@@ -7,4 +7,7 @@ export default {
     midnight: "#010b19",
     greenvogue: "#021631",
   },
+  breakpoints: {
+    large: "769px",
+  },
 }

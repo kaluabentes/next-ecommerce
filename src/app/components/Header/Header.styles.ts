@@ -18,6 +18,14 @@ export const TopContainer = styled.div`
   justify-content: space-between;
 `
 
+export const IconButtonLabel = styled.p`
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: ${rem(16)};
+  font-size: ${rem(14)};
+  font-weight: 500;
+`
+
 export const IconButton = styled.button`
   padding: 0;
   font-size: ${rem(32)};
@@ -26,21 +34,35 @@ export const IconButton = styled.button`
   border: 0;
   outline: 0;
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
+  gap: ${rem(4)};
+
+  &:hover {
+    color: white;
+
+    & p {
+      color: white;
+    }
+  }
 `
 
 export const IconGroup = styled.div`
   display: flex;
   gap: ${rem(6)};
+
+  @media (min-width: ${(props) => props.theme.breakpoints.large}) {
+    gap: ${rem(16)};
+    margin-left: ${rem(32)};
+  }
 `
 
 export const LogoContainer = styled.div`
-  flex: 1;
   display: flex;
   justify-content: flex-start;
-  padding-left: ${rem(16)};
+  margin-left: ${rem(16)};
+  margin-right: ${rem(32)};
 `
 
 export const Logo = styled.img`

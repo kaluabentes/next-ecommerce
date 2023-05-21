@@ -4,15 +4,24 @@ import rem from "@/utilities/styles/rem"
 
 import { IconButton } from "../Header.styles"
 
-export const Container = styled(IconButton)<{ count: number }>`
-  padding-right: 9px;
-  position: relative;
+export const OuterContainer = styled(IconButton)<{ count: number }>`
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: white;
+  }
 
   ${(props) =>
     props.count > 0 &&
     css`
       color: white;
     `}
+`
+
+export const Container = styled.div`
+  position: relative;
+  padding-right: ${rem(9)};
 `
 
 export const Counter = styled.span`
