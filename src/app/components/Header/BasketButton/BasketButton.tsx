@@ -8,7 +8,7 @@ interface BasketButtonProps {
 
 export default function BasketButton({ count }: BasketButtonProps) {
   return (
-    <Container>
+    <Container count={count}>
       <Counter>{count}</Counter>
       <BiBasket />
     </Container>

@@ -1,16 +1,18 @@
-import rem from "@/utilities/styles/rem"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
-export const Container = styled.button`
-  padding: 0;
-  font-size: ${rem(32)};
-  background: transparent;
-  color: white;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
-  position: relative;
+import rem from "@/utilities/styles/rem"
+
+import { IconButton } from "../Header.styles"
+
+export const Container = styled(IconButton)<{ count: number }>`
   padding-right: 9px;
+  position: relative;
+
+  ${(props) =>
+    props.count > 0 &&
+    css`
+      color: white;
+    `}
 `
 
 export const Counter = styled.span`

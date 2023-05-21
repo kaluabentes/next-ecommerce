@@ -11,8 +11,35 @@ export const Container = styled.header`
     ${(props) => props.theme.colors.greenvogue} 100%
   );
   color: white;
+  display: flex;
+  justify-content: space-between;
 `
 
-export const IconButton = styled.button``
+export const IconButton = styled.button`
+  padding: 0;
+  font-size: ${rem(32)};
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+`
 
-export const Logo = styled.image``
+export const IconGroup = styled.div`
+  display: flex;
+  gap: ${rem(6)};
+`
+
+export const LogoContainer = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: ${rem(16)};
+`
+
+export const Logo = styled.img`
+  height: 40px;
+`
