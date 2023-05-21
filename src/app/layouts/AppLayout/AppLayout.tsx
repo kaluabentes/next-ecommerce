@@ -1,12 +1,13 @@
 "use client"
 
-import { ReactNode, useState } from "react"
+import { ReactNode, useEffect, useState } from "react"
 
 import Header from "@/app/components/Header"
 import { Main } from "./AppLayout.styles"
 import Footer from "@/app/components/Footer"
 import { GlobalStyle } from "@/app/styles/global"
 import Menu from "@/app/components/Menu"
+import PageSpinner from "@/components/PageSpinner"
 
 interface AppLayoutProps {
   children: ReactNode
@@ -14,18 +15,33 @@ interface AppLayoutProps {
 
 export default function AppLayout({ children }: AppLayoutProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isReady, setIsReady] = useState(false)
 
   const handleMenuToggle = () => {
     setIsMenuOpen((prev) => !prev)
   }
 
+  useEffect(() => {
+    setIsReady(true)
+  }, [])
+
   return (
     <>
       <GlobalStyle />
-      <Header onMenuClick={handleMenuToggle} />
-      <Menu items={[]} isOpen={isMenuOpen} onMenuToggle={handleMenuToggle} />
-      <Main>{children}</Main>
-      <Footer />
+      {isReady ? (
+        <>
+          <Header onMenuClick={handleMenuToggle} />
+          <Menu
+            items={[]}
+            isOpen={isMenuOpen}
+            onMenuToggle={handleMenuToggle}
+          />
+          <Main>{children}</Main>
+          <Footer />
+        </>
+      ) : (
+        <PageSpinner />
+      )}
     </>
   )
 }

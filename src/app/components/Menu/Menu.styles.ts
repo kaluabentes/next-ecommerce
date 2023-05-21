@@ -1,7 +1,7 @@
 import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"
 
-export const Container = styled.div<{ isOpen: boolean }>`
+export const Container = styled.div<{ $isOpen: boolean }>`
   position: absolute;
   background: white;
   height: 100%;
@@ -14,7 +14,7 @@ export const Container = styled.div<{ isOpen: boolean }>`
   transition: 0.3s;
 
   ${(props) =>
-    props.isOpen &&
+    props.$isOpen &&
     css`
       left: 0;
       opacity: 1;

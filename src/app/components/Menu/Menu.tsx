@@ -14,7 +14,7 @@ interface MenuProps {
 
 export default function Menu({ items, isOpen, onMenuToggle }: MenuProps) {
   return (
-    <Container>
+    <Container $isOpen={isOpen}>
       <CloseButton onClick={onMenuToggle}>
         <BiX />
       </CloseButton>

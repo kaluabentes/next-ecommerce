@@ -16,12 +16,14 @@ import {
 } from "./Header.styles"
 import SearchField from "./SearchField"
 import theme from "@/app/styles/theme"
+import useIsMounted from "@/hooks/useIsMounted"
 
 interface HeaderProps {
   onMenuClick: () => void
 }
 
 export default function Header({ onMenuClick }: HeaderProps) {
+  const { isMounted } = useIsMounted()
   const isLargeScreen = useMediaQuery({
     query: `(min-width: ${theme.breakpoints.large})`,
   })
@@ -35,22 +37,24 @@ export default function Header({ onMenuClick }: HeaderProps) {
         <LogoContainer>
           <Logo src="/droptron.svg" />
         </LogoContainer>
-        {isLargeScreen && <SearchField />}
+        {isLargeScreen && isMounted && <SearchField />}
         <IconGroup>
           <IconButton>
             <BiUser />
-            {isLargeScreen && <IconButtonLabel>Minha conta</IconButtonLabel>}
+            {isLargeScreen && isMounted && (
+              <IconButtonLabel>Minha conta</IconButtonLabel>
+            )}
           </IconButton>
           <IconButton>
             <BiMap />
-            {isLargeScreen && (
+            {isLargeScreen && isMounted && (
               <IconButtonLabel>Rastrear pedido</IconButtonLabel>
             )}
           </IconButton>
           <BasketButton count={1} />
         </IconGroup>
       </TopContainer>
-      {!isLargeScreen && <SearchField />}
+      {!isLargeScreen && isMounted && <SearchField />}
     </Container>
   )
 }
