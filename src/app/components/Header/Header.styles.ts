@@ -1,6 +1,7 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 import rem from "@/utilities/styles/rem"
+import mediaQuery from "@/utilities/styles/mediaQuery"
 
 export const Container = styled.header`
   padding: ${rem(16)};
@@ -52,10 +53,10 @@ export const IconGroup = styled.div`
   display: flex;
   gap: ${rem(6)};
 
-  @media (min-width: ${(props) => props.theme.breakpoints.large}) {
+  ${mediaQuery(css`
     gap: ${rem(16)};
     margin-left: ${rem(32)};
-  }
+  `)}
 `
 
 export const LogoContainer = styled.div`
@@ -63,6 +64,11 @@ export const LogoContainer = styled.div`
   justify-content: flex-start;
   margin-left: ${rem(16)};
   margin-right: ${rem(32)};
+  flex: 1;
+
+  ${mediaQuery(css`
+    flex: initial;
+  `)}
 `
 
 export const Logo = styled.img`

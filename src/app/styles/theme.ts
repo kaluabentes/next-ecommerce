@@ -6,8 +6,9 @@ export default {
     secondaryVariant: "#00c950",
     midnight: "#010b19",
     greenvogue: "#021631",
+    gray: "#f0f2f5",
   },
   breakpoints: {
-    large: "769px",
+    large: "821px",
   },
 }

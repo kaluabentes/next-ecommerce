@@ -17,7 +17,11 @@ import {
 import SearchField from "./SearchField"
 import theme from "@/app/styles/theme"
 
-export default function Header() {
+interface HeaderProps {
+  onMenuClick: () => void
+}
+
+export default function Header({ onMenuClick }: HeaderProps) {
   const isLargeScreen = useMediaQuery({
     query: `(min-width: ${theme.breakpoints.large})`,
   })
@@ -25,7 +29,7 @@ export default function Header() {
   return (
     <Container>
       <TopContainer>
-        <IconButton>
+        <IconButton onClick={onMenuClick}>
           <BiMenu />
         </IconButton>
         <LogoContainer>
