@@ -11,6 +11,9 @@ export const Container = styled.header`
     ${(props) => props.theme.colors.greenvogue} 100%
   );
   color: white;
+`
+
+export const TopContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `

@@ -23,7 +23,7 @@ export const Counter = styled.span`
   font-weight: 500;
   height: 18px;
   width: 18px;
-  background: #00c95d;
+  background: ${(props) => props.theme.colors.secondary};
   font-size: ${rem(11)};
   position: absolute;
   right: 0px;
