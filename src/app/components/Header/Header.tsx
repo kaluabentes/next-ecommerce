@@ -30,31 +30,35 @@ export default function Header({ onMenuClick }: HeaderProps) {
 
   return (
     <Container>
-      <TopContainer>
-        <IconButton onClick={onMenuClick}>
-          <BiMenu />
-        </IconButton>
-        <LogoContainer>
-          <Logo src="/droptron.svg" />
-        </LogoContainer>
-        {isLargeScreen && isMounted && <SearchField />}
-        <IconGroup>
-          <IconButton>
-            <BiUser />
-            {isLargeScreen && isMounted && (
-              <IconButtonLabel>Minha conta</IconButtonLabel>
-            )}
-          </IconButton>
-          <IconButton>
-            <BiMap />
-            {isLargeScreen && isMounted && (
-              <IconButtonLabel>Rastrear pedido</IconButtonLabel>
-            )}
-          </IconButton>
-          <BasketButton count={1} />
-        </IconGroup>
-      </TopContainer>
-      {!isLargeScreen && isMounted && <SearchField />}
+      <ContentContainer>
+        <TopContainer>
+          {!isLargeScreen && isMounted && (
+            <IconButton onClick={onMenuClick}>
+              <BiMenu />
+            </IconButton>
+          )}
+          <LogoContainer>
+            <Logo src="/droptron.svg" />
+          </LogoContainer>
+          {isLargeScreen && isMounted && <SearchField />}
+          <IconGroup>
+            <IconButton>
+              <BiUser />
+              {isLargeScreen && isMounted && (
+                <IconButtonLabel>Minha conta</IconButtonLabel>
+              )}
+            </IconButton>
+            <IconButton>
+              <BiMap />
+              {isLargeScreen && isMounted && (
+                <IconButtonLabel>Rastrear pedido</IconButtonLabel>
+              )}
+            </IconButton>
+            <BasketButton count={1} />
+          </IconGroup>
+        </TopContainer>
+        {!isLargeScreen && isMounted && <SearchField />}
+      </ContentContainer>
     </Container>
   )
 }

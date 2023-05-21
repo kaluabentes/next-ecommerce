@@ -8,6 +8,7 @@ import Footer from "@/app/components/Footer"
 import { GlobalStyle } from "@/app/styles/global"
 import Menu from "@/app/components/Menu"
 import PageSpinner from "@/components/PageSpinner"
+import menuItems from "@/config/menuItems"
 
 interface AppLayoutProps {
   children: ReactNode
@@ -32,7 +33,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
         <>
           <Header onMenuClick={handleMenuToggle} />
           <Menu
-            items={[]}
+            items={menuItems}
             isOpen={isMenuOpen}
             onMenuToggle={handleMenuToggle}
           />

@@ -4,7 +4,7 @@ import rem from "@/utilities/styles/rem"
 import mediaQuery from "@/utilities/styles/mediaQuery"
 
 export const Container = styled.header`
-  padding: ${rem(16)};
+  padding: ${rem(16)} 0;
   background: ${(props) => props.theme.colors.primary};
   background: linear-gradient(
     180deg,
@@ -12,6 +12,10 @@ export const Container = styled.header`
     ${(props) => props.theme.colors.greenvogue} 100%
   );
   color: white;
+
+  ${mediaQuery(css`
+    padding: ${rem(28)} ${rem(16)};
+  `)}
 `
 
 export const TopContainer = styled.div`

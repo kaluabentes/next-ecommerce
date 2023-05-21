@@ -34,10 +34,6 @@ export default [
     ],
   },
   {
-    label: "Entrar em contato",
-    path: "/contact",
-  },
-  {
     label: "Sobre nós",
     path: "/contact",
   },
@@ -46,7 +42,7 @@ export default [
     path: "/privacy-policy",
   },
   {
-    label: "Termos de Uso",
-    path: "/terms-of-use",
+    label: "Entrar em contato",
+    path: "/contact",
   },
 ]
