@@ -22,6 +22,8 @@ export const OuterContainer = styled(IconButton)<{ count: number }>`
 export const Container = styled.div`
   position: relative;
   padding-right: ${rem(9)};
+  display: flex;
+  align-items: center;
 `
 
 export const Counter = styled.span`
