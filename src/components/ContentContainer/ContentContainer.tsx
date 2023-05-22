@@ -1,4 +1,4 @@
-import { ReactNode, Ref } from "react"
+import { MouseEvent, ReactNode, Ref } from "react"
 
 import { Container } from "./ContentContainer.styles"
 

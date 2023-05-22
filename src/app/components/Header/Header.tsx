@@ -38,7 +38,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
             </IconButton>
           )}
           <LogoContainer>
-            <Logo src="/droptron.svg" />
+            <Logo src="/droptron.svg" alt="Droptron" />
           </LogoContainer>
           {isLargeScreen && isMounted && <SearchField />}
           <IconGroup>

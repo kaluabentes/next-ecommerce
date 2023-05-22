@@ -1,7 +1,28 @@
 "use client"
 
-import { Container } from "./CollectionsCarousel.styles"
+import HorizontalCarousel from "@/components/HorizontalCarousel"
+import { Item, Image, Title } from "./CollectionsCarousel.styles"
 
-export default function CollectionsCarousel() {
-  return <Container>CollectionsCarousel</Container>
+interface Item {
+  title: string
+  image: string
+}
+
+interface CollectionsCarouselProps {
+  items: Item[]
+}
+
+export default function CollectionsCarousel({
+  items,
+}: CollectionsCarouselProps) {
+  return (
+    <HorizontalCarousel>
+      {items.map((item) => (
+        <Item>
+          <Image src={item.image} alt={item.title} />
+          <Title>{item.title}</Title>
+        </Item>
+      ))}
+    </HorizontalCarousel>
+  )
 }

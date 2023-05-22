@@ -66,9 +66,10 @@ export const IconGroup = styled.div`
   `)}
 `
 
-export const LogoContainer = styled.div`
+export const LogoContainer = styled.h1`
   display: flex;
   justify-content: flex-start;
+  margin: 0;
   margin-left: ${rem(16)};
   margin-right: ${rem(32)};
   flex: 1;

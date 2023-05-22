@@ -24,8 +24,8 @@ export default [
         path: "/collections/beleza-saude",
       },
       {
-        label: "Smartwatches",
-        path: "/collections/smartwatches",
+        label: "Relógios",
+        path: "/collections/relogios",
       },
       {
         label: "Dispositivos",
