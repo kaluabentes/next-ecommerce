@@ -22,8 +22,11 @@ export const Item = styled.button`
   border: 0;
   outline: 0;
   padding: 0;
+  transition: 0.3s;
 
   &:hover {
+    transform: scale(1.1);
+
     & ${Title} {
       color: ${(props) => props.theme.colors.primary};
     }
