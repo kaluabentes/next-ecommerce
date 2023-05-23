@@ -1,7 +1,11 @@
 export default [
   {
-    title: "Sápatos Masculinos",
-    image: "/collections/sapatos-masculinos.png",
+    title: "Dispositivos",
+    image: "/collections/dispositivos.png",
+  },
+  {
+    title: "Casa & jardim",
+    image: "/collections/casa-jardim.png",
   },
   {
     title: "Mochilas",
@@ -12,15 +16,11 @@ export default [
     image: "/collections/acessorios-de-moda.png",
   },
   {
-    title: "Beleza e Saúde",
+    title: "Beleza & Saúde",
     image: "/collections/beleza-saude.png",
   },
   {
-    title: "Relógios",
+    title: "Pet",
     image: "/collections/relogios.png",
-  },
-  {
-    title: "Dispositivos",
-    image: "/collections/dispositivos.png",
   },
 ]

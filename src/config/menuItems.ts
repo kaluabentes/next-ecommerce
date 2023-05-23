@@ -8,8 +8,12 @@ export default [
     path: undefined,
     items: [
       {
-        label: "Sápatos Masculinos",
-        path: "/collections/sapatos-masculinos",
+        label: "Dispositivos",
+        path: "/collections/dispositivos",
+      },
+      {
+        label: "Casa & Jardim",
+        path: "/collections/casa-jardim",
       },
       {
         label: "Mochilas",
@@ -20,16 +24,12 @@ export default [
         path: "/collections/acessorios-de-moda",
       },
       {
-        label: "Beleza e Saúde",
+        label: "Beleza & Saúde",
         path: "/collections/beleza-saude",
       },
       {
         label: "Relógios",
         path: "/collections/relogios",
-      },
-      {
-        label: "Dispositivos",
-        path: "/collections/dispositivos",
       },
     ],
   },
