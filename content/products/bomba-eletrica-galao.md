@@ -6,6 +6,10 @@ price: 89.9
 fromPrice: 149.9
 portionPrice: 22.5
 freeShipping: true
+hero: true
+heroTitle: Indispensável na sua cozinha
+heroDescription: Com a bomba elétrica para galão você facilita a tarefa de retirar água de galões de água pesados.
+heroImage: /products/bomba-eletrica-galao/photo-hero.png
 thumb: /products/bomba-eletrica-galao/photo-1.jpg
 images:
   - /products/bomba-eletrica-galao/photo-1.jpg

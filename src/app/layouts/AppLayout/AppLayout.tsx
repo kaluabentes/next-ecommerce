@@ -9,6 +9,7 @@ import { GlobalStyle } from "@/app/styles/global"
 import Menu from "@/app/components/Menu"
 import PageSpinner from "@/components/PageSpinner"
 import menuItems from "@/config/menuItems"
+import Benefits from "@/app/components/Benefits"
 
 interface AppLayoutProps {
   children: ReactNode
@@ -38,6 +39,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
             onMenuToggle={handleMenuToggle}
           />
           <Main>{children}</Main>
+          <Benefits />
           <Footer />
         </>
       ) : (

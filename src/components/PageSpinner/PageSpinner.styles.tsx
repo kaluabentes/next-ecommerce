@@ -17,7 +17,7 @@ export const Container = styled.div`
 
 export const Spinner = styled.div`
   border: 3px solid #f4f4f4;
-  border-top: 3px solid ${(props) => props.theme.colors.midnight};
+  border-top: 3px solid ${(props) => props.theme.colors.greenvogue};
   border-radius: 50%;
   width: 120px;
   height: 120px;

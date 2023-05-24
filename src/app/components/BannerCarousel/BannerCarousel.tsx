@@ -13,20 +13,10 @@ import {
 } from "./BannerCarousel.styles"
 import range from "@/utilities/array/range"
 import createKey from "@/utilities/array/createKey"
+import Product from "@/models/Product"
+import ProductHero from "./ProductHero"
 
 const DELAY = 5000
-
-const DEFAULT_ITEMS = [
-  {
-    src: "/banner-carousel/carousel-item-1.jpg",
-  },
-  {
-    src: "/banner-carousel/carousel-item-2.jpg",
-  },
-  {
-    src: "/banner-carousel/carousel-item-3.jpg",
-  },
-]
 
 interface Item {
   src: string
@@ -34,15 +24,19 @@ interface Item {
 
 interface BannerCarouselProps {
   items?: Item[]
+  products?: Product[]
 }
 
 export default function BannerCarousel({
-  items = DEFAULT_ITEMS,
+  items = [],
+  products = [],
 }: BannerCarouselProps) {
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [viewportRef, embla] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: DELAY }),
   ])
+
+  const heroProducts = products.filter((product) => product.hero)
 
   const handleSelect = useCallback(() => {
     setSelectedIndex(embla?.selectedScrollSnap()!)
@@ -59,12 +53,15 @@ export default function BannerCarousel({
   return (
     <Container componentRef={viewportRef}>
       <EmblaContainer>
+        {heroProducts.map((product) => (
+          <ProductHero product={product} />
+        ))}
         {items.map((item, index) => (
           <Image key={createKey(index)} src={item.src} />
         ))}
       </EmblaContainer>
       <DotContainer>
-        {range(items.length).map((n, index) => (
+        {range([...heroProducts, ...items].length).map((n, index) => (
           <Dot
             $isActive={selectedIndex === index}
             key={n}

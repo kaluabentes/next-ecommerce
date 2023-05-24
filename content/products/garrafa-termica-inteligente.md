@@ -6,8 +6,13 @@ price: 89.9
 fromPrice: 149.9
 portionPrice: 22.5
 freeShipping: true
-thumb: /products/garrafa-termica-inteligente/photo-5.jpg
+hero: true
+heroTitle: Mantenha-se hidratado
+heroDescription: As garras térmicas inteligentes podem conservar seu liquido por até 8 horas, ainda possuem um medidor de temperatura para monitoramento.
+heroImage: /products/garrafa-termica-inteligente/photo-hero.png
+thumb: /products/garrafa-termica-inteligente/photo-14.png
 images:
+  - /products/garrafa-termica-inteligente/photo-14.png
   - /products/garrafa-termica-inteligente/photo-1.jpg
   - /products/garrafa-termica-inteligente/photo-2.jpg
   - /products/garrafa-termica-inteligente/photo-3.jpg
