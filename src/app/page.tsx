@@ -20,17 +20,7 @@ export default function Home() {
     <>
       <BannerCarousel />
       <CollectionsCarousel items={collectionItems} />
-      <ProductsCarousel
-        items={products.map((product: any) => ({
-          title: product.name,
-          image: product.thumb,
-          price: product.price,
-          fromPrice: product.fromPrice,
-          portionPrice: product.portionPrice,
-          slug: product.slug,
-          reviews: product.reviews,
-        }))}
-      />
+      <ProductsCarousel products={products} />
     </>
   )
 }
