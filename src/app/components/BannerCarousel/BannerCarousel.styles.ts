@@ -1,4 +1,5 @@
 import ContentContainer from "@/components/ContentContainer"
+import mediaQuery from "@/utilities/styles/mediaQuery"
 import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"
 
@@ -6,6 +7,10 @@ export const Container = styled(ContentContainer)`
   overflow: hidden;
   position: relative;
   margin-top: ${rem(16)};
+
+  ${mediaQuery(css`
+    margin-top: ${rem(28)};
+  `)}
 `
 
 export const EmblaContainer = styled.div`
