@@ -36,7 +36,7 @@ export const IconButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: ${rem(4)};
+  gap: ${rem(8)};
 
   &:hover {
     color: white;
@@ -44,6 +44,10 @@ export const IconButton = styled.button`
     & p {
       color: white;
     }
+  }
+
+  & svg {
+    color: ${(props) => props.theme.colors.secondary};
   }
 
   ${mediaQuery(css`

@@ -34,10 +34,9 @@ export default function Home() {
 
   return (
     <>
-      <BannerCarousel items={BANNER_ITEMS} />
+      <BannerCarousel products={products.reverse()} />
       <CollectionsCarousel items={collectionItems} />
       <ProductsCarousel products={products} />
-      <BannerCarousel products={products.reverse()} />
     </>
   )
 }

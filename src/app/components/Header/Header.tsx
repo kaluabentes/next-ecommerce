@@ -17,6 +17,8 @@ import {
 import SearchField from "./SearchField"
 import theme from "@/app/styles/theme"
 import useIsMounted from "@/hooks/useIsMounted"
+import { RiTruckLine } from "react-icons/ri"
+import { TbTruckDelivery } from "react-icons/tb"
 
 interface HeaderProps {
   onMenuClick: () => void
@@ -38,7 +40,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
             </IconButton>
           )}
           <LogoContainer>
-            <Logo src="/droptron.svg" alt="Droptron" />
+            <Logo src="/logo.svg" alt="Droptron" />
           </LogoContainer>
           {isLargeScreen && isMounted && <SearchField />}
           <IconGroup>
@@ -49,7 +51,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
               )}
             </IconButton>
             <IconButton>
-              <BiMap />
+              <TbTruckDelivery />
               {isLargeScreen && isMounted && (
                 <IconButtonLabel>Rastrear pedido</IconButtonLabel>
               )}

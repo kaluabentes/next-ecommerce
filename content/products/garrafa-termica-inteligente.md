@@ -2,13 +2,13 @@
 name: Garrafa Térmica Inteligente 500ML
 slug: garrafa-termica-inteligente
 collection: casa-jardim
-price: 89.9
+price: 99.9
 fromPrice: 149.9
 portionPrice: 22.5
 freeShipping: true
 hero: true
 heroTitle: Quente ou gelado por bem mais tempo
-heroDescription: As garrafas térmicas inteligentes podem conservar seu conteúdo por até 8 horas, e ainda possuem um medidor de temperatura para monitoramento.
+heroDescription: Já imaginou ter uma garrafa térmica que não só mantém suas bebidas quentes ou frias, mas também mede a temperatura com precisão? Apresentamos a você a nossa incrível Garrafa Térmica com Medidor de Temperatura, o seu companheiro perfeito para todas as ocasiões!
 heroImage: /products/garrafa-termica-inteligente/photo-hero.png
 thumb: /products/garrafa-termica-inteligente/photo-14.png
 images:

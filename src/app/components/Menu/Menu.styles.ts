@@ -13,6 +13,7 @@ export const Container = styled.div<{ $isOpen: boolean }>`
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
+  z-index: 200;
 
   ${(props) =>
     props.$isOpen &&

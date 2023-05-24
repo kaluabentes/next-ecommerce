@@ -25,7 +25,7 @@ export const Item = styled.div`
   & svg {
     font-size: ${rem(80)};
     margin: 0 0 ${rem(16)} 0;
-    fill: ${(props) => props.theme.colors.greenvogue};
+    fill: ${(props) => props.theme.colors.secondary};
   }
 `
 

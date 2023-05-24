@@ -12,12 +12,15 @@ export const Container = styled.div`
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
   border-radius: ${rem(12)};
   display: flex;
-  flex-direction: column;
-  padding: ${rem(40)} ${rem(16)};
+  flex-direction: column-reverse;
+  padding: ${rem(32)} ${rem(16)};
+  position: relative;
+  overflow: hidden;
+  align-items: start;
 
   ${mediaQuery(css`
     flex-direction: row;
-    padding: ${rem(40)};
+    padding: ${rem(32)} ${rem(40)};
   `)}
 `
 
@@ -25,8 +28,8 @@ export const ContentGroup = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: ${rem(32)};
   max-width: 780px;
+  z-index: 20;
 
   ${mediaQuery(css`
     align-items: start;
@@ -42,16 +45,17 @@ export const Title = styled.h2`
 
   ${mediaQuery(css`
     text-align: left;
-    font-size: ${rem(50)};
+    font-size: ${rem(56)};
   `)}
 `
 
 export const Description = styled.p`
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.6);
   line-height: 1.5em;
   text-align: center;
   margin: 0;
   margin-bottom: ${rem(40)};
+  font-weight: 500;
 
   ${mediaQuery(css`
     text-align: left;
@@ -63,7 +67,14 @@ export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: stretch;
   flex: 1;
+  z-index: 20;
+  margin-bottom: ${rem(16)};
+
+  ${mediaQuery(css`
+    margin-bottom: 0;
+  `)}
 `
 
 export const Image = styled.img`

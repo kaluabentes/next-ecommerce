@@ -38,8 +38,8 @@ export default [
     path: "/contact",
   },
   {
-    label: "Políticas de privacidade",
-    path: "/privacy-policy",
+    label: "Perguntas Frequentes",
+    path: "/faq",
   },
   {
     label: "Entrar em contato",
