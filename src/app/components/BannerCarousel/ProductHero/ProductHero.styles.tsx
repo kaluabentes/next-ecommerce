@@ -1,3 +1,4 @@
+import { DiscountFlag } from "@/components/ProductCard/ProductCard.styles"
 import mediaQuery from "@/utilities/styles/mediaQuery"
 import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"
@@ -12,7 +13,7 @@ export const Container = styled.div`
   border-radius: ${rem(12)};
   display: flex;
   flex-direction: column;
-  padding: ${rem(16)};
+  padding: ${rem(40)} ${rem(16)};
 
   ${mediaQuery(css`
     flex-direction: row;
@@ -34,10 +35,9 @@ export const ContentGroup = styled.div`
 
 export const Title = styled.h2`
   margin: 0;
-  line-height: 1.5em;
   text-align: center;
   font-size: ${rem(32)};
-  margin-bottom: ${rem(16)};
+  margin-bottom: ${rem(22)};
   font-weight: 600;
 
   ${mediaQuery(css`
@@ -51,7 +51,7 @@ export const Description = styled.p`
   line-height: 1.5em;
   text-align: center;
   margin: 0;
-  margin-bottom: ${rem(28)};
+  margin-bottom: ${rem(40)};
 
   ${mediaQuery(css`
     text-align: left;
@@ -70,4 +70,36 @@ export const Image = styled.img`
   height: ${rem(300)};
   width: 100%;
   object-fit: contain;
+
+  ${mediaQuery(css`
+    height: ${rem(400)};
+  `)}
+`
+
+export const PriceContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: ${rem(32)};
+  position: relative;
+`
+
+export const Price = styled.p`
+  margin: 0 0 0 0;
+  font-size: ${rem(56)};
+  font-weight: 500;
+`
+
+export const FromPrice = styled.p`
+  margin: 0 0 ${rem(16)} 0;
+  font-size: ${rem(22)};
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: line-through;
+`
+
+export const DiscountFlagHero = styled(DiscountFlag)`
+  position: static;
+  font-size: ${rem(16)};
+  margin-bottom: ${rem(6)};
 `

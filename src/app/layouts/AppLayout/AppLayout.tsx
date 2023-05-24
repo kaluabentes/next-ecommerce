@@ -10,6 +10,7 @@ import Menu from "@/app/components/Menu"
 import PageSpinner from "@/components/PageSpinner"
 import menuItems from "@/config/menuItems"
 import Benefits from "@/app/components/Benefits"
+import benefitItems from "@/config/benefitItems"
 
 interface AppLayoutProps {
   children: ReactNode
@@ -39,7 +40,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
             onMenuToggle={handleMenuToggle}
           />
           <Main>{children}</Main>
-          <Benefits />
+          <Benefits items={benefitItems} />
           <Footer />
         </>
       ) : (

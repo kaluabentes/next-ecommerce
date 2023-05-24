@@ -8,7 +8,7 @@ portionPrice: 22.5
 freeShipping: true
 hero: true
 heroTitle: Segurança nunca é demais
-heroDescription: Sinta-se seguro com as nossas câmeras giratórias 360, espalhe umas dessas pela sua casa e durma tranquilo.
+heroDescription: Sinta-se seguro com as nossas câmeras giratórias 360, instale algumas dessas em sua casa e durma tranquilo.
 heroImage: /products/camera-wifi-giratoria-360/photo-hero.png
 thumb: /products/camera-wifi-giratoria-360/photo-1.jpg
 images:

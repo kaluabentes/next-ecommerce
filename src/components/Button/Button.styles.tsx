@@ -40,8 +40,16 @@ export const Container = styled.button<{
       color: white;
       border-color: ${props.theme.colors.secondary};
 
+      &:visited {
+        background: ${props.theme.colors.secondary};
+      }
+
       &:hover {
         background: ${props.theme.colors.secondaryVariant};
+      }
+
+      &:active {
+        background: ${props.theme.colors.secondaryVariantActive};
       }
     `};
 
