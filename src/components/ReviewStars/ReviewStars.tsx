@@ -1,12 +1,6 @@
 import range from "@/utilities/array/range"
 
-import {
-  Container,
-  ProgressStar,
-  Star,
-  StarBox,
-  StarContainer,
-} from "./ReviewStars.styles"
+import { Container, Star, StarBox, StarContainer } from "./ReviewStars.styles"
 import isFloat from "@/utilities/number/isFloat"
 import { Fragment } from "react"
 
