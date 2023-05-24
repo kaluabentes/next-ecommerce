@@ -4,17 +4,24 @@ import { BsWhatsapp, BsChatLeftFill, BsPinMapFill } from "react-icons/bs"
 
 import ContentContainer from "@/components/ContentContainer"
 import {
+  AppMax,
+  ChatButton,
   Container,
+  Copyright,
   FlexBox,
   Image,
   Item,
   Menu,
   MenuItem,
+  PaymentContainer,
+  PaymentMethods,
+  PaymentTitle,
   Title,
 } from "./Footer.styles"
 import ContactMethod from "@/components/ContactMethod"
 import rem from "@/utilities/styles/rem"
 import menuItems from "@/config/menuItems"
+import { RiCustomerService2Fill } from "react-icons/ri"
 
 export default function Footer() {
   return (
@@ -62,7 +69,20 @@ export default function Footer() {
             </Menu>
           </Item>
         </FlexBox>
+        <PaymentContainer>
+          <PaymentTitle>Pagamento seguro com</PaymentTitle>
+        </PaymentContainer>
+        <PaymentContainer>
+          <AppMax src="/appmax-dark.png" />
+          <PaymentMethods src="/payment-methods.png" />
+        </PaymentContainer>
+        <PaymentContainer>
+          <Copyright>&copy; Droptron | CNPJ: 0000-00000-0000-0001</Copyright>
+        </PaymentContainer>
       </ContentContainer>
+      <ChatButton>
+        <RiCustomerService2Fill />
+      </ChatButton>
     </Container>
   )
 }
