@@ -18,14 +18,15 @@ export const Item = styled.button`
   align-items: center;
   flex-direction: column;
   gap: ${rem(16)};
-  cursor: grab;
+  cursor: pointer;
   border: 0;
   outline: 0;
   padding: 0;
   transition: 0.3s;
+  background: transparent;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
 
     & ${Title} {
       color: ${(props) => props.theme.colors.primary};

@@ -109,7 +109,7 @@ export const MenuItem = styled.button<{
       text-indent: 10px;
     `}
 
-    ${mediaQuery(css`
+  ${mediaQuery(css`
     border-bottom: none;
   `)}
 `
@@ -139,4 +139,10 @@ export const DropdownMenu = styled.div<{ $isOpen: boolean }>`
         border: none;
       `)}
     `}
+
+  ${mediaQuery(css`
+    & ${MenuItem} {
+      color: rgba(0, 0, 0, 0.8);
+    }
+  `)}
 `

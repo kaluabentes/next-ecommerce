@@ -2,6 +2,8 @@
 
 import HorizontalCarousel from "@/components/HorizontalCarousel"
 import { Item, Image, Title } from "./CollectionsCarousel.styles"
+import rem from "@/utilities/styles/rem"
+import createKey from "@/utilities/array/createKey"
 
 interface Item {
   title: string
@@ -16,9 +18,9 @@ export default function CollectionsCarousel({
   items,
 }: CollectionsCarouselProps) {
   return (
-    <HorizontalCarousel>
-      {items.map((item) => (
-        <Item>
+    <HorizontalCarousel margin={`0px auto ${rem(32)} auto`}>
+      {items.map((item, index) => (
+        <Item key={createKey(index)}>
           <Image src={item.image} alt={item.title} />
           <Title>{item.title}</Title>
         </Item>

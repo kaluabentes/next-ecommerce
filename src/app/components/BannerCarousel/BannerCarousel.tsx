@@ -12,6 +12,7 @@ import {
   DotContainer,
 } from "./BannerCarousel.styles"
 import range from "@/utilities/array/range"
+import createKey from "@/utilities/array/createKey"
 
 const DELAY = 5000
 
@@ -58,8 +59,8 @@ export default function BannerCarousel({
   return (
     <Container componentRef={viewportRef}>
       <EmblaContainer>
-        {items.map((item) => (
-          <Image src={item.src} />
+        {items.map((item, index) => (
+          <Image key={createKey(index)} src={item.src} />
         ))}
       </EmblaContainer>
       <DotContainer>

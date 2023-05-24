@@ -2,11 +2,11 @@
 name: Bomba Elétrica para Galão de Água
 slug: bomba-eletrica-galao
 collection: casa-jardim
-prce: 89.9
+price: 89.9
 fromPrice: 149.9
 portionPrice: 22.5
 freeShipping: true
-thumb: /products/bomba-eletrica-galao/photo-5.jpg
+thumb: /products/bomba-eletrica-galao/photo-1.jpg
 images:
   - /products/bomba-eletrica-galao/photo-1.jpg
   - /products/bomba-eletrica-galao/photo-2.jpg
@@ -16,13 +16,13 @@ images:
 reviews:
   - {
       name: Thais Bastos,
-      rating: 5,
+      rating: 4.6,
       comment: Amei muito! Já chegou carregado,
       veio rápido e muito bem embalado. O produto é de ótima qualidade!,
     }
   - {
       name: Rodrigo Antoniazi,
-      rating: 5,
+      rating: 4,
       comment: Muito bom! Chegou rápido e conforme o anúncio. Enche copo e garrafa bem rápido.,
     }
   - {

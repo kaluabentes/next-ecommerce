@@ -14,6 +14,7 @@
     "@types/react-dom": "18.2.4",
     "embla-carousel-autoplay": "^8.0.0-rc04",
     "embla-carousel-react": "^8.0.0-rc04",
+    "gray-matter": "^4.0.3",
     "next": "13.4.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",

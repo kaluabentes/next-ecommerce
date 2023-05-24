@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { Fragment, useEffect, useState } from "react"
 import {
   BiCollection,
   BiMinus,
@@ -53,10 +53,9 @@ export default function Menu({ items, isOpen, onMenuToggle }: MenuProps) {
   const renderMenuItem = (item: StatefulItem, index: number) => {
     if (item.items) {
       return (
-        <>
+        <Fragment key={String(index + 1)}>
           <MenuItem
             onClick={() => openDropdown(index)}
-            key={String(index + 1)}
             $isDropdownTrigger
             $isOpen={item.isOpen}
           >
@@ -70,7 +69,7 @@ export default function Menu({ items, isOpen, onMenuToggle }: MenuProps) {
               </MenuItem>
             ))}
           </DropdownMenu>
-        </>
+        </Fragment>
       )
     }
 

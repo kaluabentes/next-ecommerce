@@ -11,5 +11,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     background: ${(props) => props.theme.colors.gray};
+    color: rgba(0, 0, 0, 0.9);
   }
 `

@@ -2,7 +2,7 @@
 name: Garrafa Térmica Inteligente 500ML
 slug: garrafa-termica-inteligente
 collection: casa-jardim
-prce: 89.9
+price: 89.9
 fromPrice: 149.9
 portionPrice: 22.5
 freeShipping: true
