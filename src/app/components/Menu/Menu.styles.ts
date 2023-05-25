@@ -113,6 +113,10 @@ export const MenuItem = styled.button<{
   ${mediaQuery(css`
     border-bottom: none;
   `)}
+
+  & svg {
+    font-size: ${rem(20)};
+  }
 `
 
 export const DropdownMenu = styled.div<{ $isOpen: boolean }>`

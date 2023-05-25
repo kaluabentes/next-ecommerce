@@ -43,7 +43,6 @@ export const Title = styled.h2`
   font-size: ${rem(32)};
   margin-bottom: ${rem(22)};
   font-weight: 600;
-  text-transform: uppercase;
 
   ${mediaQuery(css`
     text-align: left;

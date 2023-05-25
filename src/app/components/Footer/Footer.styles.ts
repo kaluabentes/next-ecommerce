@@ -34,7 +34,7 @@ export const Title = styled.h3`
   font-size: ${rem(14)};
   font-weight: 600;
   margin: 0;
-  margin-bottom: ${rem(32)};
+  margin-bottom: ${rem(28)};
   text-transform: uppercase;
 `
 
@@ -46,7 +46,7 @@ export const Image = styled.img`
 export const Menu = styled.nav`
   display: flex;
   flex-direction: column;
-  gap: ${rem(18)};
+  gap: ${rem(14)};
 `
 
 export const MenuItem = styled.button`

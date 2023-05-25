@@ -1,5 +1,7 @@
 import { Fragment, useEffect, useState } from "react"
 import {
+  BiChevronDown,
+  BiChevronUp,
   BiCollection,
   BiMinus,
   BiPlus,
@@ -63,7 +65,7 @@ export default function Menu({ items, isOpen, onMenuToggle }: MenuProps) {
             $isOpen={item.isOpen}
           >
             {item.label}
-            {item.isOpen ? <BiMinus /> : <BiPlus />}
+            {item.isOpen ? <BiChevronUp /> : <BiChevronDown />}
           </MenuItem>
           <DropdownMenu $isOpen={item.isOpen!}>
             {item.items.map((item, itemIndex) => (
