@@ -5,7 +5,7 @@ import createKey from "@/utilities/array/createKey"
 import { Image } from "../components/PhotoGallery/PhotoGallery"
 import ContentContainer from "@/components/ContentContainer"
 import ProductBuyArea from "../components/ProductBuyArea"
-import { ProductInfoBox } from "../components/styles"
+import { ProductInfoBox } from "../components/components"
 
 export async function generateStaticParams() {
   const products = getAllProducts(["slug"])
