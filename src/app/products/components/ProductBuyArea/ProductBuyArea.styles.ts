@@ -36,6 +36,10 @@ export const Container = styled.div<{ $fixed?: boolean }>`
 
   ${mediaQuery(css`
     padding: ${rem(32)};
+
+    & ${Price} {
+      font-size: ${rem(38)};
+    }
   `)}
 
   ${(props) =>
