@@ -8,16 +8,17 @@ import useIsMounted from "@/hooks/useIsMounted"
 
 interface BasketButtonProps {
   count: number
+  onClick: () => void
 }
 
-export default function BasketButton({ count }: BasketButtonProps) {
+export default function BasketButton({ count, onClick }: BasketButtonProps) {
   const { isMounted } = useIsMounted()
   const isLargeScreen = useMediaQuery({
     query: `(min-width: ${theme.breakpoints.large})`,
   })
 
   return (
-    <OuterContainer count={count}>
+    <OuterContainer count={count} onClick={onClick}>
       <Container>
         <Counter>{count}</Counter>
         <BiBasket />

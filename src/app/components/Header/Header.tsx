@@ -4,6 +4,9 @@ import { BiMap, BiMenu, BiUser } from "react-icons/bi"
 import { useMediaQuery } from "react-responsive"
 import ContentContainer from "@/components/ContentContainer"
 import Link from "next/link"
+import { RiTruckLine } from "react-icons/ri"
+import { TbTruckDelivery } from "react-icons/tb"
+import { useRouter } from "next/navigation"
 
 import BasketButton from "./BasketButton"
 import {
@@ -18,14 +21,14 @@ import {
 import SearchField from "./SearchField"
 import theme from "@/app/styles/theme"
 import useIsMounted from "@/hooks/useIsMounted"
-import { RiTruckLine } from "react-icons/ri"
-import { TbTruckDelivery } from "react-icons/tb"
 
 interface HeaderProps {
   onMenuClick: () => void
 }
 
 export default function Header({ onMenuClick }: HeaderProps) {
+  const router = useRouter()
+
   const { isMounted } = useIsMounted()
   const isLargeScreen = useMediaQuery({
     query: `(min-width: ${theme.breakpoints.large})`,
@@ -47,19 +50,19 @@ export default function Header({ onMenuClick }: HeaderProps) {
           </Link>
           {isLargeScreen && isMounted && <SearchField />}
           <IconGroup>
-            <IconButton>
+            <IconButton onClick={() => router.push("/my-account")}>
               <BiUser />
               {isLargeScreen && isMounted && (
                 <IconButtonLabel>Minha conta</IconButtonLabel>
               )}
             </IconButton>
-            <IconButton>
+            <IconButton onClick={() => router.push("/track")}>
               <TbTruckDelivery />
               {isLargeScreen && isMounted && (
                 <IconButtonLabel>Rastrear pedido</IconButtonLabel>
               )}
             </IconButton>
-            <BasketButton count={1} />
+            <BasketButton onClick={() => router.push("/cart")} count={1} />
           </IconGroup>
         </TopContainer>
         {!isLargeScreen && isMounted && <SearchField />}
