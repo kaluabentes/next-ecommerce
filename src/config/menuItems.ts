@@ -9,27 +9,27 @@ export default [
     items: [
       {
         label: "Dispositivos",
-        path: "/collections/dispositivos",
+        path: "/products?category=dispositivos",
       },
       {
         label: "Casa & Jardim",
-        path: "/collections/casa-jardim",
+        path: "/products?category=casa-jardim",
       },
       {
         label: "Mochilas",
-        path: "/collections/mochilas",
+        path: "/products?category=mochilas",
       },
       {
         label: "Acessórios de Moda",
-        path: "/collections/acessorios-de-moda",
+        path: "/products?category=acessorios-de-moda",
       },
       {
         label: "Beleza & Saúde",
-        path: "/collections/beleza-saude",
+        path: "/products?category=beleza-saude",
       },
       {
         label: "Relógios",
-        path: "/collections/relogios",
+        path: "/products?category=relogios",
       },
     ],
   },

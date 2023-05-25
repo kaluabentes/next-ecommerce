@@ -3,6 +3,7 @@
 import { BiMap, BiMenu, BiUser } from "react-icons/bi"
 import { useMediaQuery } from "react-responsive"
 import ContentContainer from "@/components/ContentContainer"
+import Link from "next/link"
 
 import BasketButton from "./BasketButton"
 import {
@@ -39,9 +40,11 @@ export default function Header({ onMenuClick }: HeaderProps) {
               <BiMenu />
             </IconButton>
           )}
-          <LogoContainer>
-            <Logo src="/logo.svg" alt="Droptron" />
-          </LogoContainer>
+          <Link href="/">
+            <LogoContainer>
+              <Logo src="/logo.svg" alt="Droptron" />
+            </LogoContainer>
+          </Link>
           {isLargeScreen && isMounted && <SearchField />}
           <IconGroup>
             <IconButton>

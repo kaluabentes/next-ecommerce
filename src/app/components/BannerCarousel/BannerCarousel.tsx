@@ -15,6 +15,7 @@ import range from "@/utilities/array/range"
 import createKey from "@/utilities/array/createKey"
 import Product from "@/models/Product"
 import ProductHero from "./ProductHero"
+import { useRouter } from "next/navigation"
 
 const DELAY = 5000
 
@@ -31,6 +32,8 @@ export default function BannerCarousel({
   items = [],
   products = [],
 }: BannerCarouselProps) {
+  const router = useRouter()
+
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [viewportRef, embla] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: DELAY }),
@@ -54,7 +57,10 @@ export default function BannerCarousel({
     <Container componentRef={viewportRef}>
       <EmblaContainer>
         {heroProducts.map((product) => (
-          <ProductHero product={product} />
+          <ProductHero
+            onDetailClick={() => router.push(`/products/${product.slug}`)}
+            product={product}
+          />
         ))}
         {items.map((item, index) => (
           <Image key={createKey(index)} src={item.src} />

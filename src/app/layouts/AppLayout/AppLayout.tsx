@@ -11,12 +11,15 @@ import PageSpinner from "@/components/PageSpinner"
 import menuItems from "@/config/menuItems"
 import Benefits from "@/app/components/Benefits"
 import benefitItems from "@/config/benefitItems"
+import { useRouter } from "next/navigation"
 
 interface AppLayoutProps {
   children: ReactNode
 }
 
 export default function AppLayout({ children }: AppLayoutProps) {
+  const router = useRouter()
+
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isReady, setIsReady] = useState(false)
 
@@ -38,6 +41,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
             items={menuItems}
             isOpen={isMenuOpen}
             onMenuToggle={handleMenuToggle}
+            onNavClick={(path: string) => router.push(path)}
           />
           <Main>{children}</Main>
           <Benefits items={benefitItems} />

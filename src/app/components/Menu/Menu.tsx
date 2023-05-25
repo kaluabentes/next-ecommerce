@@ -35,9 +35,15 @@ interface MenuProps {
   items: Item[]
   isOpen: boolean
   onMenuToggle: () => void
+  onNavClick: (path: string) => void
 }
 
-export default function Menu({ items, isOpen, onMenuToggle }: MenuProps) {
+export default function Menu({
+  items,
+  isOpen,
+  onMenuToggle,
+  onNavClick,
+}: MenuProps) {
   const [statefulItems, setStatefulItems] = useState<StatefulItem[]>([])
 
   const openDropdown = (index: number) => {
@@ -69,7 +75,11 @@ export default function Menu({ items, isOpen, onMenuToggle }: MenuProps) {
           </MenuItem>
           <DropdownMenu $isOpen={item.isOpen!}>
             {item.items.map((item, itemIndex) => (
-              <MenuItem $isSub key={String(itemIndex + 1)}>
+              <MenuItem
+                $isSub
+                key={String(itemIndex + 1)}
+                onClick={() => onNavClick(item.path!)}
+              >
                 {item.label}
               </MenuItem>
             ))}
@@ -78,7 +88,11 @@ export default function Menu({ items, isOpen, onMenuToggle }: MenuProps) {
       )
     }
 
-    return <MenuItem key={String(index + 1)}>{item.label}</MenuItem>
+    return (
+      <MenuItem key={String(index + 1)} onClick={() => onNavClick(item.path!)}>
+        {item.label}
+      </MenuItem>
+    )
   }
 
   useEffect(() => {

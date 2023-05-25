@@ -21,13 +21,14 @@ import ReviewStars from "@/components/ReviewStars/ReviewStars"
 
 interface ProductCardProps {
   product: Product
+  onClick: () => void
 }
 
-export default function ProductCard({ product }: ProductCardProps) {
+export default function ProductCard({ product, onClick }: ProductCardProps) {
   const reviewsAverage = getAverage(product.reviews?.map((r) => r.rating)!)
 
   return (
-    <Item key={product.slug}>
+    <Item key={product.slug} onClick={onClick}>
       <DiscountFlag>-50%</DiscountFlag>
       <Image src={product.thumb} alt={product.name} />
       <Title>{product.name}</Title>

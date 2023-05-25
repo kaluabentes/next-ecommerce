@@ -16,9 +16,13 @@ import formatCurrency from "@/utilities/number/formatCurrency"
 
 interface ProductHeroProps {
   product: Product
+  onDetailClick: () => void
 }
 
-export default function ProductHero({ product }: ProductHeroProps) {
+export default function ProductHero({
+  product,
+  onDetailClick,
+}: ProductHeroProps) {
   return (
     <Container>
       <ContentGroup>
@@ -29,7 +33,7 @@ export default function ProductHero({ product }: ProductHeroProps) {
           <Price>{formatCurrency(product.price!)}</Price>
           <FromPrice>{formatCurrency(product.fromPrice!)}</FromPrice>
         </PriceContainer>
-        <Button variant="secondary" size="lg">
+        <Button variant="secondary" size="lg" onClick={onDetailClick}>
           Ver mais detalhes
         </Button>
       </ContentGroup>
