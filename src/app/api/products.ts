@@ -2,6 +2,7 @@ import fs from "fs"
 import { join } from "path"
 import matter from "gray-matter"
 import Product from "@/models/Product"
+import markdownToHtml from "@/utilities/markdown/markdownToHtml"
 
 const postsDirectory = join(process.cwd(), "content", "products")
 
@@ -9,19 +10,20 @@ export function getProductSlugs(): string[] {
   return fs.readdirSync(postsDirectory)
 }
 
-export function getProductBySlug(
+export async function getProductBySlug(
   slug: string,
   fields: string[] | "*" = []
-): Product {
+): Promise<Product> {
   const realSlug = slug.replace(/\.md$/, "")
   const fullPath = join(postsDirectory, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data, content } = matter(fileContents)
+  const htmlContent = await markdownToHtml(content)
 
   if (fields === "*") {
     return {
       ...data,
-      content,
+      content: htmlContent,
     }
   }
 
@@ -36,7 +38,7 @@ export function getProductBySlug(
       items[field] = realSlug
     }
     if (field === "content") {
-      items[field] = content
+      items[field] = htmlContent
     }
 
     if (typeof data[field] !== "undefined") {

@@ -1,3 +1,5 @@
+"use client"
+
 import { ReactNode } from "react"
 
 import { Container } from "./Button.styles"
@@ -8,6 +10,7 @@ interface ButtonProps {
   size?: "lg"
   full?: boolean
   onClick?: () => void
+  className?: string
 }
 
 export default function Button({
@@ -16,9 +19,16 @@ export default function Button({
   size,
   full,
   onClick,
+  className,
 }: ButtonProps) {
   return (
-    <Container $size={size} $variant={variant} $full={full} onClick={onClick}>
+    <Container
+      className={className}
+      $size={size}
+      $variant={variant}
+      $full={full}
+      onClick={onClick}
+    >
       {children}
     </Container>
   )

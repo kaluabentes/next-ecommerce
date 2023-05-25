@@ -1,12 +1,14 @@
 import { getAllProducts, getProductBySlug } from "@/app/api/products"
-import Product from "@/models/Product"
 import PhotoGallery from "../components/PhotoGallery"
 import createKey from "@/utilities/array/createKey"
 import { Image } from "../components/PhotoGallery/PhotoGallery"
 import ContentContainer from "@/components/ContentContainer"
 import ProductBuyArea from "../components/ProductBuyArea"
-import { ProductInfoBox } from "../components/components"
+import { BuyNowButtonBox, ProductInfoBox } from "../components/components"
 import ProductDescription from "../components/ProductDescription"
+import Button from "@/components/Button"
+import { useEffect, useState } from "react"
+import BuyNowButton from "../components/BuyNowButton/BuyNowButton"
 
 export async function generateStaticParams() {
   const products = getAllProducts(["slug"])
@@ -16,15 +18,13 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function ProductPage({ params }: any) {
+export default async function ProductPage({ params }: any) {
   const { slug } = params
-  const product = getProductBySlug(slug, "*")
+  const product = await getProductBySlug(slug, "*")
   const images = product.images?.map((img, index) => ({
     src: img,
     alt: `${product.name} ${createKey(index)}`,
   }))
-
-  console.log("content", product.content)
 
   return (
     <ContentContainer>
@@ -33,6 +33,7 @@ export default function ProductPage({ params }: any) {
         <ProductBuyArea product={product} />
       </ProductInfoBox>
       <ProductDescription content={product.content!} />
+      <BuyNowButton />
     </ContentContainer>
   )
 }
