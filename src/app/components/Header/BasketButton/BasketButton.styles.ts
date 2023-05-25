@@ -40,7 +40,7 @@ export const Counter = styled.span`
   font-weight: 500;
   height: 18px;
   width: 18px;
-  background: ${(props) => props.theme.colors.secondaryVariant};
+  background: yellowgreen;
   font-size: ${rem(11)};
   position: absolute;
   right: 0px;

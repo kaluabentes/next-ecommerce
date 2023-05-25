@@ -3,10 +3,9 @@ import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"
 
 export const Container = styled.div`
-  margin-top: ${rem(16)};
   padding: ${rem(16)};
   background-color: white;
-  max-width: 758px;
+  max-width: ${rem(758)};
   box-shadow: 0px 3px 3px 0.05px rgba(0, 0, 0, 0.05);
   border-radius: ${rem(8)};
 
@@ -14,6 +13,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: row-reverse;
     justify-content: start;
+    min-width: ${rem(758)};
   `)}
 `
 

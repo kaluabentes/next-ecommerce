@@ -76,7 +76,7 @@ export default function Footer() {
         </PaymentContainer>
         <PaymentContainer>
           <AppMax src="/appmax-dark.png" />
-          <PaymentMethods src="/payment-methods.png" />
+          <PaymentMethods src="/payment-methods-dark.png" />
         </PaymentContainer>
         <PaymentContainer>
           <Copyright>&copy; Droptron | CNPJ: 0000-00000-0000-0001</Copyright>

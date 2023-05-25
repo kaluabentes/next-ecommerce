@@ -40,16 +40,17 @@ export const Item = styled.button`
   }
 `
 
-export const DiscountFlag = styled.div`
+export const DiscountFlag = styled.div<{ $static?: boolean }>`
   font-weight: 600;
   font-size: ${rem(12)};
   background: ${(props) => props.theme.colors.primary};
   color: white;
   padding: ${rem(2)} ${rem(4)};
   border-radius: ${rem(4)};
-  position: absolute;
+  position: ${(props) => (props.$static ? "static" : "absolute")};
   left: ${rem(20)};
   top: ${rem(20)};
+  display: inline-block;
 `
 
 export const FromText = styled.p`
@@ -78,7 +79,7 @@ export const Price = styled.p`
   margin: 0;
   font-size: ${rem(22)};
   font-weight: 600;
-  color: ${(props) => props.theme.colors.secondaryVariant};
+  color: ${(props) => props.theme.colors.secondary};
 `
 
 export const FromPrice = styled.p`

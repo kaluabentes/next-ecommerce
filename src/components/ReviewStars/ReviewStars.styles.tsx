@@ -33,7 +33,7 @@ export const Star = styled(AiFillStar)<{
   ${(props) =>
     props.$isFilled &&
     css`
-      color: ${(props) => props.theme.colors.secondaryVariant};
+      color: yellowgreen;
     `}
 `
 

@@ -4,6 +4,7 @@ import styled, { css } from "styled-components"
 export const Container = styled.button<{
   $variant?: "primary" | "secondary"
   $size?: "lg"
+  $full?: boolean
 }>`
   height: ${rem(40)};
   padding: 0 ${rem(16)};
@@ -61,4 +62,10 @@ export const Container = styled.button<{
       height: ${rem(48)};
       padding: 0 ${rem(24)};
     `};
+
+  ${(props) =>
+    props.$full &&
+    css`
+      width: 100%;
+    `}
 `

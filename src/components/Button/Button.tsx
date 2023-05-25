@@ -6,11 +6,12 @@ interface ButtonProps {
   children: ReactNode
   variant?: "primary" | "secondary"
   size?: "lg"
+  full?: boolean
 }
 
-export default function Button({ children, variant, size }: ButtonProps) {
+export default function Button({ children, variant, size, full }: ButtonProps) {
   return (
-    <Container $size={size} $variant={variant}>
+    <Container $size={size} $variant={variant} $full={full}>
       {children}
     </Container>
   )
