@@ -147,3 +147,30 @@ export const DropdownMenu = styled.div<{ $isOpen: boolean }>`
     }
   `)}
 `
+
+export const Overlay = styled.button<{ $isOpen: boolean }>`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 150;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  opacity: 0.2;
+  visibility: hidden;
+  transition: 0.3s;
+
+  ${(props) =>
+    props.$isOpen &&
+    css`
+      opacity: 1;
+      visibility: visible;
+    `}
+`
+
+export const Wrapper = styled.div`
+  position: relative;
+`

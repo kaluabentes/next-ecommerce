@@ -31,10 +31,11 @@ export const Item = styled.div`
 `
 
 export const Title = styled.h3`
-  font-size: ${rem(16)};
+  font-size: ${rem(14)};
   font-weight: 600;
   margin: 0;
   margin-bottom: ${rem(32)};
+  text-transform: uppercase;
 `
 
 export const Image = styled.img`

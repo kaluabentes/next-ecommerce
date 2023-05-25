@@ -14,7 +14,10 @@ import {
   MenuItem,
   MenuContainer,
   DropdownMenu,
+  Overlay,
+  Wrapper,
 } from "./Menu.styles"
+import ClickOutside from "@/components/ClickOutside/ClickOutside"
 
 interface Item {
   path?: string
@@ -84,12 +87,22 @@ export default function Menu({ items, isOpen, onMenuToggle }: MenuProps) {
     )
   }, [items])
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflowY = "hidden"
+    }
+
+    if (!isOpen) {
+      document.body.style.overflowY = "auto"
+    }
+  }, [isOpen])
+
   return (
-    <Container $isOpen={isOpen}>
-      <CloseButton onClick={onMenuToggle}>
-        <BiX />
-      </CloseButton>
-      <MenuContainer>{statefulItems.map(renderMenuItem)}</MenuContainer>
-    </Container>
+    <>
+      <Container $isOpen={isOpen}>
+        <MenuContainer>{statefulItems.map(renderMenuItem)}</MenuContainer>
+      </Container>
+      <Overlay $isOpen={isOpen} onClick={onMenuToggle} />
+    </>
   )
 }

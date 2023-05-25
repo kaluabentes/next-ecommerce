@@ -57,7 +57,7 @@ export const IconButton = styled.button`
 
 export const IconGroup = styled.div`
   display: flex;
-  gap: ${rem(6)};
+  gap: ${rem(8)};
 
   ${mediaQuery(css`
     gap: ${rem(16)};

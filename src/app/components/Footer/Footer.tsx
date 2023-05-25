@@ -22,6 +22,7 @@ import ContactMethod from "@/components/ContactMethod"
 import rem from "@/utilities/styles/rem"
 import menuItems from "@/config/menuItems"
 import { RiCustomerService2Fill } from "react-icons/ri"
+import footerMenuItems from "@/config/footerMenuItems"
 
 export default function Footer() {
   return (
@@ -53,7 +54,7 @@ export default function Footer() {
             />
           </Item>
           <Item>
-            <Title>Menu de Rodapé</Title>
+            <Title>Menu de Princial</Title>
             <Menu>
               {menuItems.map((menu) => (
                 <MenuItem>{menu.label}</MenuItem>
@@ -61,9 +62,9 @@ export default function Footer() {
             </Menu>
           </Item>
           <Item>
-            <Title>Menu Principal</Title>
+            <Title>Institucional</Title>
             <Menu>
-              {menuItems.map((menu) => (
+              {footerMenuItems.map((menu) => (
                 <MenuItem>{menu.label}</MenuItem>
               ))}
             </Menu>
