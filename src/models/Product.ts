@@ -14,4 +14,5 @@ export default interface Product {
   heroImage?: string
   images?: string[]
   reviews?: Review[]
+  content?: string
 }

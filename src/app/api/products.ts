@@ -1,18 +1,29 @@
 import fs from "fs"
 import { join } from "path"
 import matter from "gray-matter"
+import Product from "@/models/Product"
 
 const postsDirectory = join(process.cwd(), "content", "products")
 
-export function getProductSlugs() {
+export function getProductSlugs(): string[] {
   return fs.readdirSync(postsDirectory)
 }
 
-export function getProductBySlug(slug: string, fields: string[] = []) {
+export function getProductBySlug(
+  slug: string,
+  fields: string[] | "*" = []
+): Product {
   const realSlug = slug.replace(/\.md$/, "")
   const fullPath = join(postsDirectory, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data, content } = matter(fileContents)
+
+  if (fields === "*") {
+    return {
+      ...data,
+      content,
+    }
+  }
 
   type Items = {
     [key: string]: string
@@ -20,7 +31,6 @@ export function getProductBySlug(slug: string, fields: string[] = []) {
 
   const items: Items = {}
 
-  // Ensure only the minimal needed data is exposed
   fields.forEach((field) => {
     if (field === "slug") {
       items[field] = realSlug
@@ -37,11 +47,11 @@ export function getProductBySlug(slug: string, fields: string[] = []) {
   return items
 }
 
-export function getAllProducts(fields: string[] = []) {
+export function getAllProducts(fields: string[] | "*" = []): Product[] {
   const slugs = getProductSlugs()
-  const posts = slugs
+  const products = slugs
     .map((slug) => getProductBySlug(slug, fields))
-    // sort posts by date in ascending order
-    .sort((product1, product2) => (product2.name > product1.name ? -1 : 1))
-  return posts
+    .sort((product1, product2) => (product2.name! > product1.name! ? -1 : 1))
+
+  return products
 }

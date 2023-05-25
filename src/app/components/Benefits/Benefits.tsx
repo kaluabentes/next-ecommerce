@@ -16,7 +16,7 @@ export default function Benefits({ items }: BenefitsProps) {
   return (
     <Container>
       {items.map((item: Item) => (
-        <Item>
+        <Item key={item.title}>
           {item.icon}
           <Title>{item.title}</Title>
           <Description>{item.description}</Description>

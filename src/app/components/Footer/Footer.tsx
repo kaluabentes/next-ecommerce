@@ -23,6 +23,7 @@ import rem from "@/utilities/styles/rem"
 import menuItems from "@/config/menuItems"
 import { RiCustomerService2Fill } from "react-icons/ri"
 import footerMenuItems from "@/config/footerMenuItems"
+import createKey from "@/utilities/array/createKey"
 
 export default function Footer() {
   return (
@@ -30,7 +31,7 @@ export default function Footer() {
       <ContentContainer>
         <FlexBox>
           <Item>
-            <Image src="logo.svg" alt="Droptron" />
+            <Image src="/logo.svg" alt="Droptron" />
             <Title>Atendimento ao Cliente</Title>
             <ContactMethod
               icon={<BsChatLeftFill />}
@@ -56,16 +57,16 @@ export default function Footer() {
           <Item>
             <Title>Menu de Princial</Title>
             <Menu>
-              {menuItems.map((menu) => (
-                <MenuItem>{menu.label}</MenuItem>
+              {menuItems.map((menu, index) => (
+                <MenuItem key={createKey(index)}>{menu.label}</MenuItem>
               ))}
             </Menu>
           </Item>
           <Item>
             <Title>Institucional</Title>
             <Menu>
-              {footerMenuItems.map((menu) => (
-                <MenuItem>{menu.label}</MenuItem>
+              {footerMenuItems.map((menu, index) => (
+                <MenuItem key={createKey(index)}>{menu.label}</MenuItem>
               ))}
             </Menu>
           </Item>

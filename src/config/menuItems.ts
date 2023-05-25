@@ -35,7 +35,7 @@ export default [
   },
   {
     label: "Sobre nós",
-    path: "/contact",
+    path: "/about",
   },
   {
     label: "Perguntas Frequentes",

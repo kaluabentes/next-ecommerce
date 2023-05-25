@@ -1,14 +1,14 @@
 export default [
   {
     label: "Termos de Uso",
-    path: "/faq",
+    path: "/terms-of-use",
   },
   {
     label: "Política de Privacidade",
-    path: "/faq",
+    path: "/privacy-policy",
   },
   {
     label: "Política de Trocas e Devoluções",
-    path: "/faq",
+    path: "/exchanges-and-returns-policy",
   },
 ]

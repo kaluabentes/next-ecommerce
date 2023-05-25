@@ -1,3 +1,5 @@
+"use client"
+
 import { MouseEvent, ReactNode, Ref } from "react"
 
 import { Container } from "./ContentContainer.styles"
