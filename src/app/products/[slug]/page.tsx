@@ -6,6 +6,7 @@ import { Image } from "../components/PhotoGallery/PhotoGallery"
 import ContentContainer from "@/components/ContentContainer"
 import ProductBuyArea from "../components/ProductBuyArea"
 import { ProductInfoBox } from "../components/components"
+import ProductDescription from "../components/ProductDescription"
 
 export async function generateStaticParams() {
   const products = getAllProducts(["slug"])
@@ -23,12 +24,15 @@ export default function ProductPage({ params }: any) {
     alt: `${product.name} ${createKey(index)}`,
   }))
 
+  console.log("content", product.content)
+
   return (
     <ContentContainer>
       <ProductInfoBox>
         <PhotoGallery images={images as Image[]} />
         <ProductBuyArea product={product} />
       </ProductInfoBox>
+      <ProductDescription content={product.content!} />
     </ContentContainer>
   )
 }
