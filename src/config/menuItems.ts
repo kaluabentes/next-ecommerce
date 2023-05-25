@@ -4,7 +4,7 @@ export default [
     path: "/",
   },
   {
-    label: "Coleções",
+    label: "Categorias",
     path: undefined,
     items: [
       {
