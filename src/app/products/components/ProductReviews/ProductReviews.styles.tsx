@@ -1,0 +1,83 @@
+import mediaQuery from "@/utilities/styles/mediaQuery"
+import rem from "@/utilities/styles/rem"
+import styled, { css } from "styled-components"
+
+export const Container = styled.div`
+  padding: ${rem(16)};
+  background-color: white;
+  box-shadow: 0px 3px 3px 0.05px rgba(0, 0, 0, 0.05);
+  border-radius: ${rem(8)};
+
+  ${mediaQuery(css`
+    padding: ${rem(32)};
+  `)}
+`
+
+export const Title = styled.h3`
+  margin: 0;
+  font-size: ${rem(22)};
+  margin-bottom: ${rem(42)};
+  text-align: center;
+
+  ${mediaQuery(css`
+    font-size: ${rem(22)};
+  `)}0
+`
+
+export const RatingBox = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: ${rem(42)};
+  flex-direction: column;
+  gap: ${rem(12)};
+
+  ${mediaQuery(css`
+    margin-bottom: 0;
+  `)}
+`
+
+export const Rating = styled.div`
+  min-height: ${rem(100)};
+  min-width: ${rem(100)};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 8px solid yellowgreen;
+  border-radius: 50%;
+  font-size: ${rem(32)};
+  font-weight: 700;
+  color: yellowgreen;
+`
+
+export const MaxContainer = styled.div`
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+
+  & button {
+    width: 100%;
+
+    ${mediaQuery(css`
+      width: initial;
+    `)}
+  }
+`
+
+export const RatingGrid = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+
+  ${mediaQuery(css`
+    flex-direction: row;
+
+    & div {
+      flex: 1;
+    }
+  `)}
+`

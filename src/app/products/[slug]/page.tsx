@@ -18,6 +18,7 @@ import BuyNowButton from "../components/BuyNowButton/BuyNowButton"
 import Breadcrumbs, {
   BreadcrumbItem,
 } from "../components/Breadcrumbs/Breadcrumbs"
+import ProductReviews from "../components/ProductReviews"
 
 export async function generateStaticParams() {
   const products = await getAllProducts(["slug"])
@@ -66,6 +67,7 @@ export default async function ProductPage({ params }: any) {
             <ProductBuyArea product={product} />
           </ShowOnlyInLarge>
         </Grid>
+        <ProductReviews />
       </PageBox>
       <BuyNowButton />
     </ContentContainer>

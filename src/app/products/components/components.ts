@@ -44,6 +44,7 @@ export const ShowOnlyInSmall = styled.div`
 
 export const ShowOnlyInLarge = styled.div`
   display: none;
+  align-self: stretch;
 
   ${mediaQuery(css`
     display: block;
