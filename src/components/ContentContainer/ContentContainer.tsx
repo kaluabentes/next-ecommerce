@@ -8,15 +8,17 @@ interface ContentContainerProps {
   children: ReactNode
   className?: string
   componentRef?: any
+  padding?: string
 }
 
 export default function ContentContainer({
   children,
   className,
   componentRef,
+  padding,
 }: ContentContainerProps) {
   return (
-    <Container ref={componentRef} className={className}>
+    <Container ref={componentRef} className={className} $padding={padding}>
       {children}
     </Container>
   )

@@ -2,11 +2,20 @@ import { css, styled } from "styled-components"
 import ContentContainer from "../ContentContainer"
 import rem from "@/utilities/styles/rem"
 
-export const Container = styled(ContentContainer)<{ $margin?: string }>`
+export const Wrapper = styled.div`
+  & [class^="ContentContainer"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+`
+
+export const Container = styled(ContentContainer)<{
+  $margin?: string
+}>`
   overflow-y: hidden;
   overflow-x: auto;
-  padding-top: ${rem(32)};
-  padding-bottom: ${rem(32)};
+  padding-top: ${rem(16)};
+  padding-bottom: ${rem(16)};
 
   ${(props) =>
     props.$margin &&

@@ -19,7 +19,7 @@ import Breadcrumbs, {
   BreadcrumbItem,
 } from "../components/Breadcrumbs/Breadcrumbs"
 import ProductReviews from "../components/ProductReviews"
-import ProductsCarousel from "@/app/components/ProductsCarousel"
+import ProductsCarousel from "@/components/ProductsCarousel"
 
 export async function generateStaticParams() {
   const products = await getAllProducts(["slug"])
@@ -69,7 +69,7 @@ export default async function ProductPage({ params }: any) {
             <ProductBuyArea product={product} />
           </ShowOnlyInLarge>
         </Grid>
-        <ProductsCarousel products={products} />
+        <ProductsCarousel title="Você também pode gostar" products={products} />
         <ProductReviews reviews={product.reviews!} />
       </PageBox>
       <BuyNowButton />

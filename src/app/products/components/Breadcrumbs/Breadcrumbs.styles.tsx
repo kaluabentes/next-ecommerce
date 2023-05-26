@@ -4,6 +4,7 @@ import styled, { css } from "styled-components"
 export const Container = styled.nav`
   display: flex;
   gap: ${rem(10)};
+  margin-bottom: ${rem(22)};
 
   & svg {
     font-size: ${rem(22)};

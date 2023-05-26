@@ -7,6 +7,8 @@ export const HeaderBox = styled.div`
   background-color: white;
   box-shadow: 0px 3px 3px 0.05px rgba(0, 0, 0, 0.05);
   border-radius: ${rem(8)};
+  margin-top: ${rem(22)};
+  margin-bottom: ${rem(32)};
 
   ${mediaQuery(css`
     padding: ${rem(32)};

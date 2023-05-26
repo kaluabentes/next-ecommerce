@@ -8,11 +8,9 @@ export const PageBox = styled.div`
   display: flex;
   flex-direction: column;
   padding: ${rem(16)} 0;
-  gap: ${rem(16)};
 
   ${mediaQuery(css`
     padding: ${rem(22)} 0;
-    gap: ${rem(22)};
   `)}
 `
 
@@ -20,6 +18,8 @@ export const Grid = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${rem(16)};
+
+  margin-bottom: ${rem(32)};
 
   ${mediaQuery(css`
     flex-direction: row;
