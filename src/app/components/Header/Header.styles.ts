@@ -72,6 +72,7 @@ export const IconGroup = styled.div`
 export const LogoContainer = styled.h1`
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   margin: 0;
   margin-left: ${rem(16)};
   margin-right: ${rem(32)};
@@ -81,8 +82,17 @@ export const LogoContainer = styled.h1`
     flex: initial;
     margin-left: 0;
   `)}
+
+  & a {
+    display: flex;
+    align-items: center;
+  }
 `
 
 export const Logo = styled.img`
-  height: 40px;
+  height: 32px;
+
+  ${mediaQuery(css`
+    height: 42px;
+  `)}
 `
