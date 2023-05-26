@@ -1,5 +1,5 @@
 import collectionItems from "@/config/collectionItems"
-import ProductsCarousel from "@/components/ProductsCarousel"
+import ProductsCarousel from "@/app/components/ProductsCarousel"
 
 import BannerCarousel from "./components/BannerCarousel"
 import CollectionsCarousel from "./components/CollectionsCarousel"

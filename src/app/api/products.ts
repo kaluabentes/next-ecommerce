@@ -12,7 +12,7 @@ export function getProductSlugs(): string[] {
 
 export async function getProductBySlug(
   slug: string,
-  fields: string[] | "*" = []
+  fields: string[] | "*" = "*"
 ): Promise<Product> {
   const realSlug = slug.replace(/\.md$/, "")
   const fullPath = join(postsDirectory, `${realSlug}.md`)
@@ -50,7 +50,7 @@ export async function getProductBySlug(
 }
 
 export async function getAllProducts(
-  fields: string[] | "*" = []
+  fields: string[] | "*" = "*"
 ): Promise<Product[]> {
   const slugs = getProductSlugs()
   const products = slugs.map(

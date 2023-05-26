@@ -19,6 +19,7 @@ import Breadcrumbs, {
   BreadcrumbItem,
 } from "../components/Breadcrumbs/Breadcrumbs"
 import ProductReviews from "../components/ProductReviews"
+import ProductsCarousel from "@/app/components/ProductsCarousel"
 
 export async function generateStaticParams() {
   const products = await getAllProducts(["slug"])
@@ -30,6 +31,7 @@ export async function generateStaticParams() {
 
 export default async function ProductPage({ params }: any) {
   const { slug } = params
+  const products = await getAllProducts()
   const product = await getProductBySlug(slug, "*")
   const images = product.images?.map((img, index) => ({
     src: img,
@@ -67,6 +69,7 @@ export default async function ProductPage({ params }: any) {
             <ProductBuyArea product={product} />
           </ShowOnlyInLarge>
         </Grid>
+        <ProductsCarousel products={products} />
         <ProductReviews reviews={product.reviews!} />
       </PageBox>
       <BuyNowButton />
