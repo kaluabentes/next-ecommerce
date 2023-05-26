@@ -11,7 +11,7 @@ import { useEffect, useState } from "react"
 import BuyNowButton from "../components/BuyNowButton/BuyNowButton"
 
 export async function generateStaticParams() {
-  const products = getAllProducts(["slug"])
+  const products = await getAllProducts(["slug"])
 
   return products.map((product) => ({
     slug: product.slug,

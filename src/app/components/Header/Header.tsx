@@ -43,11 +43,11 @@ export default function Header({ onMenuClick }: HeaderProps) {
               <BiMenu />
             </IconButton>
           )}
-          <Link href="/">
-            <LogoContainer>
+          <LogoContainer>
+            <Link href="/">
               <Logo src="/logo.svg" alt="Droptron" />
-            </LogoContainer>
-          </Link>
+            </Link>
+          </LogoContainer>
           {isLargeScreen && isMounted && <SearchField />}
           <IconGroup>
             <IconButton onClick={() => router.push("/my-account")}>

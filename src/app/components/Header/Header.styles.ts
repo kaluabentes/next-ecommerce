@@ -61,10 +61,10 @@ export const IconButton = styled.button`
 
 export const IconGroup = styled.div`
   display: flex;
-  gap: ${rem(8)};
+  gap: ${rem(10)};
 
   ${mediaQuery(css`
-    gap: ${rem(16)};
+    gap: ${rem(22)};
     margin-left: ${rem(32)};
   `)}
 `

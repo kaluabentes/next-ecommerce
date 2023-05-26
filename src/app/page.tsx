@@ -5,8 +5,8 @@ import BannerCarousel from "./components/BannerCarousel"
 import CollectionsCarousel from "./components/CollectionsCarousel"
 import { getAllProducts } from "./api/products"
 
-export default function Home() {
-  const products = getAllProducts([
+export default async function Home() {
+  const products = await getAllProducts([
     "slug",
     "name",
     "price",

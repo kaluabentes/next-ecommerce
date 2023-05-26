@@ -49,11 +49,18 @@ export async function getProductBySlug(
   return items
 }
 
-export function getAllProducts(fields: string[] | "*" = []): Product[] {
+export async function getAllProducts(
+  fields: string[] | "*" = []
+): Promise<Product[]> {
   const slugs = getProductSlugs()
-  const products = slugs
-    .map((slug) => getProductBySlug(slug, fields))
-    .sort((product1, product2) => (product2.name! > product1.name! ? -1 : 1))
+  const products = slugs.map(
+    async (slug) => await getProductBySlug(slug, fields)
+  )
+  const resolvedProducts = await Promise.all(products)
 
-  return products
+  resolvedProducts.sort((product1: Product, product2: Product) =>
+    product2.name! > product1.name! ? -1 : 1
+  )
+
+  return resolvedProducts
 }

@@ -71,7 +71,7 @@ export const Title = styled.h2`
   margin-bottom: ${rem(16)};
 
   ${mediaQuery(css`
-    font-size: ${rem(42)};
+    font-size: ${rem(32)};
   `)}
 `
 
