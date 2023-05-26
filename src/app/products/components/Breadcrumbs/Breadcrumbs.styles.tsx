@@ -31,7 +31,6 @@ export const Item = styled.button<{ $current?: boolean }>`
     props.$current &&
     css`
       opacity: 1;
-      font-weight: 600;
       cursor: initial;
     `}
 `

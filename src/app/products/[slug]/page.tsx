@@ -67,7 +67,7 @@ export default async function ProductPage({ params }: any) {
             <ProductBuyArea product={product} />
           </ShowOnlyInLarge>
         </Grid>
-        <ProductReviews />
+        <ProductReviews reviews={product.reviews!} />
       </PageBox>
       <BuyNowButton />
     </ContentContainer>

@@ -21,26 +21,26 @@ reviews:
   - {
       name: Thais Bastos,
       rating: 4.6,
-      comment: Amei muito! Já chegou carregado,
-      veio rápido e muito bem embalado. O produto é de ótima qualidade!,
+      comment: 'Amei muito! Já chegou carregado, veio rápido e muito bem embalado. O produto é de ótima qualidade!',
+      image: /reviews/thais-bastos.jpg,
     }
   - {
       name: Rodrigo Antoniazi,
       rating: 4,
-      comment: Muito bom! Chegou rápido e conforme o anúncio. Enche copo e garrafa bem rápido.,
+      comment: 'Muito bom! Chegou rápido e conforme o anúncio. Enche copo e garrafa bem rápido.',
+      image: /reviews/rodrigo-antoniazi.webp,
     }
   - {
-      name: Marcella Sanchez,
+      name: Marcela Sanchez,
       rating: 5,
-      comment: Ótimo produto,
-      qualidade e praticidade ao usar. Chegou rápido e muito bem embalado.,
+      comment: 'Ótimo produto, qualidade e praticidade ao usar. Chegou rápido e muito bem embalado.',
+      image: /reviews/marcela-sanchez.webp,
     }
   - {
       name: Julia Gomes,
       rating: 5,
-      comment: Amei a compra! Já estamos usando e tem funcionado muito bem. Chegou rápido em Recife,
-      veio com todas as peças e o cabo pra carregar,
-      tudo certinho.,
+      comment: 'Amei a compra! Já estamos usando e tem funcionado muito bem. Chegou rápido em Recife, veio com todas as peças e o cabo pra carregar, tudo certinho.',
+      image: /reviews/julia-gomes.webp,
     }
 ---
 

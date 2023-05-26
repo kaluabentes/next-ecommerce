@@ -97,14 +97,14 @@ export const PriceContainer = styled.div`
 
 export const Price = styled.p`
   margin: 0 0 0 0;
-  font-size: ${rem(42)};
+  font-size: ${rem(52)};
   font-weight: 700;
 `
 
 export const FromPrice = styled.p`
   margin: 0 0 ${rem(16)} 0;
   font-size: ${rem(22)};
-  font-weight: 400;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.5);
   text-decoration: line-through;
 `

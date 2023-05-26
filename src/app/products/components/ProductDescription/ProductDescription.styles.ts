@@ -25,6 +25,7 @@ export const Container = styled.div`
 
   & p {
     line-height: 1.6em;
+    color: rgba(0, 0, 0, 0.61);
   }
 
   & h3,

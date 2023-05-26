@@ -22,32 +22,26 @@ reviews:
   - {
       name: Arthur Miguel,
       rating: 5,
-      comment: Veio bem embalada,
-      está funcionando tudo certo,
-      super recomendo.,
+      comment: 'Veio bem embalada, está funcionando tudo certo, super recomendo.',
+      image: /reviews/arthur-miguel.webp,
     }
   - {
       name: Daya Miranda,
       rating: 5,
-      comment: Amei a garrafa,
-      ela é linda e veio funcionando,
-      entrega super rápida,
+      comment: 'Amei a garrafa, ela é linda e veio funcionando, entrega super rápida',
+      image: /reviews/daya-miranda.webp,
     }
   - {
       name: Isabele Giovani,
       rating: 5,
-      comment: Entrega super rápida superou minhas expectativas,
-      foram apenas 4 dias de espera,
-      a garrafa é linda,
-      super elegante,
-      veio muito bem embalada,
-      funciona muito bem pelo que pude perceber de  primeira impressão,
-      nada do que reclamar.,
+      comment: 'Entrega super rápida superou minhas expectativas, foram apenas 4 dias de espera.',
+      image: /reviews/isabele-giovani.webp,
     }
   - {
       name: Letícia Gabriela,
       rating: 5,
-      comment: O produto condiz com a descrição. Tem uma boa qualidade. E é muito bonito.,
+      comment: 'O produto condiz com a descrição. Tem uma boa qualidade. E é muito bonito.',
+      image: /reviews/leticia-gabriela.webp,
     }
 ---
 

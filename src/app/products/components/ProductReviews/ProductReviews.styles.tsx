@@ -2,7 +2,7 @@ import mediaQuery from "@/utilities/styles/mediaQuery"
 import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"
 
-export const Container = styled.div`
+export const HeaderBox = styled.div`
   padding: ${rem(16)};
   background-color: white;
   box-shadow: 0px 3px 3px 0.05px rgba(0, 0, 0, 0.05);
@@ -80,4 +80,39 @@ export const RatingGrid = styled.div`
       flex: 1;
     }
   `)}
+`
+
+export const ReviewsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: ${rem(18)};
+`
+
+export const ReviewContent = styled.div`
+  padding: ${rem(16)};
+  display: flex;
+  flex-direction: column;
+  gap: ${rem(16)};
+`
+
+export const ReviewItem = styled.article`
+  flex: 1;
+  background: white;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0px 3px 3px 0.05px rgba(0, 0, 0, 0.05);
+  border-radius: ${rem(8)};
+`
+
+export const ReviewItemImage = styled.img`
+  width: 100%;
+`
+
+export const ReviewItemUsername = styled.h3`
+  margin: 0;
+`
+
+export const ReviewItemComment = styled.p`
+  margin: 0;
+  line-height: 1.4;
 `
