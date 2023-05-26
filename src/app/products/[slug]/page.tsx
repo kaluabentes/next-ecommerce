@@ -33,6 +33,7 @@ export default async function ProductPage({ params }: any) {
   const { slug } = params
   const products = await getAllProducts()
   const product = await getProductBySlug(slug, "*")
+  const filteredProducts = products.filter((p) => p.slug !== product.slug)
   const images = product.images?.map((img, index) => ({
     src: img,
     alt: `${product.name} ${createKey(index)}`,
@@ -69,7 +70,10 @@ export default async function ProductPage({ params }: any) {
             <ProductBuyArea product={product} />
           </ShowOnlyInLarge>
         </Grid>
-        <ProductsCarousel title="Você também pode gostar" products={products} />
+        <ProductsCarousel
+          title="Você também pode gostar"
+          products={filteredProducts}
+        />
         <ProductReviews reviews={product.reviews!} />
       </PageBox>
       <BuyNowButton />
