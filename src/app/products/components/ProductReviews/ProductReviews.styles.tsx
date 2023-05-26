@@ -83,9 +83,8 @@ export const RatingGrid = styled.div`
 `
 
 export const ReviewsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: ${rem(18)};
+  columns: 5 250px;
+  column-gap: ${rem(18)};
 `
 
 export const ReviewContent = styled.div`
@@ -102,6 +101,8 @@ export const ReviewItem = styled.article`
   background-color: white;
   box-shadow: 0px 3px 3px 0.05px rgba(0, 0, 0, 0.05);
   border-radius: ${rem(8)};
+  min-width: 250px;
+  margin-bottom: ${rem(18)};
 `
 
 export const ReviewItemImage = styled.img`
