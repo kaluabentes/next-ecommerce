@@ -46,7 +46,7 @@ export default function ProductBuyArea({
   const reviewsAverage = getAverage(product.reviews?.map((r) => r.rating)!)
 
   return (
-    <Container $fixed={fixed} $isShow={isShow}>
+    <Container>
       <Title>{product.name}</Title>
       <ReviewContainer>
         <ReviewRating>
@@ -55,7 +55,7 @@ export default function ProductBuyArea({
         <ReviewStars rating={reviewsAverage} />
       </ReviewContainer>
       <Separator />
-      <DiscountFlag $static>-50%</DiscountFlag>
+      <DiscountFlag $static>{product.discount}</DiscountFlag>
       <FromText>A partir de</FromText>
       <PriceContainer>
         <Price>{formatCurrency(product.price!)}</Price>
@@ -67,7 +67,9 @@ export default function ProductBuyArea({
           {formatCurrency(product.portionPrice!)}
         </span>
       </PortionPrice>
-      <EconomyPrice>Economia de R$ 30,00</EconomyPrice>
+      <EconomyPrice>
+        Economia de {formatCurrency(product.economyPrice!)}
+      </EconomyPrice>
       <ShippingBox>
         <TbTruckDelivery />
         <ShippingGroup>

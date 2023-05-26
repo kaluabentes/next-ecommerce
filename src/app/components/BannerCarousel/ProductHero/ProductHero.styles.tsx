@@ -113,4 +113,8 @@ export const DiscountFlagHero = styled(DiscountFlag)`
   position: static;
   font-size: ${rem(16)};
   margin-bottom: ${rem(6)};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: ${rem(4)} ${rem(5)};
 `

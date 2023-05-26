@@ -8,6 +8,8 @@ export default interface Product {
   fromPrice?: number
   portionPrice?: number
   freeShipping?: boolean
+  economyPrice?: number
+  discount?: string
   hero?: boolean
   heroTitle?: string
   heroDescription?: string

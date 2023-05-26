@@ -29,7 +29,7 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
 
   return (
     <Item key={product.slug} onClick={onClick}>
-      <DiscountFlag>-50%</DiscountFlag>
+      <DiscountFlag>{product.discount}</DiscountFlag>
       <Image src={product.thumb} alt={product.name} />
       <Title>{product.name}</Title>
       <PriceSection>

@@ -29,7 +29,7 @@ export default function ProductHero({
         <Title>{product.heroTitle}</Title>
         <Description>{product.heroDescription}</Description>
         <PriceContainer>
-          <DiscountFlagHero>-50%</DiscountFlagHero>
+          <DiscountFlagHero>{product.discount}</DiscountFlagHero>
           <Price>{formatCurrency(product.price!)}</Price>
           <FromPrice>{formatCurrency(product.fromPrice!)}</FromPrice>
         </PriceContainer>

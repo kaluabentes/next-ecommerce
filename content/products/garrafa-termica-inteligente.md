@@ -5,6 +5,8 @@ collection: casa-jardim
 price: 99.9
 fromPrice: 149.9
 portionPrice: 22.5
+economyPrice: 50
+discount: '-35%'
 freeShipping: true
 hero: true
 heroTitle: Quente ou gelado por bem mais tempo

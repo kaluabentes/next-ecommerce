@@ -3,8 +3,10 @@ name: Câmera Wifi Giratória 360 com Visão Noturna
 slug: camera-wifi-giratoria-360
 collection: dispositivos
 price: 229.9
+economyPrice: 200
 fromPrice: 429.9
 portionPrice: 22.5
+discount: '-53%'
 freeShipping: true
 hero: true
 heroTitle: Segurança nunca é demais

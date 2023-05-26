@@ -18,6 +18,7 @@ export default async function Home() {
     "heroDescription",
     "heroImage",
     "reviews",
+    "discount",
   ])
 
   return (
