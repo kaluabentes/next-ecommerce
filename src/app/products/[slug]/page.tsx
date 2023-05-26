@@ -9,6 +9,9 @@ import ProductDescription from "../components/ProductDescription"
 import Button from "@/components/Button"
 import { useEffect, useState } from "react"
 import BuyNowButton from "../components/BuyNowButton/BuyNowButton"
+import Breadcrumbs, {
+  BreadcrumbItem,
+} from "../components/Breadcrumbs/Breadcrumbs"
 
 export async function generateStaticParams() {
   const products = await getAllProducts(["slug"])
@@ -26,9 +29,25 @@ export default async function ProductPage({ params }: any) {
     alt: `${product.name} ${createKey(index)}`,
   }))
 
+  const breadcrumbs: BreadcrumbItem[] = [
+    {
+      path: "/",
+      title: "Página inicial",
+    },
+    {
+      path: "/products",
+      title: "Todos os produtos",
+    },
+    {
+      title: product.name!,
+      current: true,
+    },
+  ]
+
   return (
     <ContentContainer>
       <PageBox>
+        <Breadcrumbs items={breadcrumbs} />
         <Grid>
           <PhotoGallery images={images as Image[]} />
           <ProductBuyArea product={product} />
