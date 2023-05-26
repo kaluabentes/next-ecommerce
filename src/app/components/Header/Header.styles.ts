@@ -38,16 +38,20 @@ export const IconButton = styled.button`
   justify-content: center;
   gap: ${rem(8)};
 
+  & svg {
+    color: ${(props) => props.theme.colors.secondary};
+  }
+
   &:hover {
     color: white;
 
     & p {
       color: white;
     }
-  }
 
-  & svg {
-    color: ${(props) => props.theme.colors.secondary};
+    & svg {
+      color: yellowgreen;
+    }
   }
 
   ${mediaQuery(css`

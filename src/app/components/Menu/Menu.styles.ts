@@ -76,8 +76,8 @@ export const MenuItem = styled.button<{
   border: 0;
   padding: ${rem(16)};
   font-size: ${rem(14)};
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
   text-align: left;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   cursor: pointer;

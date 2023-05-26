@@ -10,8 +10,16 @@ export const OuterContainer = styled(IconButton)<{ count: number }>`
   align-items: center;
   font-size: ${rem(28)};
 
+  & svg {
+    color: ${(props) => props.theme.colors.secondary};
+  }
+
   &:hover {
     color: white;
+
+    & svg {
+      color: yellowgreen;
+    }
   }
 
   ${(props) =>
