@@ -27,7 +27,7 @@ export const Container = styled.div<{ $fixed?: boolean; $isShow?: boolean }>`
   }
 
   & ${PortionPrice} {
-    margin-bottom: ${rem(32)};
+    margin-bottom: ${rem(12)};
   }
 
   & button {
@@ -62,6 +62,18 @@ export const Container = styled.div<{ $fixed?: boolean; $isShow?: boolean }>`
         display: block;
       `)}
     `}
+`
+
+export const EconomyPrice = styled.p`
+  margin: 0;
+  margin-bottom: ${rem(32)};
+  font-size: ${rem(12)};
+  background: ${(props) => props.theme.colors.greenvogue};
+  display: inline-block;
+  color: white;
+  padding: ${rem(5)} ${rem(10)};
+  border-radius: ${rem(5)};
+  font-weight: 600;
 `
 
 export const Title = styled.h2`
@@ -111,12 +123,14 @@ export const ShippingText = styled.p`
   font-size: ${rem(12)};
   color: rgba(0, 0, 0, 0.6);
   margin: 0;
+  font-weight: 500;
 `
 
 export const PaymentTitle = styled.p`
   margin: 0 0 ${rem(4)} 0;
   font-size: ${rem(12)};
   color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
 `
 
 export const PaymentMethodBox = styled.div`

@@ -4,6 +4,7 @@ import Product from "@/models/Product"
 import {
   AppMax,
   Container,
+  EconomyPrice,
   PaymentMethodBox,
   PaymentMethods,
   PaymentTitle,
@@ -66,6 +67,7 @@ export default function ProductBuyArea({
           {formatCurrency(product.portionPrice!)}
         </span>
       </PortionPrice>
+      <EconomyPrice>Economia de R$ 30,00</EconomyPrice>
       <ShippingBox>
         <TbTruckDelivery />
         <ShippingGroup>
