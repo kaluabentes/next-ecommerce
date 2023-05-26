@@ -2,8 +2,8 @@ import {
   RiCustomerService2Fill,
   RiRefund2Line,
   RiSecurePaymentLine,
-  RiTruckLine,
 } from "react-icons/ri"
+import { TbTruckDelivery } from "react-icons/tb"
 
 export default [
   {
@@ -16,7 +16,7 @@ export default [
     title: "Frete Grátis",
     description:
       "O produto será entregue no prazo de 7 a 10 dias, acompanhe seu pedido com código de rastreio.",
-    icon: <RiTruckLine />,
+    icon: <TbTruckDelivery />,
   },
   {
     title: "Suporte Profissional",

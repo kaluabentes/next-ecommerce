@@ -4,10 +4,11 @@ import styled, { css } from "styled-components"
 export const Container = styled.div<{ $margin?: string }>`
   display: flex;
   align-items: start;
-  gap: ${rem(14)};
+  gap: ${rem(10)};
 
   & svg {
-    font-size: ${rem(18)};
+    font-size: ${rem(22)};
+    color: ${(props) => props.theme.colors.secondary};
   }
 
   ${(props) =>

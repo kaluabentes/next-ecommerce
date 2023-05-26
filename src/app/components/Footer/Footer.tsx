@@ -21,9 +21,10 @@ import {
 import ContactMethod from "@/components/ContactMethod"
 import rem from "@/utilities/styles/rem"
 import menuItems from "@/config/menuItems"
-import { RiCustomerService2Fill } from "react-icons/ri"
+import { RiCustomerService2Fill, RiWhatsappLine } from "react-icons/ri"
 import footerMenuItems from "@/config/footerMenuItems"
 import createKey from "@/utilities/array/createKey"
+import { BiMailSend, BiMap, BiPhone } from "react-icons/bi"
 
 export default function Footer() {
   return (
@@ -34,17 +35,17 @@ export default function Footer() {
             <Image src="/logo.svg" alt="Droptron" />
             <Title>Atendimento ao Cliente</Title>
             <ContactMethod
-              icon={<BsChatLeftFill />}
+              icon={<BiMailSend />}
               text="kaluxshop01@gmail.com"
               margin={`0 0 ${rem(16)} 0`}
             />
             <ContactMethod
-              icon={<BsWhatsapp />}
+              icon={<RiWhatsappLine />}
               text="(92) 98146-7183"
               margin={`0 0 ${rem(16)} 0`}
             />
             <ContactMethod
-              icon={<BsPinMapFill />}
+              icon={<BiMap />}
               text={
                 <>
                   Rua Abel Botelho, 273, Flores, Manaus / AM
