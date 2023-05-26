@@ -29,16 +29,23 @@ import {
 import formatCurrency from "@/utilities/number/formatCurrency"
 import { TbTruckDelivery } from "react-icons/tb"
 import Button from "@/components/Button"
+import { useState } from "react"
+import useShowOnScroll from "@/hooks/useShowOnScroll"
 
 interface ProductBuyAreaProps {
   product: Product
+  fixed?: boolean
 }
 
-export default function ProductBuyArea({ product }: ProductBuyAreaProps) {
+export default function ProductBuyArea({
+  product,
+  fixed,
+}: ProductBuyAreaProps) {
+  const { isShow } = useShowOnScroll(940)
   const reviewsAverage = getAverage(product.reviews?.map((r) => r.rating)!)
 
   return (
-    <Container>
+    <Container $fixed={fixed} $isShow={isShow}>
       <Title>{product.name}</Title>
       <ReviewContainer>
         <ReviewRating>

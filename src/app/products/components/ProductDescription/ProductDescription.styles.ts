@@ -10,6 +10,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${rem(16)};
+  max-width: ${rem(758)};
 
   & img {
     width: 100%;
@@ -28,7 +29,7 @@ export const Container = styled.div`
 
   & h3,
   & h4 {
-    line-height: 1.5em;
+    line-height: 1.3em;
   }
 
   & h3 {
