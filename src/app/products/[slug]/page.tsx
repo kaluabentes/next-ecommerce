@@ -4,7 +4,13 @@ import createKey from "@/utilities/array/createKey"
 import { Image } from "../components/PhotoGallery/PhotoGallery"
 import ContentContainer from "@/components/ContentContainer"
 import ProductBuyArea from "../components/ProductBuyArea"
-import { Grid, PageBox } from "../components/components"
+import {
+  ContentGrid,
+  Grid,
+  PageBox,
+  ShowOnlyInLarge,
+  ShowOnlyInSmall,
+} from "../components/components"
 import ProductDescription from "../components/ProductDescription"
 import Button from "@/components/Button"
 import { useEffect, useState } from "react"
@@ -49,12 +55,16 @@ export default async function ProductPage({ params }: any) {
       <PageBox>
         <Breadcrumbs items={breadcrumbs} />
         <Grid>
-          <PhotoGallery images={images as Image[]} />
-          <ProductBuyArea product={product} />
-        </Grid>
-        <Grid>
-          <ProductDescription content={product.content!} />
-          <ProductBuyArea fixed product={product} />
+          <ContentGrid>
+            <PhotoGallery images={images as Image[]} />
+            <ShowOnlyInSmall>
+              <ProductBuyArea product={product} />
+            </ShowOnlyInSmall>
+            <ProductDescription content={product.content!} />
+          </ContentGrid>
+          <ShowOnlyInLarge>
+            <ProductBuyArea product={product} />
+          </ShowOnlyInLarge>
         </Grid>
       </PageBox>
       <BuyNowButton />

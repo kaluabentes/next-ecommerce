@@ -97,8 +97,8 @@ export const PriceContainer = styled.div`
 
 export const Price = styled.p`
   margin: 0 0 0 0;
-  font-size: ${rem(32)};
-  font-weight: 500;
+  font-size: ${rem(42)};
+  font-weight: 700;
 `
 
 export const FromPrice = styled.p`

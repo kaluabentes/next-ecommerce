@@ -11,8 +11,8 @@ export const PageBox = styled.div`
   gap: ${rem(16)};
 
   ${mediaQuery(css`
-    padding: ${rem(32)} 0;
-    gap: ${rem(32)};
+    padding: ${rem(22)} 0;
+    gap: ${rem(22)};
   `)}
 `
 
@@ -24,6 +24,28 @@ export const Grid = styled.div`
   ${mediaQuery(css`
     flex-direction: row;
     align-items: start;
-    gap: ${rem(32)};
+    gap: ${rem(22)};
+  `)}
+`
+
+export const ContentGrid = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${rem(22)};
+`
+
+export const ShowOnlyInSmall = styled.div`
+  display: block;
+
+  ${mediaQuery(css`
+    display: none;
+  `)}
+`
+
+export const ShowOnlyInLarge = styled.div`
+  display: none;
+
+  ${mediaQuery(css`
+    display: block;
   `)}
 `

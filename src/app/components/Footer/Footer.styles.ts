@@ -41,6 +41,11 @@ export const Title = styled.h3`
 export const Image = styled.img`
   height: ${rem(50)};
   margin-bottom: ${rem(32)};
+  align-self: center;
+
+  ${mediaQuery(css`
+    align-self: initial;
+  `)}
 `
 
 export const Menu = styled.nav`

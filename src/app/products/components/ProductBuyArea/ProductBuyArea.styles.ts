@@ -8,11 +8,15 @@ import mediaQuery from "@/utilities/styles/mediaQuery"
 import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"
 
-export const Container = styled.div<{ $fixed?: boolean; $isShow?: boolean }>`
+export const Container = styled.div`
   padding: ${rem(16)};
   background-color: white;
   box-shadow: 0px 3px 3px 0.05px rgba(0, 0, 0, 0.05);
   border-radius: ${rem(8)};
+
+  position: sticky;
+  left: 0;
+  top: 0;
 
   & ${DiscountFlag} {
     margin-bottom: ${rem(16)};
@@ -41,27 +45,6 @@ export const Container = styled.div<{ $fixed?: boolean; $isShow?: boolean }>`
       font-size: ${rem(38)};
     }
   `)}
-
-  ${(props) =>
-    props.$fixed &&
-    css`
-      position: sticky;
-      left: 0;
-      top: 0;
-      max-width: 530px;
-      opacity: 0;
-      transition: 0.3s;
-      display: none;
-
-      ${props.$isShow &&
-      css`
-        opacity: 1;
-      `}
-
-      ${mediaQuery(css`
-        display: block;
-      `)}
-    `}
 `
 
 export const EconomyPrice = styled.p`
