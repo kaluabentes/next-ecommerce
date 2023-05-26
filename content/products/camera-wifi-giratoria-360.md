@@ -19,13 +19,13 @@ images:
 reviews:
   - {
       name: Celes Maria,
-      rating: 5,
+      rating: 4,
       comment: 'Já testei está funcionado só não coloquei o cartão de memoria ainda mas parece tudo ok obrigada ao vendedor recomendo o produto.',
       image: /reviews/celes-maria.webp,
     }
   - {
       name: Paulo Sergio,
-      rating: 5,
+      rating: 4,
       comment: 'Produto bom de ótima qualidade sem falar no preço né a entrega foi super rápida bem embalado gostei muito se der tudo certo vou comprar outras!',
       image: /reviews/paulo-sergio.webp,
     }

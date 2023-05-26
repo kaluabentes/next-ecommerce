@@ -21,7 +21,7 @@ images:
 reviews:
   - {
       name: Arthur Miguel,
-      rating: 5,
+      rating: 4,
       comment: 'Veio bem embalada, está funcionando tudo certo, super recomendo.',
       image: /reviews/arthur-miguel.webp,
     }
@@ -51,7 +51,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut volutpat
 
 Pellentesque ultrices urna ac eros dignissim, ut elementum metus luctus. Sed elit erat, iaculis a arcu non, vestibulum blandit risus. Mauris tincidunt, ipsum sit amet porttitor aliquet, ligula dolor semper orci, in mollis nibh ex ut nisi. Curabitur sed lectus eros. Phasellus eget nisi id ligula porttitor ultrices. Quisque quis elit non felis convallis gravida sed eu mi.
 
-![Recursos da camera](/products/bomba-eletrica-galao/photo-5.jpg)
+![Recursos da camera](/products/garrafa-termica-inteligente/photo-5.jpg)
 
 #### Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
@@ -64,6 +64,6 @@ Pellentesque ultrices urna ac eros dignissim, ut elementum metus luctus. Sed eli
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
-![Recursos da camera](/products/bomba-eletrica-galao/photo-3.jpg)
+![Recursos da camera](/products/garrafa-termica-inteligente/photo-3.jpg)
 
 Pellentesque ultrices urna ac eros dignissim, ut elementum metus luctus. Sed elit erat, iaculis a arcu non, vestibulum blandit risus. Mauris tincidunt, ipsum sit amet porttitor aliquet, ligula dolor semper orci, in mollis nibh ex ut nisi. Curabitur sed lectus eros. Phasellus eget nisi id ligula porttitor ultrices. Quisque quis elit non felis convallis gravida sed eu mi.

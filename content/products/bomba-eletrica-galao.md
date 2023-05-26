@@ -20,7 +20,7 @@ images:
 reviews:
   - {
       name: Thais Bastos,
-      rating: 4.6,
+      rating: 4,
       comment: 'Amei muito! Já chegou carregado, veio rápido e muito bem embalado. O produto é de ótima qualidade!',
       image: /reviews/thais-bastos.jpg,
     }

@@ -18,12 +18,15 @@ import {
 import RatingSummary from "./RatingSummary"
 import Button from "@/components/Button"
 import Review from "@/models/Review"
+import getAverage from "@/utilities/number/getAverage"
 
 interface ProductReviewsProps {
   reviews: Review[]
 }
 
 export default function ProductReviews({ reviews }: ProductReviewsProps) {
+  const averageRating = getAverage(reviews.map((r) => r.rating))
+
   return (
     <>
       <HeaderBox>
@@ -31,10 +34,10 @@ export default function ProductReviews({ reviews }: ProductReviewsProps) {
           <Title>Avaliação dos Clientes</Title>
           <RatingGrid>
             <RatingBox>
-              <Rating>5.0</Rating>
-              <ReviewStars rating={5} />
+              <Rating>{averageRating}</Rating>
+              <ReviewStars rating={averageRating} />
             </RatingBox>
-            <RatingSummary />
+            <RatingSummary reviews={reviews} />
           </RatingGrid>
         </MaxContainer>
       </HeaderBox>
