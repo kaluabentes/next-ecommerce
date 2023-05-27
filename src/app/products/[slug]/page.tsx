@@ -8,6 +8,7 @@ import {
   ContentGrid,
   Grid,
   PageBox,
+  ProductCarouselWrapper,
   ShowOnlyInLarge,
   ShowOnlyInSmall,
 } from "../components/components"
@@ -70,10 +71,13 @@ export default async function ProductPage({ params }: any) {
             <ProductBuyArea product={product} />
           </ShowOnlyInLarge>
         </Grid>
-        {/* <ProductsCarousel
-          title="Você também pode gostar"
-          products={filteredProducts}
-        /> */}
+
+        <ProductCarouselWrapper>
+          <ProductsCarousel
+            title="Você também pode gostar"
+            products={filteredProducts}
+          />
+        </ProductCarouselWrapper>
         <ProductReviews reviews={product.reviews!} />
       </PageBox>
       <BuyNowButton />

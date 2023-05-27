@@ -2,13 +2,6 @@ import { css, styled } from "styled-components"
 import ContentContainer from "../ContentContainer"
 import rem from "@/utilities/styles/rem"
 
-export const Wrapper = styled.div`
-  & [class^="ContentContainer"] {
-    padding-left: 0;
-    padding-right: 0;
-  }
-`
-
 export const Container = styled(ContentContainer)<{
   $margin?: string
 }>`

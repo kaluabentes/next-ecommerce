@@ -4,6 +4,13 @@ import mediaQuery from "@/utilities/styles/mediaQuery"
 import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"
 
+export const ProductCarouselWrapper = styled.div`
+  & [class^="ContentContainer"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+`
+
 export const PageBox = styled.div`
   display: flex;
   flex-direction: column;

@@ -3,7 +3,6 @@ import {
   Container,
   InnerContainer,
   SectionTitle,
-  Wrapper,
 } from "./HorizontalCarousel.styles"
 import ContentContainer from "../ContentContainer"
 
@@ -25,7 +24,7 @@ export default function HorizontalCarousel({
   title,
 }: HorizontalCarouselProps) {
   return (
-    <Wrapper>
+    <>
       {title && (
         <ContentContainer>
           <SectionTitle>{title}</SectionTitle>
@@ -36,6 +35,6 @@ export default function HorizontalCarousel({
           {children}
         </InnerContainer>
       </Container>
-    </Wrapper>
+    </>
   )
 }
