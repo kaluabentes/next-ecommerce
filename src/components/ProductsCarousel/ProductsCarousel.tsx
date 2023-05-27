@@ -23,7 +23,6 @@ export default function ProductsCarousel({
 
   return (
     <HorizontalCarousel
-      padding={padding}
       margin={margin}
       title={title}
       justifyContent="flex-start"
