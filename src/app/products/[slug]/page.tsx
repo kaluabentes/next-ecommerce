@@ -72,12 +72,11 @@ export default async function ProductPage({ params }: any) {
           </ShowOnlyInLarge>
         </Grid>
 
-        <ProductCarouselWrapper>
-          <ProductsCarousel
-            title="Você também pode gostar"
-            products={filteredProducts}
-          />
-        </ProductCarouselWrapper>
+        <ProductsCarousel
+          title="Você também pode gostar"
+          products={filteredProducts}
+          padding="0px"
+        />
         <ProductReviews reviews={product.reviews!} />
       </PageBox>
       <BuyNowButton />

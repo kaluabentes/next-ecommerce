@@ -11,6 +11,7 @@ interface HorizontalCarouselProps {
   justifyContent?: string
   gap?: number
   margin?: string
+  padding?: string
   title?: string
 }
 
@@ -21,16 +22,17 @@ export default function HorizontalCarousel({
   justifyContent,
   gap,
   margin,
+  padding,
   title,
 }: HorizontalCarouselProps) {
   return (
     <>
       {title && (
-        <ContentContainer>
+        <ContentContainer padding={padding}>
           <SectionTitle>{title}</SectionTitle>
         </ContentContainer>
       )}
-      <Container $margin={margin}>
+      <Container $margin={margin} padding={padding}>
         <InnerContainer $justifyContent={justifyContent} $gap={gap}>
           {children}
         </InnerContainer>
