@@ -18,7 +18,7 @@ export default function CollectionsCarousel({
   items,
 }: CollectionsCarouselProps) {
   return (
-    <HorizontalCarousel margin={`0px auto ${rem(32)} auto`}>
+    <HorizontalCarousel margin={`0 0 ${rem(16)} 0`}>
       {items.map((item, index) => (
         <Item key={createKey(index)}>
           <Image src={item.image} alt={item.title} />

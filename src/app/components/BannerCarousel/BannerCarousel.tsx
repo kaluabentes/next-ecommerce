@@ -16,6 +16,7 @@ import createKey from "@/utilities/array/createKey"
 import Product from "@/models/Product"
 import ProductHero from "./ProductHero"
 import { useRouter } from "next/navigation"
+import rem from "@/utilities/styles/rem"
 
 const DELAY = 5000
 
@@ -54,7 +55,7 @@ export default function BannerCarousel({
   }, [embla, handleSelect])
 
   return (
-    <Container componentRef={viewportRef}>
+    <Container ref={viewportRef}>
       <EmblaContainer>
         {heroProducts.map((product) => (
           <ProductHero

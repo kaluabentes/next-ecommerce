@@ -9,6 +9,7 @@ interface ContentContainerProps {
   className?: string
   componentRef?: any
   padding?: string
+  margin?: string
 }
 
 export default function ContentContainer({
@@ -16,9 +17,15 @@ export default function ContentContainer({
   className,
   componentRef,
   padding,
+  margin,
 }: ContentContainerProps) {
   return (
-    <Container ref={componentRef} className={className} $padding={padding}>
+    <Container
+      ref={componentRef}
+      className={className}
+      $padding={padding}
+      $margin={margin}
+    >
       {children}
     </Container>
   )

@@ -10,9 +10,8 @@ interface HorizontalCarouselProps {
   children: ReactNode
   justifyContent?: string
   gap?: number
-  margin?: string
-  padding?: string
   title?: string
+  margin?: string
 }
 
 export const CLASS_NAME = "horizontal-carousel"
@@ -21,18 +20,13 @@ export default function HorizontalCarousel({
   children,
   justifyContent,
   gap,
-  margin,
-  padding,
   title,
+  margin,
 }: HorizontalCarouselProps) {
   return (
     <>
-      {title && (
-        <ContentContainer padding={padding}>
-          <SectionTitle>{title}</SectionTitle>
-        </ContentContainer>
-      )}
-      <Container $margin={margin} padding={padding}>
+      {title && <SectionTitle>{title}</SectionTitle>}
+      <Container $margin={margin}>
         <InnerContainer $justifyContent={justifyContent} $gap={gap}>
           {children}
         </InnerContainer>

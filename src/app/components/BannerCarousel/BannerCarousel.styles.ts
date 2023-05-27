@@ -3,7 +3,7 @@ import mediaQuery from "@/utilities/styles/mediaQuery"
 import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"
 
-export const Container = styled(ContentContainer)`
+export const Container = styled.div`
   overflow: hidden;
   position: relative;
   margin-top: ${rem(16)};

@@ -1,14 +1,19 @@
 import { css, styled } from "styled-components"
 import ContentContainer from "../ContentContainer"
 import rem from "@/utilities/styles/rem"
+import mediaQuery from "@/utilities/styles/mediaQuery"
 
-export const Container = styled(ContentContainer)<{
+export const Container = styled.div<{
   $margin?: string
 }>`
   overflow-y: hidden;
   overflow-x: auto;
   padding-top: ${rem(16)};
   padding-bottom: ${rem(16)};
+
+  ${mediaQuery(css`
+    overflow: visible;
+  `)}
 
   ${(props) =>
     props.$margin &&

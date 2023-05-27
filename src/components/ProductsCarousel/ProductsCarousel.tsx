@@ -10,18 +10,21 @@ interface ProductsCarouselProps {
   products: Product[]
   title: string
   padding?: string
+  margin?: string
 }
 
 export default function ProductsCarousel({
   products,
   title,
   padding,
+  margin,
 }: ProductsCarouselProps) {
   const router = useRouter()
 
   return (
     <HorizontalCarousel
       padding={padding}
+      margin={margin}
       title={title}
       justifyContent="flex-start"
       gap={16}

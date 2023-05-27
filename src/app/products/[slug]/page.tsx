@@ -76,6 +76,7 @@ export default async function ProductPage({ params }: any) {
           title="Você também pode gostar"
           products={filteredProducts}
           padding="0px"
+          margin="0px"
         />
         <ProductReviews reviews={product.reviews!} />
       </PageBox>

@@ -8,8 +8,8 @@ export const Container = styled(ContentContainer)`
   display: flex;
   flex-direction: column;
   gap: ${rem(32)};
-  padding-top: ${rem(40)};
-  padding-bottom: ${rem(40)};
+  padding-top: ${rem(32)};
+  padding-bottom: ${rem(32)};
 
   ${mediaQuery(css`
     flex-direction: row;

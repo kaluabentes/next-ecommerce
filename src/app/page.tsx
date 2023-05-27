@@ -6,6 +6,7 @@ import ProductsCarousel from "@/components/ProductsCarousel"
 import BannerCarousel from "./components/BannerCarousel"
 import CollectionsCarousel from "./components/CollectionsCarousel"
 import { getAllProducts } from "./api/products"
+import ContentContainer from "@/components/ContentContainer"
 
 export const metadata: Metadata = {
   title: "Kalux Shop",
@@ -30,10 +31,10 @@ export default async function Home() {
   ])
 
   return (
-    <>
+    <ContentContainer>
       <BannerCarousel products={products.reverse()} />
       <CollectionsCarousel items={collectionItems} />
       <ProductsCarousel title="Ofertas da semana" products={products} />
-    </>
+    </ContentContainer>
   )
 }
