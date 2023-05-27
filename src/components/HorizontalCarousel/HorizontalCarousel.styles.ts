@@ -5,7 +5,7 @@ import rem from "@/utilities/styles/rem"
 export const Wrapper = styled.div`
   & [class^="ContentContainer"] {
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 2px;
   }
 `
 
