@@ -70,10 +70,10 @@ export default async function ProductPage({ params }: any) {
             <ProductBuyArea product={product} />
           </ShowOnlyInLarge>
         </Grid>
-        <ProductsCarousel
+        {/* <ProductsCarousel
           title="Você também pode gostar"
           products={filteredProducts}
-        />
+        /> */}
         <ProductReviews reviews={product.reviews!} />
       </PageBox>
       <BuyNowButton />
