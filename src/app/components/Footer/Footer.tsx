@@ -89,7 +89,7 @@ export default function Footer() {
           <PaymentTitle>Pagamento seguro com</PaymentTitle>
         </PaymentContainer>
         <PaymentContainer>
-          <AppMax src="/appmax-dark.png" />
+          <AppMax src="/mercado-pago-dark.png" />
           <PaymentMethods src="/payment-methods-dark.png" />
         </PaymentContainer>
         <PaymentContainer>

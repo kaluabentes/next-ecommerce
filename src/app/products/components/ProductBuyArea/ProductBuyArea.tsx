@@ -84,7 +84,7 @@ export default function ProductBuyArea({
       </Button>
       <PaymentMethodBox>
         <PaymentTitle>Pagamento seguro com</PaymentTitle>
-        <AppMax src="/appmax.png" alt="Logo da AppMax" />
+        <AppMax src="/mercado-pago-logo.png" alt="Logo da AppMax" />
         <PaymentMethods
           src="/payment-methods.png"
           alt="Métodos de Pagamentos Aceitos"

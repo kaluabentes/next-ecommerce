@@ -83,7 +83,7 @@ export const PaymentContainer = styled.div`
 `
 
 export const AppMax = styled.img`
-  height: ${rem(50)};
+  height: ${rem(40)};
 `
 
 export const PaymentMethods = styled.img`

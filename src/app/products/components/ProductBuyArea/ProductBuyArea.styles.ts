@@ -116,7 +116,7 @@ export const ShippingText = styled.p`
 `
 
 export const PaymentTitle = styled.p`
-  margin: 0 0 ${rem(4)} 0;
+  margin: 0 0 ${rem(16)} 0;
   font-size: ${rem(12)};
   color: rgba(0, 0, 0, 0.6);
   font-weight: 500;
@@ -130,6 +130,7 @@ export const PaymentMethodBox = styled.div`
 
 export const AppMax = styled.img`
   height: 50px;
+  margin: 0 0 ${rem(16)} 0;
 `
 
 export const PaymentMethods = styled.img`
