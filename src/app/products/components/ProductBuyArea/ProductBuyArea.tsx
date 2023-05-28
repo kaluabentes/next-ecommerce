@@ -73,7 +73,7 @@ export default function ProductBuyArea({
       <ShippingBox>
         <TbTruckDelivery />
         <ShippingGroup>
-          <ShippingTitle>Calcular prazo de entrega</ShippingTitle>
+          <ShippingTitle>Prazo de entrega entre 15 a 30 dias</ShippingTitle>
           <ShippingText>
             Compre sem preocupação, o frete é por nossa conta.
           </ShippingText>

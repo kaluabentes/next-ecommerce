@@ -8,13 +8,10 @@ import {
   ContentGrid,
   Grid,
   PageBox,
-  ProductCarouselWrapper,
   ShowOnlyInLarge,
   ShowOnlyInSmall,
 } from "../components/components"
 import ProductDescription from "../components/ProductDescription"
-import Button from "@/components/Button"
-import { useEffect, useState } from "react"
 import BuyNowButton from "../components/BuyNowButton/BuyNowButton"
 import Breadcrumbs, {
   BreadcrumbItem,

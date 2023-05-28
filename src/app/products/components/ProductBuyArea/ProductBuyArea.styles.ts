@@ -97,20 +97,15 @@ export const ShippingBox = styled.div`
 
 export const ShippingGroup = styled.div``
 
-export const ShippingTitle = styled.button`
+export const ShippingTitle = styled.p`
   font-size: ${rem(16)};
   color: ${(props) => props.theme.colors.primary};
   margin: 0 0 ${rem(4)} 0;
-  cursor: pointer;
   padding: 0;
   background: transparent;
   border: 0;
   outline: 0;
   font-weight: 700;
-
-  &:hover {
-    color: ${(props) => props.theme.colors.greenvogue};
-  }
 `
 
 export const ShippingText = styled.p`
