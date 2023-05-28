@@ -22,6 +22,10 @@ import Breadcrumbs, {
 import ProductReviews from "../components/ProductReviews"
 import ProductsCarousel from "@/components/ProductsCarousel"
 
+interface ProductPageProps {
+  params: { slug: string }
+}
+
 export async function generateStaticParams() {
   const products = await getAllProducts(["slug"])
 
@@ -30,7 +34,21 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function ProductPage({ params }: any) {
+export async function generateMetadata({ params }: ProductPageProps) {
+  const { slug } = params
+
+  const product = await getProductBySlug(slug)
+
+  return {
+    title: product.name,
+    description: product.heroDescription,
+    openGraph: {
+      images: [product.thumb],
+    },
+  }
+}
+
+export default async function ProductPage({ params }: ProductPageProps) {
   const { slug } = params
   const products = await getAllProducts()
   const product = await getProductBySlug(slug, "*")

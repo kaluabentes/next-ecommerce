@@ -73,13 +73,13 @@ export default function ProductBuyArea({
       <ShippingBox>
         <TbTruckDelivery />
         <ShippingGroup>
-          <ShippingTitle>FRETE GRÁTIS</ShippingTitle>
+          <ShippingTitle>Calcular prazo de entrega</ShippingTitle>
           <ShippingText>
             Compre sem preocupação, o frete é por nossa conta.
           </ShippingText>
         </ShippingGroup>
       </ShippingBox>
-      <Button variant="secondary" size="lg" full>
+      <Button className="buy-now" variant="secondary" size="lg" full>
         Comprar agora
       </Button>
       <PaymentMethodBox>

@@ -9,7 +9,7 @@ export const BuyNowButtonBox = styled.div<{ $isShow: boolean }>`
   bottom: 0;
   left: 0;
   width: calc(100% - 64px - 10px);
-  z-index: 100;
+  z-index: 0;
   opacity: 0.2;
   visibility: hidden;
   transition: 0.3s;

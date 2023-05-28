@@ -1,3 +1,4 @@
+import Button from "@/components/Button"
 import {
   DiscountFlag,
   FromPrice,
@@ -34,7 +35,7 @@ export const Container = styled.div`
     margin-bottom: ${rem(12)};
   }
 
-  & button {
+  & .buy-now {
     margin-bottom: ${rem(32)};
   }
 
@@ -96,10 +97,20 @@ export const ShippingBox = styled.div`
 
 export const ShippingGroup = styled.div``
 
-export const ShippingTitle = styled.h3`
+export const ShippingTitle = styled.button`
   font-size: ${rem(16)};
-  color: ${(props) => props.theme.colors.greenvogue};
+  color: ${(props) => props.theme.colors.primary};
   margin: 0 0 ${rem(4)} 0;
+  cursor: pointer;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-weight: 700;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.greenvogue};
+  }
 `
 
 export const ShippingText = styled.p`
