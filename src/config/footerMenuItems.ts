@@ -8,7 +8,11 @@ export default [
     path: "/privacy-policy",
   },
   {
-    label: "Política de Trocas e Devoluções",
-    path: "/exchanges-and-returns-policy",
+    label: "Política de Troca",
+    path: "/exchange-policy",
+  },
+  {
+    label: "Política de Reembolso",
+    path: "/refund-policy",
   },
 ]

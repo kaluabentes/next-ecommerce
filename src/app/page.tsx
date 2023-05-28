@@ -9,7 +9,7 @@ import { getAllProducts } from "./api/products"
 import ContentContainer from "@/components/ContentContainer"
 
 export const metadata: Metadata = {
-  title: "Kalux Shop",
+  title: "Bem-vindo à Kalux - Sua Loja Online de Variedades",
   description:
     "Bem-vindo à nossa loja online onde você encontrará uma ampla variedade de produtos cuidadosamente selecionados para atender às suas necessidades e desejos.",
 }

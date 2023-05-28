@@ -41,7 +41,10 @@ export default function AppLayout({ children }: AppLayoutProps) {
             items={menuItems}
             isOpen={isMenuOpen}
             onMenuToggle={handleMenuToggle}
-            onNavClick={(path: string) => router.push(path)}
+            onNavClick={(path: string) => {
+              setIsMenuOpen(false)
+              router.push(path)
+            }}
           />
           <Main>{children}</Main>
           <Benefits items={benefitItems} />

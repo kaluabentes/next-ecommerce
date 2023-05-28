@@ -10,6 +10,7 @@ interface ContentContainerProps {
   componentRef?: any
   padding?: string
   margin?: string
+  size?: "md" | "lg"
 }
 
 export default function ContentContainer({
@@ -18,6 +19,7 @@ export default function ContentContainer({
   componentRef,
   padding,
   margin,
+  size = "lg",
 }: ContentContainerProps) {
   return (
     <Container
@@ -25,6 +27,7 @@ export default function ContentContainer({
       className={className}
       $padding={padding}
       $margin={margin}
+      $size={size}
     >
       {children}
     </Container>

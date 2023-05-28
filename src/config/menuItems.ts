@@ -41,8 +41,4 @@ export default [
     label: "Perguntas Frequentes",
     path: "/faq",
   },
-  {
-    label: "Entrar em contato",
-    path: "/contact",
-  },
 ]

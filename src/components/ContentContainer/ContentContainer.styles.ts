@@ -5,8 +5,8 @@ import styled, { css } from "styled-components"
 export const Container = styled.div<{
   $padding?: string
   $margin?: string
+  $size?: "md" | "lg"
 }>`
-  max-width: 1400px;
   padding: 0 ${rem(16)};
   margin-left: auto;
   margin-right: auto;
@@ -19,5 +19,18 @@ export const Container = styled.div<{
     props.$padding &&
     css`
       padding: ${props.$padding};
+    `}
+
+  ${(props) =>
+    props.$size === "lg" &&
+    css`
+      max-width: 1400px;
+    `}
+
+  ${(props) =>
+    props.$size === "md" &&
+    css`
+      padding: ${props.$padding};
+      max-width: 700px;
     `}
 `

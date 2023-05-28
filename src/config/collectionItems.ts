@@ -20,7 +20,7 @@ export default [
     image: "/collections/beleza-saude.png",
   },
   {
-    title: "Pet",
+    title: "Relógios",
     image: "/collections/relogios.png",
   },
 ]

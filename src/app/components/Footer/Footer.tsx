@@ -25,8 +25,11 @@ import { RiCustomerService2Fill, RiWhatsappLine } from "react-icons/ri"
 import footerMenuItems from "@/config/footerMenuItems"
 import createKey from "@/utilities/array/createKey"
 import { BiMailSend, BiMap, BiPhone } from "react-icons/bi"
+import { useRouter } from "next/navigation"
 
 export default function Footer() {
+  const router = useRouter()
+
   return (
     <Container>
       <ContentContainer>
@@ -59,7 +62,12 @@ export default function Footer() {
             <Title>Menu de Princial</Title>
             <Menu>
               {menuItems.map((menu, index) => (
-                <MenuItem key={createKey(index)}>{menu.label}</MenuItem>
+                <MenuItem
+                  onClick={() => router.push(menu.path!)}
+                  key={createKey(index)}
+                >
+                  {menu.label}
+                </MenuItem>
               ))}
             </Menu>
           </Item>
@@ -67,7 +75,12 @@ export default function Footer() {
             <Title>Institucional</Title>
             <Menu>
               {footerMenuItems.map((menu, index) => (
-                <MenuItem key={createKey(index)}>{menu.label}</MenuItem>
+                <MenuItem
+                  onClick={() => router.push(menu.path!)}
+                  key={createKey(index)}
+                >
+                  {menu.label}
+                </MenuItem>
               ))}
             </Menu>
           </Item>
