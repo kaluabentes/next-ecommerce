@@ -25,6 +25,7 @@ export const Input = styled.input`
   height: 42px;
   border: 0;
   outline: 0;
+  width: 100px;
 `
 
 export const IconButton = styled.button`
