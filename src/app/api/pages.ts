@@ -56,12 +56,12 @@ export async function getAllPages(
   fields: string[] | "*" = "*"
 ): Promise<Page[]> {
   const slugs = getPageSlugs()
-  const products = slugs.map(async (slug) => await getPageBySlug(slug, fields))
-  const resolvedProducts = await Promise.all(products)
+  const pages = slugs.map(async (slug) => await getPageBySlug(slug, fields))
+  const resolvedPages = await Promise.all(pages)
 
-  resolvedProducts.sort((product1: Product, product2: Product) =>
-    product2.name! > product1.name! ? -1 : 1
+  resolvedPages.sort((page1: Page, page2: Page) =>
+    page2.title! > page1.title! ? -1 : 1
   )
 
-  return resolvedProducts
+  return resolvedPages
 }

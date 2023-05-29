@@ -1,7 +1,7 @@
 "use client"
 
 import ContentContainer from "@/components/ContentContainer"
-import { Container, Content, Title } from "./PageContent.styles"
+import { Content, Title } from "./PageContent.styles"
 
 interface PageContentProps {
   title: string
