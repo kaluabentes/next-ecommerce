@@ -30,20 +30,28 @@ import {
 import formatCurrency from "@/utilities/number/formatCurrency"
 import { TbTruckDelivery } from "react-icons/tb"
 import Button from "@/components/Button"
-import { useState } from "react"
-import useShowOnScroll from "@/hooks/useShowOnScroll"
+import useAddToCart from "@/app/products/useAddToCart"
+import { useCartContext } from "@/contexts/cart"
+import { useRouter } from "next/navigation"
 
 interface ProductBuyAreaProps {
   product: Product
   fixed?: boolean
 }
 
-export default function ProductBuyArea({
-  product,
-  fixed,
-}: ProductBuyAreaProps) {
-  const { isShow } = useShowOnScroll(940)
+export default function ProductBuyArea({ product }: ProductBuyAreaProps) {
+  const { cart, setCart } = useCartContext()
+  const router = useRouter()
   const reviewsAverage = getAverage(product.reviews?.map((r) => r.rating)!)
+
+  const handleBuyNow = () => {
+    setCart({
+      ...cart,
+      products: [...cart.products, product],
+    })
+
+    router.push("/cart")
+  }
 
   return (
     <Container>
@@ -79,7 +87,13 @@ export default function ProductBuyArea({
           </ShippingText>
         </ShippingGroup>
       </ShippingBox>
-      <Button className="buy-now" variant="secondary" size="lg" full>
+      <Button
+        className="buy-now"
+        variant="secondary"
+        size="lg"
+        onClick={handleBuyNow}
+        full
+      >
         Comprar agora
       </Button>
       <PaymentMethodBox>

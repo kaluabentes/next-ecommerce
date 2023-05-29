@@ -4,11 +4,16 @@ import { ReactNode } from "react"
 import { ThemeProvider } from "styled-components"
 
 import theme from "./styles/theme"
+import { CartContextProvider } from "@/contexts/cart"
 
 interface ProvidersProps {
   children: ReactNode
 }
 
 export default function Providers({ children }: ProvidersProps) {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>
+  return (
+    <ThemeProvider theme={theme}>
+      <CartContextProvider>{children}</CartContextProvider>
+    </ThemeProvider>
+  )
 }
