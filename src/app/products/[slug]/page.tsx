@@ -1,22 +1,22 @@
 import { getAllProducts, getProductBySlug } from "@/app/api/products"
-import PhotoGallery from "../components/PhotoGallery"
+import PhotoGallery from "./components/PhotoGallery"
 import createKey from "@/utilities/array/createKey"
-import { Image } from "../components/PhotoGallery/PhotoGallery"
+import { Image } from "./components/PhotoGallery/PhotoGallery"
 import ContentContainer from "@/components/ContentContainer"
-import ProductBuyArea from "../components/ProductBuyArea"
+import ProductBuyArea from "./components/ProductBuyArea"
 import {
   ContentGrid,
   Grid,
   PageBox,
   ShowOnlyInLarge,
   ShowOnlyInSmall,
-} from "../components/components"
-import ProductDescription from "../components/ProductDescription"
-import BuyNowButton from "../components/BuyNowButton/BuyNowButton"
+} from "./components/utils"
+import ProductDescription from "./components/ProductDescription"
+import BuyNowButton from "./components/BuyNowButton/BuyNowButton"
 import Breadcrumbs, {
   BreadcrumbItem,
-} from "../components/Breadcrumbs/Breadcrumbs"
-import ProductReviews from "../components/ProductReviews"
+} from "./components/Breadcrumbs/Breadcrumbs"
+import ProductReviews from "./components/ProductReviews"
 import ProductsCarousel from "@/components/ProductsCarousel"
 
 interface ProductPageProps {

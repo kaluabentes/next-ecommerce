@@ -1,6 +1,6 @@
 import ContentContainer from "@/components/ContentContainer"
 import { getAllPages, getPageBySlug } from "../api/pages"
-import ProductDescription from "../products/components/ProductDescription"
+import ProductDescription from "../products/[slug]/components/ProductDescription"
 import PageContent from "./components/PageContent"
 
 interface PageProps {

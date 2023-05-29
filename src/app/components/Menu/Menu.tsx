@@ -78,7 +78,10 @@ export default function Menu({
               <MenuItem
                 $isSub
                 key={String(itemIndex + 1)}
-                onClick={() => onNavClick(item.path!)}
+                onClick={() => {
+                  openDropdown(index)
+                  onNavClick(item.path!)
+                }}
               >
                 {item.label}
               </MenuItem>
