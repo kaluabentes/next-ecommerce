@@ -20,6 +20,11 @@ export const Container = styled.button<{
     border: 1px solid rgba(0, 0, 0, 0.3);
   }
 
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
   ${(props) =>
     props.$variant &&
     props.$variant === "primary" &&

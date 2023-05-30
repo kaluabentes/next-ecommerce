@@ -11,6 +11,7 @@ interface ButtonProps {
   full?: boolean
   onClick?: () => void
   className?: string
+  disabled?: boolean
 }
 
 export default function Button({
@@ -20,6 +21,7 @@ export default function Button({
   full,
   onClick,
   className,
+  disabled,
 }: ButtonProps) {
   return (
     <Container
@@ -28,6 +30,7 @@ export default function Button({
       $variant={variant}
       $full={full}
       onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </Container>

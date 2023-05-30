@@ -7,19 +7,31 @@ import {
 } from "./CartContextProvider"
 import Product from "@/models/Product"
 
-export default function useCartContext(): {
+interface CartContextApi {
   cart: CartState
   totalProductsAmount: number
+  totalProductsPrice: number
+  totalEconomyPrice: number
   addProduct: (product: Product) => void
   changeQuantity: (slug: string, value: number) => void
   incrementQuantity: (slug: string) => void
   decrementQuantity: (slug: string) => void
   removeProduct: (slug: string) => void
-} {
+}
+
+export default function useCartContext(): CartContextApi {
   const { setCart } = useContext(CartActionContext)
   const cart = useContext(CartValueContext)
   const totalProductsAmount = cart.products.reduce(
     (prev, curr) => prev + (curr?.quantity || 0),
+    0
+  )
+  const totalProductsPrice = cart.products.reduce(
+    (prev, curr) => prev + (curr.price || 0) * (curr.quantity || 0),
+    0
+  )
+  const totalEconomyPrice = cart.products.reduce(
+    (prev, curr) => prev + (curr.economyPrice || 0) * (curr.quantity || 0),
     0
   )
 
@@ -92,6 +104,8 @@ export default function useCartContext(): {
   return {
     cart,
     totalProductsAmount,
+    totalProductsPrice,
+    totalEconomyPrice,
     addProduct,
     incrementQuantity,
     decrementQuantity,
