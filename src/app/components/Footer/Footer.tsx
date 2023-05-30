@@ -93,7 +93,7 @@ export default function Footer() {
           <PaymentMethods src="/payment-methods-dark.png" />
         </PaymentContainer>
         <PaymentContainer>
-          <Copyright>&copy; Droptron | CNPJ: 0000-00000-0000-0001</Copyright>
+          <Copyright>&copy; Kalux | CNPJ: 0000-00000-0000-0001</Copyright>
         </PaymentContainer>
       </ContentContainer>
       <ChatButton>
