@@ -21,14 +21,14 @@ import {
 import SearchField from "./SearchField"
 import theme from "@/app/styles/theme"
 import useIsMounted from "@/hooks/useIsMounted"
-import { useCartContext } from "@/contexts/cart"
+import useCartContext from "@/contexts/cart/useCartContext"
 
 interface HeaderProps {
   onMenuClick: () => void
 }
 
 export default function Header({ onMenuClick }: HeaderProps) {
-  const { cart } = useCartContext()
+  const { totalProductsAmount } = useCartContext()
   const router = useRouter()
 
   const { isMounted } = useIsMounted()
@@ -66,7 +66,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
             </IconButton>
             <BasketButton
               onClick={() => router.push("/cart")}
-              count={cart.products.length}
+              count={totalProductsAmount}
             />
           </IconGroup>
         </TopContainer>

@@ -13,18 +13,20 @@ export interface CartProduct extends Product {
   quantity?: number
 }
 
-interface CartState {
+export interface CartState {
   products: CartProduct[]
   isReady: boolean
 }
 
-interface CartStateParam {
+export interface CartStateParam {
   products?: CartProduct[]
   isReady?: boolean
 }
 
+type Callback = (prevState: CartState) => CartState
+
 const DEFAULT_ACTION_STATE = {
-  setCart: (cart: CartStateParam) => {},
+  setCart: (callback: Callback) => {},
 }
 
 const DEFAULT_VALUE_STATE = {
@@ -35,16 +37,25 @@ const DEFAULT_VALUE_STATE = {
 export const CartValueContext = createContext<CartState>(DEFAULT_VALUE_STATE)
 export const CartActionContext = createContext(DEFAULT_ACTION_STATE)
 
-export const CartContextProvider = ({ children }: { children: ReactNode }) => {
+export default function CartContextProvider({
+  children,
+}: {
+  children: ReactNode
+}) {
   const [state, setState] = useState<CartState>(DEFAULT_VALUE_STATE)
 
   if (process.env.NODE_ENV === "development") {
     console.log("cart state", state)
   }
 
-  const mutateState = (newState: CartStateParam) => {
-    localStorage.setItem(`kalux.cart`, JSON.stringify(newState))
-    setState(newState as CartState)
+  const mutateState = (callback: Callback) => {
+    setState((prev: CartState) => {
+      const newState = callback(prev)
+
+      localStorage.setItem(`kalux.cart`, JSON.stringify(newState))
+
+      return newState
+    })
   }
 
   useEffect(() => {
@@ -70,18 +81,4 @@ export const CartContextProvider = ({ children }: { children: ReactNode }) => {
       </CartActionContext.Provider>
     </CartValueContext.Provider>
   )
-}
-
-export const useCartContext = (): {
-  setCart: (state: CartStateParam) => void
-  cart: CartState
-} => {
-  const { setCart } = useContext(CartActionContext)
-  const cart = useContext(CartValueContext)
-
-  if (!setCart || !cart) {
-    throw new Error("Wrap CartContextProvider in the root component")
-  }
-
-  return { setCart, cart }
 }

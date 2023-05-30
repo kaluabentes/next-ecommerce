@@ -1,6 +1,26 @@
 "use client"
 
 import Product from "@/models/Product"
+import getAverage from "@/utilities/number/getAverage"
+import ReviewStars from "@/components/ReviewStars/ReviewStars"
+import {
+  FromPrice,
+  FromText,
+  PortionPrice,
+  Price,
+  PriceContainer,
+  ReviewContainer,
+  ReviewRating,
+} from "@/components/ProductCard/ProductCard.styles"
+import formatCurrency from "@/utilities/number/formatCurrency"
+import { TbTruckDelivery } from "react-icons/tb"
+import Button from "@/components/Button"
+import { useRouter } from "next/navigation"
+import Badge from "@/components/Badge"
+import rem from "@/utilities/styles/rem"
+import useCartContext from "@/contexts/cart/useCartContext"
+import BuyNowButton from "../BuyNowButton/BuyNowButton"
+
 import {
   AppMax,
   Container,
@@ -15,26 +35,6 @@ import {
   ShippingTitle,
   Title,
 } from "./ProductBuyArea.styles"
-import getAverage from "@/utilities/number/getAverage"
-import ReviewStars from "@/components/ReviewStars/ReviewStars"
-import {
-  DiscountFlag,
-  FromPrice,
-  FromText,
-  PortionPrice,
-  Price,
-  PriceContainer,
-  ReviewContainer,
-  ReviewRating,
-} from "@/components/ProductCard/ProductCard.styles"
-import formatCurrency from "@/utilities/number/formatCurrency"
-import { TbTruckDelivery } from "react-icons/tb"
-import Button from "@/components/Button"
-import { CartProduct, useCartContext } from "@/contexts/cart"
-import { useRouter } from "next/navigation"
-import Badge from "@/components/Badge"
-import rem from "@/utilities/styles/rem"
-import BuyNowButton from "../BuyNowButton/BuyNowButton"
 
 interface ProductBuyAreaProps {
   product: Product
@@ -42,7 +42,7 @@ interface ProductBuyAreaProps {
 }
 
 export default function ProductBuyArea({ product }: ProductBuyAreaProps) {
-  const { cart, setCart } = useCartContext()
+  const { cart, incrementQuantity, addProduct } = useCartContext()
   const router = useRouter()
   const reviewsAverage = getAverage(product.reviews?.map((r) => r.rating)!)
 
@@ -52,25 +52,14 @@ export default function ProductBuyArea({ product }: ProductBuyAreaProps) {
     )
 
     if (existingProduct) {
-      setCart({
-        ...cart,
-        products: cart.products.map((cartProduct: CartProduct) => {
-          if (cartProduct.slug === product.slug) {
-            return {
-              ...cartProduct,
-              quantity: cartProduct.quantity! + 1,
-            }
-          }
-        }) as CartProduct[],
-      })
+      incrementQuantity(product.slug!)
     } else {
-      setCart({
-        ...cart,
-        products: [...cart.products, { ...product, quantity: 0 }],
-      })
+      addProduct(product)
     }
 
-    router.push("/cart")
+    setTimeout(() => {
+      router.push("/cart")
+    }, 1000)
   }
 
   return (

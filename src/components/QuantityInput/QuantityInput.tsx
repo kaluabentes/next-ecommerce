@@ -1,19 +1,23 @@
-import { BiMinus, BiPlus } from "react-icons/bi"
+import { BiMinus, BiPlus, BiTrash } from "react-icons/bi"
 import { Button, Container, Quantity } from "./QuantityInput.styles"
-import { useEffect, useState } from "react"
+import { MouseEvent, useEffect, useState } from "react"
 
 interface QuantityInputProps {
   value: number
   className?: string
   onChange: (nextValue: number) => void
+  onRemove: () => void
 }
 
 export default function QuantityInput({
   value,
   onChange,
+  onRemove,
   className,
 }: QuantityInputProps) {
-  const handleSubtract = () => {
+  const handleSubtract = (event: MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation()
+
     const nextValue = value - 1
 
     if (nextValue <= 0) {
@@ -23,15 +27,17 @@ export default function QuantityInput({
     onChange(nextValue)
   }
 
-  const handleAdd = () => {
+  const handleAdd = (event: MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation()
+
     const nextValue = value + 1
     onChange(nextValue)
   }
 
   return (
     <Container className={["quantity-input", className].join(" ")}>
-      <Button onClick={handleSubtract}>
-        <BiMinus />
+      <Button onClick={value === 1 ? onRemove : handleSubtract}>
+        {value === 1 ? <BiTrash /> : <BiMinus />}
       </Button>
       <Quantity>{value}</Quantity>
       <Button onClick={handleAdd}>

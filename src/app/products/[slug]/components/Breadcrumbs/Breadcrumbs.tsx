@@ -5,6 +5,8 @@ import { Container, Item } from "./Breadcrumbs.styles"
 import { useRouter } from "next/navigation"
 import { useMediaQuery } from "react-responsive"
 import { useTheme } from "styled-components"
+import { Fragment } from "react"
+import createKey from "@/utilities/array/createKey"
 
 export interface BreadcrumbItem {
   path?: string
@@ -29,8 +31,8 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
 
   return (
     <Container>
-      {items.map((item) => (
-        <>
+      {items.map((item, index) => (
+        <Fragment key={createKey(index)}>
           <Item
             $current={item.current}
             disabled={item.current}
@@ -39,7 +41,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
             {item.title}
           </Item>
           <BiChevronRight />
-        </>
+        </Fragment>
       ))}
     </Container>
   )

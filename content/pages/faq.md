@@ -14,7 +14,7 @@ Sim, você poderá rastrear seu pedido. Assim que seu pedido for enviado, enviar
 
 **O que devo fazer se houver algum problema com o meu pedido?**
 
-Se houver algum problema com seu pedido, como produtos danificados ou não recebidos, entre em contato conosco imediatamente. Estamos aqui para ajudar! Envie-nos um e-mail ou entre em contato através do formulário de contato em nosso site. Faremos o possível para resolver qualquer problema o mais rápido possível.
+Se houver algum problema com seu pedido, como produtos danificados ou não recebidos, entre em contato conosco imediatamente. Estamos aqui para ajudar! Envie-nos um e-mail ou entre em contato através do WhatsApp ambos encontrados abaixo na seção de contato. Faremos o possível para resolver qualquer problema o mais rápido possível.
 
 **Vocês oferecem reembolsos ou trocas?**
 
@@ -28,7 +28,7 @@ Aceitamos diversas formas de pagamento, incluindo:
 - Cartões de crédito (Visa, Mastercard, American Express, entre outros)
 - Boleto
 
-Os pagamentos são processados de forma segura pelo Mercado Pago.
+Os pagamentos são processados de forma segura pelo **Mercado Pago**.
 
 **Como posso entrar em contato com o suporte ao cliente?**
 

@@ -57,8 +57,9 @@ export default function BannerCarousel({
   return (
     <Container ref={viewportRef}>
       <EmblaContainer>
-        {heroProducts.map((product) => (
+        {heroProducts.map((product, index) => (
           <ProductHero
+            key={createKey(index)}
             onDetailClick={() => router.push(`/products/${product.slug}`)}
             product={product}
           />

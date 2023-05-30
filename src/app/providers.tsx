@@ -4,7 +4,7 @@ import { ReactNode } from "react"
 import { ThemeProvider } from "styled-components"
 
 import theme from "./styles/theme"
-import { CartContextProvider } from "@/contexts/cart"
+import CartContextProvider from "@/contexts/cart/CartContextProvider"
 
 interface ProvidersProps {
   children: ReactNode

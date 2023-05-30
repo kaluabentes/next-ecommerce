@@ -7,10 +7,8 @@ export default function useShowOnScroll(limit: number) {
     const handle = () => {
       if (window.scrollY > limit) {
         setIsShow(true)
-        console.log(true)
       } else {
         setIsShow(false)
-        console.log(false)
       }
     }
 

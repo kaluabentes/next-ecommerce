@@ -3,15 +3,10 @@ import mediaQuery from "@/utilities/styles/mediaQuery"
 import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"
 
-export const Container = styled.button`
+export const Container = styled.div`
   display: flex;
   position: relative;
   width: 100%;
-  background: transparent;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
-  text-align: left;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
   & .quantity-input {
@@ -40,10 +35,16 @@ export const Image = styled.img`
   `)}
 `
 
-export const Title = styled.h3`
+export const Title = styled.button`
   font-size: ${rem(14)};
-  margin: 0 0 ${rem(12)} 0;
+  margin: 0 0 ${rem(16)} 0;
   font-weight: 500;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
 
   ${mediaQuery(css`
     font-size: ${rem(16)};
@@ -70,7 +71,7 @@ export const Content = styled.div`
   display: flex;
   align-items: start;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   padding: ${rem(16)};
   padding-left: 0;
 

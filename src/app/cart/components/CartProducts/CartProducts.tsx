@@ -2,8 +2,9 @@
 
 import { useRouter } from "next/navigation"
 import CartProduct from "../CartProduct/CartProduct"
-import { Box } from "./CartProducts.styles"
-import { useCartContext } from "@/contexts/cart"
+import { Box, EmptyStateBox, EmptyStateText } from "./CartProducts.styles"
+import useCartContext from "@/contexts/cart/useCartContext"
+import { BiCart } from "react-icons/bi"
 
 export default function CartProducts() {
   const { cart } = useCartContext()
@@ -11,9 +12,15 @@ export default function CartProducts() {
 
   return (
     <Box>
+      {!cart.products.length && (
+        <EmptyStateBox>
+          <BiCart />
+          <EmptyStateText>Seu carrinho de compras está vazio</EmptyStateText>
+        </EmptyStateBox>
+      )}
       {cart.products.map((product) => (
         <CartProduct
-          key={product.slug}
+          key={product?.slug}
           product={product}
           onClick={() => router.push(`/products/${product.slug}`)}
         />

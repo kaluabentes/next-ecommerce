@@ -20,7 +20,7 @@ export default function CartSummary() {
         <TotalLabel>Total</TotalLabel>
         <TotalValue>R$ 250,00</TotalValue>
       </TotalContainer>
-      <EconomyText>Você economizou R$ 40,00</EconomyText>
+      <EconomyText>Você economizou R$ 40,00 + Frete Grátis</EconomyText>
       <Badge variant="greenvogue" margin={`0 0 ${rem(28)} 0`}>
         Pague no PIX ou Cartão e receba 3 dias antes
       </Badge>

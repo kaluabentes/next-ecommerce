@@ -19,6 +19,7 @@ import RatingSummary from "./RatingSummary"
 import Button from "@/components/Button"
 import Review from "@/models/Review"
 import getAverage from "@/utilities/number/getAverage"
+import createKey from "@/utilities/array/createKey"
 
 interface ProductReviewsProps {
   reviews: Review[]
@@ -42,8 +43,8 @@ export default function ProductReviews({ reviews }: ProductReviewsProps) {
         </MaxContainer>
       </HeaderBox>
       <ReviewsGrid>
-        {reviews.map((review) => (
-          <ReviewItem>
+        {reviews.map((review, index) => (
+          <ReviewItem key={createKey(index)}>
             <ReviewItemImage src={review.image} alt={review.name} />
             <ReviewContent>
               <ReviewStars rating={review.rating} />
