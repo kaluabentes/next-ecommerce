@@ -86,7 +86,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <ProductBuyArea product={product} />
           </ShowOnlyInLarge>
         </Grid>
-
         <ProductsCarousel
           title="Você também pode gostar"
           products={filteredProducts}
@@ -95,7 +94,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
         />
         <ProductReviews reviews={product.reviews!} />
       </PageBox>
-      <BuyNowButton />
     </ContentContainer>
   )
 }

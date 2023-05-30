@@ -11,7 +11,7 @@ export default css`
   & h4,
   p,
   ul {
-    margin: 0 0 ${rem(32)} 0;
+    margin: 0 0 ${rem(22)} 0;
   }
 
   & p {
@@ -25,19 +25,7 @@ export default css`
   }
 
   & h3 {
-    font-size: ${rem(28)};
-
-    ${mediaQuery(css`
-      font-size: ${rem(32)};
-    `)}
-  }
-
-  & h4 {
     font-size: ${rem(22)};
-
-    ${mediaQuery(css`
-      font-size: ${rem(28)};
-    `)}
   }
 
   & ul,

@@ -30,9 +30,11 @@ import {
 import formatCurrency from "@/utilities/number/formatCurrency"
 import { TbTruckDelivery } from "react-icons/tb"
 import Button from "@/components/Button"
-import useAddToCart from "@/app/products/useAddToCart"
 import { useCartContext } from "@/contexts/cart"
 import { useRouter } from "next/navigation"
+import Badge from "@/components/Badge"
+import rem from "@/utilities/styles/rem"
+import BuyNowButton from "../BuyNowButton/BuyNowButton"
 
 interface ProductBuyAreaProps {
   product: Product
@@ -63,7 +65,7 @@ export default function ProductBuyArea({ product }: ProductBuyAreaProps) {
         <ReviewStars rating={reviewsAverage} />
       </ReviewContainer>
       <Separator />
-      <DiscountFlag $static>{product.discount}</DiscountFlag>
+      <Badge margin={`0 0 ${rem(10)} 0`}>{product.discount}</Badge>
       <FromText>A partir de</FromText>
       <PriceContainer>
         <Price>{formatCurrency(product.price!)}</Price>
@@ -75,9 +77,9 @@ export default function ProductBuyArea({ product }: ProductBuyAreaProps) {
           {formatCurrency(product.portionPrice!)}
         </span>
       </PortionPrice>
-      <EconomyPrice>
+      <Badge variant="greenvogue" margin={`0 0 ${rem(32)} 0`}>
         Economia de {formatCurrency(product.economyPrice!)}
-      </EconomyPrice>
+      </Badge>
       <ShippingBox>
         <TbTruckDelivery />
         <ShippingGroup>
@@ -104,6 +106,7 @@ export default function ProductBuyArea({ product }: ProductBuyAreaProps) {
           alt="Métodos de Pagamentos Aceitos"
         />
       </PaymentMethodBox>
+      <BuyNowButton onClick={handleBuyNow} />
     </Container>
   )
 }

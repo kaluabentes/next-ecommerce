@@ -27,7 +27,7 @@ Para os fins desta Política de Privacidade:
 - **"Tratamento de Dados Pessoais":** significa qualquer operação efetuada no âmbito dos Dados Pessoais, por meio de meios automáticos ou não, tal como a recolha, gravação, organização, estruturação, armazenamento, adaptação ou alteração, recuperação, consulta, utilização, divulgação por transmissão, disseminação ou, alternativamente, disponibilização, harmonização ou associação, restrição, eliminação ou destruição. Também é considerado Tratamento de Dados Pessoais qualquer outra operação prevista nos termos da legislação aplicável;
 - **"Leis de Proteção de Dados":** significa todas as disposições legais que regulam o Tratamento de Dados Pessoais, incluindo, porém sem se limitar, a Lei nº 13.709/18, Lei Geral de Proteção de Dados Pessoais ("LGPD").
 
-**- Seção 2 - Uso de Dados Pessoais**
+**Seção 2 - Uso de Dados Pessoais**
 
 Coletamos e usamos Dados Pessoais para gerenciar seu relacionamento conosco e melhor atendê-lo quando você estiver adquirindo produtos e/ou serviços na loja, personalizando e melhorando sua experiência. Exemplos de como usamos os dados incluem:
 

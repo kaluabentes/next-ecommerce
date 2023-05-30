@@ -1,4 +1,5 @@
 import React, { ReactNode, useEffect, useRef } from "react"
+import { Container } from "./ClickOutside.styles"
 
 interface ClickOutsideProps {
   onClickOutside: () => void
@@ -27,8 +28,8 @@ export default function ClickOutside({
   }, [])
 
   return (
-    <div style={{ position: "relative" }} ref={containerRef}>
+    <Container style={{ position: "relative" }} ref={containerRef}>
       {children}
-    </div>
+    </Container>
   )
 }

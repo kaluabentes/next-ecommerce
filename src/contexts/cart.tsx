@@ -39,7 +39,7 @@ export const CartContextProvider = ({ children }: { children: ReactNode }) => {
   }
 
   const mutateState = (newState: CartStateParam) => {
-    localStorage.setItem(`kalux.Cart`, JSON.stringify(newState))
+    localStorage.setItem(`kalux.cart`, JSON.stringify(newState))
     setState(newState as CartState)
   }
 

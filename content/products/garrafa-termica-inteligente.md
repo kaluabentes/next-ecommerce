@@ -55,7 +55,7 @@ Pellentesque ultrices urna ac eros dignissim, ut elementum metus luctus. Sed eli
 
 ![Recursos da camera](/products/garrafa-termica-inteligente/photo-5.jpg)
 
-#### Lorem ipsum dolor sit amet, consectetur adipiscing elit
+### Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit

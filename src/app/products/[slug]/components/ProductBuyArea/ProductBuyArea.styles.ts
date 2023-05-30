@@ -19,10 +19,6 @@ export const Container = styled.div`
   left: 0;
   top: 0;
 
-  & ${DiscountFlag} {
-    margin-bottom: ${rem(16)};
-  }
-
   & ${Price} {
     font-size: ${rem(32)};
   }
