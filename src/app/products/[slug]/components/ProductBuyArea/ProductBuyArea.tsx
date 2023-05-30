@@ -30,7 +30,7 @@ import {
 import formatCurrency from "@/utilities/number/formatCurrency"
 import { TbTruckDelivery } from "react-icons/tb"
 import Button from "@/components/Button"
-import { useCartContext } from "@/contexts/cart"
+import { CartProduct, useCartContext } from "@/contexts/cart"
 import { useRouter } from "next/navigation"
 import Badge from "@/components/Badge"
 import rem from "@/utilities/styles/rem"
@@ -47,10 +47,28 @@ export default function ProductBuyArea({ product }: ProductBuyAreaProps) {
   const reviewsAverage = getAverage(product.reviews?.map((r) => r.rating)!)
 
   const handleBuyNow = () => {
-    setCart({
-      ...cart,
-      products: [...cart.products, product],
-    })
+    const existingProduct = cart.products.find(
+      (cartProduct) => cartProduct.slug === product.slug
+    )
+
+    if (existingProduct) {
+      setCart({
+        ...cart,
+        products: cart.products.map((cartProduct: CartProduct) => {
+          if (cartProduct.slug === product.slug) {
+            return {
+              ...cartProduct,
+              quantity: cartProduct.quantity! + 1,
+            }
+          }
+        }) as CartProduct[],
+      })
+    } else {
+      setCart({
+        ...cart,
+        products: [...cart.products, { ...product, quantity: 0 }],
+      })
+    }
 
     router.push("/cart")
   }

@@ -9,13 +9,17 @@ import {
 
 import Product from "@/models/Product"
 
+export interface CartProduct extends Product {
+  quantity?: number
+}
+
 interface CartState {
-  products: Product[]
+  products: CartProduct[]
   isReady: boolean
 }
 
 interface CartStateParam {
-  products?: Product[]
+  products?: CartProduct[]
   isReady?: boolean
 }
 

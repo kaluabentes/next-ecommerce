@@ -6,7 +6,7 @@ description: Reunimos aqui diversas perguntas frequentes feitas pelos nossos cli
 
 **Quanto tempo leva para o meu pedido ser entregue?**
 
-O tempo de entrega pode variar dependendo do local de entrega e do produto adquirido. Normalmente, nosso prazo de processamento é de 1 a 3 dias úteis. Após o envio, o prazo de entrega estimado é de 7 a 14 dias úteis. No entanto, tenha em mente que esses prazos podem ser afetados por circunstâncias imprevistas, como feriados ou problemas logísticos.
+O tempo de entrega pode variar dependendo do local de entrega e do produto adquirido. Normalmente, nosso prazo de processamento é de 1 a 3 dias úteis. Após o envio, o prazo de entrega estimado é de 15 a 30 dias úteis. No entanto, tenha em mente que esses prazos podem ser afetados por circunstâncias imprevistas, como feriados ou problemas logísticos.
 
 **Posso rastrear o meu pedido?**
 
