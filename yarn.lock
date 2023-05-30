@@ -1180,6 +1180,11 @@
   dependencies:
     "@types/unist" "*"
 
+"@types/mercadopago@^1.5.8":
+  version "1.5.8"
+  resolved "https://registry.yarnpkg.com/@types/mercadopago/-/mercadopago-1.5.8.tgz#baa64963c8e563c62ecbfc9cb1546af52cf7b9c8"
+  integrity sha512-tamrRo4Z5IfLmWXDm72l7egxzQzhM5sJJtSH7n1z4EJsS71T0PddybGMZmMJp5GRiNJhbc9Ts6ZxIJ2jfxzM9Q==
+
 "@types/ms@*":
   version "0.7.31"
   resolved "https://registry.yarnpkg.com/@types/ms/-/ms-0.7.31.tgz#31b7ca6407128a3d2bbc27fe2d21b345397f6197"

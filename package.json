@@ -30,6 +30,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.195"
+    "@types/lodash": "^4.14.195",
+    "@types/mercadopago": "^1.5.8"
   }
 }
