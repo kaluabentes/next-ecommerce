@@ -1,5 +1,5 @@
 import ContentContainer from "@/components/ContentContainer"
-import { getAllPages, getPageBySlug } from "../api/pages"
+import { getAllPages, getPageBySlug } from "../content/pages"
 import ProductDescription from "../products/[slug]/components/ProductDescription"
 import PageContent from "./components/PageContent"
 

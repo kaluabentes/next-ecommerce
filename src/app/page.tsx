@@ -5,7 +5,7 @@ import ProductsCarousel from "@/components/ProductsCarousel"
 
 import BannerCarousel from "./components/BannerCarousel"
 import CollectionsCarousel from "./components/CollectionsCarousel"
-import { getAllProducts } from "./api/products"
+import { getAllProducts } from "./content/products"
 import ContentContainer from "@/components/ContentContainer"
 
 export const metadata: Metadata = {
