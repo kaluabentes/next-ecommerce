@@ -32,7 +32,11 @@ export default function PhotoGallery({ images }: PhotoGalleryProps) {
       </ActiveImageBox>
       <ThumbsBox>
         {images.map((image, index) => (
-          <ThumbButton onClick={() => setActiveImage(index)} key={image.src}>
+          <ThumbButton
+            $isActive={activeImage === index}
+            onClick={() => setActiveImage(index)}
+            key={image.src}
+          >
             <ThumbImage src={image.src} alt={image.alt} />
           </ThumbButton>
         ))}

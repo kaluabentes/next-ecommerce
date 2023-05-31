@@ -10,7 +10,6 @@ export const Container = styled.div`
   border-radius: ${rem(8)};
   display: flex;
   flex-direction: column;
-  max-width: ${rem(758)};
 
   ${typography}
 

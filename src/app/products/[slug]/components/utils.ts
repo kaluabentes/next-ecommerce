@@ -39,10 +39,12 @@ export const ContentGrid = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${rem(22)};
+  min-width: 60%;
 `
 
 export const ShowOnlyInSmall = styled.div`
   display: block;
+  width: 100%;
 
   ${mediaQuery(css`
     display: none;
@@ -52,6 +54,7 @@ export const ShowOnlyInSmall = styled.div`
 export const ShowOnlyInLarge = styled.div`
   display: none;
   align-self: stretch;
+  width: 100%;
 
   ${mediaQuery(css`
     display: block;

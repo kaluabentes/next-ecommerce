@@ -14,17 +14,18 @@ export const Container = styled.div`
   background-color: white;
   box-shadow: 0px 3px 3px 0.05px rgba(0, 0, 0, 0.05);
   border-radius: ${rem(8)};
+  min-width: 100%;
 
   position: sticky;
-  left: 0;
+  right: 0;
   top: 0;
 
   & ${Price} {
-    font-size: ${rem(32)};
+    font-size: ${rem(28)};
   }
 
   & ${FromPrice} {
-    font-size: ${rem(18)};
+    font-size: ${rem(16)};
   }
 
   & ${PortionPrice} {
@@ -37,10 +38,7 @@ export const Container = styled.div`
 
   ${mediaQuery(css`
     padding: ${rem(32)};
-
-    & ${Price} {
-      font-size: ${rem(38)};
-    }
+    min-width: 452px;
   `)}
 `
 
@@ -59,8 +57,9 @@ export const EconomyPrice = styled.p`
 export const Title = styled.h2`
   margin: 0;
   line-height: 1.3em;
-  font-size: ${rem(28)};
+  font-size: ${rem(25)};
   margin-bottom: ${rem(16)};
+  font-weight: 600;
 
   ${mediaQuery(css`
     font-size: ${rem(32)};
