@@ -84,6 +84,11 @@ export const PaymentContainer = styled.div`
 
 export const AppMax = styled.img`
   height: ${rem(40)};
+  margin-bottom: ${rem(16)};
+
+  ${mediaQuery(css`
+    margin-bottom: 0;
+  `)}
 `
 
 export const PaymentMethods = styled.img`
