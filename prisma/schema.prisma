@@ -43,7 +43,7 @@ model OrderProduct {
   id                String  @id @default(cuid())
   name String
   slug String
-  unityPrice Decimal
+  price Decimal
   quantity Int
   thumb String
   

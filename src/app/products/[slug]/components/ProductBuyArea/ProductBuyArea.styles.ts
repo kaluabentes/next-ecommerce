@@ -38,7 +38,7 @@ export const Container = styled.div`
 
   ${mediaQuery(css`
     padding: ${rem(32)};
-    min-width: 452px;
+    min-width: ${rem(470)};
   `)}
 `
 
