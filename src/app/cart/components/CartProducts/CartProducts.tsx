@@ -15,7 +15,7 @@ export default function CartProducts() {
       {!cart.products.length && (
         <EmptyStateBox>
           <BiCart />
-          <EmptyStateText>Seu carrinho de compras está vazio</EmptyStateText>
+          <EmptyStateText>Seu carrinho de compras está vazio.</EmptyStateText>
         </EmptyStateBox>
       )}
       {cart.products.map((product) => (

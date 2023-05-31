@@ -14,15 +14,11 @@ export const Box = styled.div`
 `
 
 export const EmptyStateBox = styled.div`
-  padding: ${rem(16)};
+  padding: ${rem(28)};
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  ${mediaQuery(css`
-    padding: ${rem(28)};
-  `)}
 
   & svg {
     font-size: ${rem(120)};
@@ -34,4 +30,5 @@ export const EmptyStateBox = styled.div`
 export const EmptyStateText = styled.p`
   margin: 0;
   font-weight: 500;
+  text-align: center;
 `
