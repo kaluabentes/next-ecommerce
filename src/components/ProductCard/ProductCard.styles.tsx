@@ -9,7 +9,7 @@ export const Image = styled.img`
 `
 
 export const Title = styled.h3`
-  font-size: ${rem(14)};
+  font-size: ${rem(16)};
   font-weight: 600;
   color: rgba(0, 0, 0, 0.8);
   margin: 0;

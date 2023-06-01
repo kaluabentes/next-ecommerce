@@ -3,7 +3,7 @@ import mediaQuery from "@/utilities/styles/mediaQuery"
 import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"
 
-export const Container = styled.div`
+export const Container = styled.div<{ $quantityAlignBottom?: boolean }>`
   display: flex;
   position: relative;
   width: 100%;
@@ -14,11 +14,12 @@ export const Container = styled.div`
     bottom: ${rem(16)};
     right: ${rem(16)};
 
-    ${mediaQuery(css`
-      bottom: 50%;
-      right: ${rem(28)};
-      transform: translateY(50%);
-    `)}
+    ${(props) =>
+      mediaQuery(css`
+        bottom: ${props.$quantityAlignBottom ? rem(28) : "50%"};
+        right: ${rem(28)};
+        transform: ${props.$quantityAlignBottom ? "none" : "translateY(50%)"};
+      `)}
   }
 `
 
@@ -38,7 +39,7 @@ export const Image = styled.img`
 export const Title = styled.button`
   font-size: ${rem(14)};
   margin: 0 0 ${rem(16)} 0;
-  font-weight: 500;
+  font-weight: 600;
   background: transparent;
   border: 0;
   outline: 0;
@@ -53,7 +54,7 @@ export const Title = styled.button`
 
 export const Price = styled.p`
   font-size: ${rem(18)};
-  font-weight: 600;
+  font-weight: 500;
   margin: 0;
 `
 
@@ -70,7 +71,6 @@ export const Content = styled.div`
   display: flex;
   align-items: start;
   flex-direction: column;
-  justify-content: start;
   padding: ${rem(16)};
   padding-left: 0;
 

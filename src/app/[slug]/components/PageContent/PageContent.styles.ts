@@ -17,6 +17,7 @@ export const Content = styled.div`
 export const Title = styled.h2`
   margin: ${rem(22)} 0;
   font-size: ${rem(22)};
+  font-weight: 600;
 
   ${mediaQuery(css`
     font-size: ${rem(32)};

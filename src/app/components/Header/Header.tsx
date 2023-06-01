@@ -28,7 +28,7 @@ interface HeaderProps {
 }
 
 export default function Header({ onMenuClick }: HeaderProps) {
-  const { totalProductsAmount } = useCartContext()
+  const { totalProductsQuantity } = useCartContext()
   const router = useRouter()
 
   const { isMounted } = useIsMounted()
@@ -66,7 +66,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
             </IconButton>
             <BasketButton
               onClick={() => router.push("/cart")}
-              count={totalProductsAmount}
+              count={totalProductsQuantity}
             />
           </IconGroup>
         </TopContainer>

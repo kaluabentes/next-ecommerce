@@ -9,7 +9,6 @@ export const Box = styled.div`
   background-color: white;
   border-radius: ${rem(8)};
   overflow: hidden;
-  flex: 1;
   width: 100%;
 `
 

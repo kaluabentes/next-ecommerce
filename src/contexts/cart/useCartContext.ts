@@ -9,7 +9,7 @@ import Product from "@/models/Product"
 
 interface CartContextApi {
   cart: CartState
-  totalProductsAmount: number
+  totalProductsQuantity: number
   totalProductsPrice: number
   totalEconomyPrice: number
   addProduct: (product: Product) => void
@@ -22,7 +22,7 @@ interface CartContextApi {
 export default function useCartContext(): CartContextApi {
   const { setCart } = useContext(CartActionContext)
   const cart = useContext(CartValueContext)
-  const totalProductsAmount = cart.products.reduce(
+  const totalProductsQuantity = cart.products.reduce(
     (prev, curr) => prev + (curr?.quantity || 0),
     0
   )
@@ -103,7 +103,7 @@ export default function useCartContext(): CartContextApi {
 
   return {
     cart,
-    totalProductsAmount,
+    totalProductsQuantity,
     totalProductsPrice,
     totalEconomyPrice,
     addProduct,

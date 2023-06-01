@@ -17,9 +17,14 @@ import {
 interface CartProductProps {
   product: CartProductType
   onClick: () => void
+  quantityAlignBottom?: boolean
 }
 
-export default function CartProduct({ product, onClick }: CartProductProps) {
+export default function CartProduct({
+  product,
+  onClick,
+  quantityAlignBottom,
+}: CartProductProps) {
   const { changeQuantity, removeProduct } = useCartContext()
   const [quantity, setQuantity] = useState(product?.quantity)
 
@@ -29,12 +34,14 @@ export default function CartProduct({ product, onClick }: CartProductProps) {
   }
 
   return (
-    <Container>
+    <Container $quantityAlignBottom={quantityAlignBottom}>
       <Image src={product?.thumb} alt={product?.name} />
       <Content>
         <Title onClick={onClick}>{product?.name}</Title>
-        <Price>{formatCurrency(product?.price!)}</Price>
-        <FromPrice>{formatCurrency(product?.fromPrice!)}</FromPrice>
+        <div>
+          <Price>{formatCurrency(product?.price!)}</Price>
+          <FromPrice>{formatCurrency(product?.fromPrice!)}</FromPrice>
+        </div>
       </Content>
       <QuantityInput
         onRemove={() => removeProduct(product?.slug!)}

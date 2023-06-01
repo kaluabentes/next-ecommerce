@@ -21,5 +21,8 @@ export const Field = styled.input<{ $margin?: string }>`
 
 export const Label = styled.label`
   display: block;
-  margin: 0 0 ${rem(4)} 0;
+  margin: 0 0 ${rem(8)} 0;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: ${rem(16)};
 `

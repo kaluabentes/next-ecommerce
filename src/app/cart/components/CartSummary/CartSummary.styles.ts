@@ -9,18 +9,18 @@ export const Container = styled.div`
   overflow: hidden;
   padding: ${rem(16)};
   width: 100%;
-  flex: 0.5;
   position: sticky;
 
   ${mediaQuery(css`
     padding: ${rem(28)};
-    max-width: ${rem(500)};
+    max-width: ${rem(470)};
   `)}
 `
 
 export const Title = styled.h3`
-  margin: 0 0 ${rem(32)} 0;
-  font-size: ${rem(22)};
+  margin: 0 0 ${rem(28)} 0;
+  font-size: ${rem(18)};
+  font-weight: 600;
 `
 
 export const TotalContainer = styled.div`
@@ -41,6 +41,7 @@ export const TotalLabel = styled.p`
   margin: 0;
   font-weight: 500;
   font-size: ${rem(16)};
+  color: rgba(0, 0, 0, 0.6);
 `
 
 export const TotalValue = styled.p<{ $fontSize?: string }>`

@@ -18,19 +18,19 @@ import formatCurrency from "@/utilities/number/formatCurrency"
 
 export default function CartSummary() {
   const router = useRouter()
-  const { totalProductsAmount, totalProductsPrice, totalEconomyPrice } =
+  const { totalProductsQuantity, totalProductsPrice, totalEconomyPrice } =
     useCartContext()
 
   return (
     <Container>
       <Title>Resumo</Title>
       <TotalContainer>
-        <TotalLabel>Total</TotalLabel>
-        <TotalValue>{formatCurrency(totalProductsPrice)}</TotalValue>
-      </TotalContainer>
-      <TotalContainer>
         <TotalLabel>Frete</TotalLabel>
         <TotalValue $fontSize={rem(16)}>Grátis</TotalValue>
+      </TotalContainer>
+      <TotalContainer>
+        <TotalLabel>Total</TotalLabel>
+        <TotalValue>{formatCurrency(totalProductsPrice)}</TotalValue>
       </TotalContainer>
       {/* <EconomyText>
         Você economizou {formatCurrency(totalEconomyPrice)} + Frete Grátis
@@ -40,7 +40,7 @@ export default function CartSummary() {
       </Badge> */}
       <Button
         variant="secondary"
-        disabled={!totalProductsAmount}
+        disabled={!totalProductsQuantity}
         onClick={() => router.push("/checkout")}
         full
       >
