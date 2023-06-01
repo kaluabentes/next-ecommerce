@@ -1,7 +1,8 @@
 "use client"
 
 import Input from "@/components/Input"
-import { Container, FormGrid, InputsGrid, Title } from "./ShippingForm.styles"
+import { Container, FormGrid, InputsGrid } from "./ShippingForm.styles"
+import { Title } from "../utils"
 
 export default function ShippingSummary() {
   return (

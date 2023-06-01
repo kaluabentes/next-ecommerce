@@ -23,16 +23,17 @@ export default function ShippingItemsResume({}: ShippingItemsResumeProps) {
 
   return (
     <Container>
-      <Title>Seu Pedido</Title>
-      {cart.products.map((product) => (
-        <CartProduct
-          key={product?.slug}
-          product={product}
-          onClick={() => router.push(`/products/${product.slug}`)}
-          quantityAlignBottom
-        />
-      ))}
       <SummaryBox>
+        <Title>Seu Pedido</Title>
+        {cart.products.map((product) => (
+          <CartProduct
+            key={product?.slug}
+            product={product}
+            onClick={() => router.push(`/products/${product.slug}`)}
+            quantityAlignBottom
+            removeXPadding
+          />
+        ))}
         <TotalContainer>
           <TotalLabel>Frete</TotalLabel>
           <TotalValue $fontSize={rem(16)}>Grátis</TotalValue>

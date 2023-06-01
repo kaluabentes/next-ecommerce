@@ -3,8 +3,9 @@ import { Metadata } from "next"
 import ContentContainer from "@/components/ContentContainer"
 import { Title } from "../[slug]/components/PageContent/PageContent.styles"
 import ShippingItemsResume from "./components/ShippingItemsResume"
-import { Grid } from "./components/utils"
+import { ContentGrid, Grid } from "./components/utils"
 import ShippingForm from "./components/ShippingForm"
+import PaymentForm from "./components/PaymentForm"
 
 export const metadata: Metadata = {
   title: "Finalize sua compra",
@@ -17,7 +18,10 @@ export default function Cart() {
     <ContentContainer>
       <Title>Finalize sua compra</Title>
       <Grid>
-        <ShippingForm />
+        <ContentGrid>
+          <ShippingForm />
+          <PaymentForm />
+        </ContentGrid>
         <ShippingItemsResume />
       </Grid>
     </ContentContainer>

@@ -18,7 +18,7 @@ export const Container = styled.div`
 `
 
 export const Title = styled.h3`
-  margin: 0 0 ${rem(28)} 0;
+  margin: 0 0 ${rem(4)} 0;
   font-size: ${rem(18)};
   font-weight: 600;
 `
@@ -28,9 +28,8 @@ export const TotalContainer = styled.div`
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 ${rem(16)} 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding-bottom: ${rem(16)};
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  padding: ${rem(16)} 0;
 
   &:last-of-type {
     border-bottom: 0;

@@ -18,12 +18,14 @@ interface CartProductProps {
   product: CartProductType
   onClick: () => void
   quantityAlignBottom?: boolean
+  removeXPadding?: boolean
 }
 
 export default function CartProduct({
   product,
   onClick,
   quantityAlignBottom,
+  removeXPadding,
 }: CartProductProps) {
   const { changeQuantity, removeProduct } = useCartContext()
   const [quantity, setQuantity] = useState(product?.quantity)
@@ -34,7 +36,10 @@ export default function CartProduct({
   }
 
   return (
-    <Container $quantityAlignBottom={quantityAlignBottom}>
+    <Container
+      $quantityAlignBottom={quantityAlignBottom}
+      $removeXPadding={removeXPadding}
+    >
       <Image src={product?.thumb} alt={product?.name} />
       <Content>
         <Title onClick={onClick}>{product?.name}</Title>
