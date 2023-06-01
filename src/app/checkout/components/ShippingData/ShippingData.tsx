@@ -8,7 +8,7 @@ export default function ShippingData() {
     <Container>
       <Title>Informações de entrega</Title>
       <InputsGrid>
-        <Input
+        {/* <Input
           id="name"
           label="Nome completo"
           placeholder="Digite seu nome completo"
@@ -29,7 +29,7 @@ export default function ShippingData() {
         <Input id="neighborhood" label="Bairro" />
         <Input id="street" label="Rua" />
         <Input id="number" label="Número" />
-        <Input id="complement" label="Complemento" />
+        <Input id="complement" label="Complemento" /> */}
       </InputsGrid>
     </Container>
   )
