@@ -1,5 +1,7 @@
 "use client"
 
+import { useRouter } from "next/navigation"
+
 import Badge from "@/components/Badge"
 import {
   Container,
@@ -15,6 +17,7 @@ import useCartContext from "@/contexts/cart/useCartContext"
 import formatCurrency from "@/utilities/number/formatCurrency"
 
 export default function CartSummary() {
+  const router = useRouter()
   const { totalProductsAmount, totalProductsPrice, totalEconomyPrice } =
     useCartContext()
 
@@ -25,13 +28,22 @@ export default function CartSummary() {
         <TotalLabel>Total</TotalLabel>
         <TotalValue>{formatCurrency(totalProductsPrice)}</TotalValue>
       </TotalContainer>
-      <EconomyText>
+      <TotalContainer>
+        <TotalLabel>Frete</TotalLabel>
+        <TotalValue $fontSize={rem(16)}>Grátis</TotalValue>
+      </TotalContainer>
+      {/* <EconomyText>
         Você economizou {formatCurrency(totalEconomyPrice)} + Frete Grátis
       </EconomyText>
-      <Badge variant="greenvogue" margin={`0 0 ${rem(28)} 0`}>
+      <Badge variant="greenvogue" margin={`0 0 ${rem(32)} 0`}>
         Pague no PIX ou Cartão e receba 3 dias antes
-      </Badge>
-      <Button variant="secondary" disabled={!totalProductsAmount} full>
+      </Badge> */}
+      <Button
+        variant="secondary"
+        disabled={!totalProductsAmount}
+        onClick={() => router.push("/checkout")}
+        full
+      >
         Finalizar Compra
       </Button>
     </Container>

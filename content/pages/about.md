@@ -1,8 +1,10 @@
 ---
-title: Bem-vindo à Kalux - Sua Loja Online de Variedades
+title: Bem-vindo à Kalux
 slug: about
 description: A Kalux é uma loja online dedicada a oferecer uma ampla variedade de produtos para atender às suas necessidades e desejos.
 ---
+
+### Sua Loja Online de Variedades
 
 A Kalux é uma loja online dedicada a oferecer uma ampla variedade de produtos para atender às suas necessidades e desejos. Nosso objetivo é proporcionar uma experiência de compra conveniente, segura e divertida para nossos clientes. Com uma seleção cuidadosamente curada de produtos de qualidade, estamos prontos para ajudá-lo a encontrar exatamente o que procura.
 

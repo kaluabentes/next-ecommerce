@@ -1,5 +1,5 @@
 ---
-title: Perguntas frequentes
+title: Política de privacidade
 slug: faq
 description: Kalux, pessoa jurídica de direito privado leva a sua privacidade a sério e zela pela segurança e proteção de dados de todos os seus clientes, parceiros, 
 ---

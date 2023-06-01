@@ -2,31 +2,13 @@ import styled, { css } from "styled-components"
 
 import rem from "@/utilities/styles/rem"
 
-import { IconButton } from "../Header.styles"
+import { IconButton, IconButtonLabel } from "../Header.styles"
 import mediaQuery from "@/utilities/styles/mediaQuery"
 
 export const OuterContainer = styled(IconButton)<{ count: number }>`
   display: flex;
   align-items: center;
   font-size: ${rem(28)};
-
-  & svg {
-    color: ${(props) => props.theme.colors.secondary};
-  }
-
-  &:hover {
-    color: white;
-
-    & svg {
-      color: yellowgreen;
-    }
-  }
-
-  ${(props) =>
-    props.count > 0 &&
-    css`
-      color: white;
-    `}
 
   ${mediaQuery(css`
     font-size: ${rem(32)};
@@ -53,4 +35,5 @@ export const Counter = styled.span`
   position: absolute;
   right: 0px;
   top: 0px;
+  color: white !important;
 `

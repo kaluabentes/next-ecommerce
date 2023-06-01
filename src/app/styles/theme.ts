@@ -9,6 +9,7 @@ export default {
     midnight: "#03214a",
     greenvogue: "#042c62",
     gray: "#f0f2f5",
+    gray800: "#323232",
   },
   breakpoints: {
     large: "821px",

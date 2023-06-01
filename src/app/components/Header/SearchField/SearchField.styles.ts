@@ -8,6 +8,7 @@ export const OuterContainer = styled.div`
 export const Container = styled.div`
   display: flex;
   background: white;
+  border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 8px;
   overflow: hidden;
   margin-top: ${rem(16)};
@@ -37,7 +38,7 @@ export const IconButton = styled.button`
   outline: 0;
   font-size: ${rem(28)};
   padding: 0 ${rem(12)};
-  color: ${(props) => props.theme.colors.secondary};
+  color: #323232;
   cursor: pointer;
 `
 

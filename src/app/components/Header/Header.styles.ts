@@ -5,7 +5,7 @@ import mediaQuery from "@/utilities/styles/mediaQuery"
 
 export const Container = styled.header`
   padding: ${rem(16)} 0;
-  background: ${(props) => props.theme.colors.greenvogue};
+  background: white;
   color: white;
 
   ${mediaQuery(css`
@@ -20,16 +20,14 @@ export const TopContainer = styled.div`
 
 export const IconButtonLabel = styled.p`
   margin: 0;
-  color: rgba(255, 255, 255, 0.7);
   font-size: ${rem(14)};
-  font-weight: 500;
+  font-weight: 700;
 `
 
 export const IconButton = styled.button`
   padding: 0;
   font-size: ${rem(28)};
   background: transparent;
-  color: rgba(255, 255, 255, 0.7);
   border: 0;
   outline: 0;
   cursor: pointer;
@@ -37,21 +35,14 @@ export const IconButton = styled.button`
   align-items: center;
   justify-content: center;
   gap: ${rem(8)};
+  color: ${(props) => props.theme.colors.gray800};
 
   & svg {
-    color: ${(props) => props.theme.colors.secondary};
+    color: ${(props) => props.theme.colors.gray800};
   }
 
   &:hover {
-    color: white;
-
-    & p {
-      color: white;
-    }
-
-    & svg {
-      color: yellowgreen;
-    }
+    color: #000;
   }
 
   ${mediaQuery(css`

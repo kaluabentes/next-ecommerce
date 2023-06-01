@@ -21,8 +21,6 @@ export const Image = styled.img`
   flex: 0 0 100%;
   min-width: 0;
   margin: 0 28px 0 28px;
-
-  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
   border-radius: ${rem(12)};
 `
 

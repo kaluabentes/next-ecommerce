@@ -57,8 +57,8 @@ export const FromText = styled.p`
   margin: 0;
   font-size: ${rem(12)};
   font-weight: 600;
-  color: ${(props) => props.theme.colors.secondaryVariant};
   margin-bottom: ${rem(4)};
+  color: ${(props) => props.theme.colors.secondary};
 `
 
 export const PriceSection = styled.div`

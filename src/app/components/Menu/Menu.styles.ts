@@ -31,6 +31,7 @@ export const Container = styled.div<{ $isOpen: boolean }>`
     width: 100%;
     display: flex;
     justify-content: center;
+    box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.07);
   `)}
 `
 
@@ -76,8 +77,8 @@ export const MenuItem = styled.button<{
   border: 0;
   padding: ${rem(16)};
   font-size: ${rem(14)};
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.7);
+  color: ${(props) => props.theme.colors.gray800};
+  font-weight: 600;
   text-align: left;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   cursor: pointer;
@@ -135,7 +136,7 @@ export const DropdownMenu = styled.div<{ $isOpen: boolean }>`
         width: 100%;
         margin-top: 48px;
         left: 0;
-        box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.07);
         background: white;
         display: flex;
         flex-direction: row;

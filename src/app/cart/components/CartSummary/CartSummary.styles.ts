@@ -27,20 +27,26 @@ export const TotalContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin: 0 0 ${rem(32)} 0;
+  align-items: center;
+  margin: 0 0 ${rem(16)} 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: ${rem(16)};
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
 `
 
 export const TotalLabel = styled.p`
   margin: 0;
-  font-weight: 600;
-  font-size: ${rem(18)};
+  font-weight: 500;
+  font-size: ${rem(16)};
 `
 
-export const TotalValue = styled.p`
+export const TotalValue = styled.p<{ $fontSize?: string }>`
   margin: 0;
-  color: ${(props) => props.theme.colors.secondary};
-  font-weight: 700;
-  font-size: ${rem(18)};
+  font-weight: 600;
+  font-size: ${(props) => (props.$fontSize ? props.$fontSize : rem(20))};
 `
 
 export const EconomyText = styled.p`

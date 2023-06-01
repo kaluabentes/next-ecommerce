@@ -52,10 +52,9 @@ export const Title = styled.button`
 `
 
 export const Price = styled.p`
-  font-size: ${rem(16)};
+  font-size: ${rem(18)};
   font-weight: 600;
   margin: 0;
-  color: ${(props) => props.theme.colors.secondary};
 `
 
 export const FromPrice = styled.p`

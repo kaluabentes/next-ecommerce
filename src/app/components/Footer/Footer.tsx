@@ -35,7 +35,7 @@ export default function Footer() {
       <ContentContainer>
         <FlexBox>
           <Item>
-            <Image src="/logo.svg" alt="Droptron" />
+            <Image src="/logo-dark.svg" alt="Droptron" />
             <Title>Atendimento ao Cliente</Title>
             <ContactMethod
               icon={<BiMailSend />}
@@ -59,7 +59,7 @@ export default function Footer() {
             />
           </Item>
           <Item>
-            <Title>Menu de Princial</Title>
+            <Title>Menu Princial</Title>
             <Menu>
               {menuItems.map((menu, index) => (
                 <MenuItem
