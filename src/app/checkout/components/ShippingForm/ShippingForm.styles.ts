@@ -23,3 +23,14 @@ export const InputsGrid = styled.div`
   flex-direction: column;
   gap: ${rem(18)};
 `
+
+export const FormGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: ${rem(16)};
+
+  ${mediaQuery(css`
+    grid-template-columns: repeat(2, 1fr);
+    gap: ${rem(28)};
+  `)}
+`

@@ -1,22 +1,30 @@
 "use client"
 
 import Input from "@/components/Input"
-import { Container, InputsGrid, Title } from "./ShippingForm.styles"
+import { Container, FormGrid, InputsGrid, Title } from "./ShippingForm.styles"
 
 export default function ShippingSummary() {
   return (
     <Container>
-      <Title>Informações de entrega</Title>
+      <Title>Dados de entrega</Title>
       <InputsGrid>
-        <Input id="name" label="Nome completo" />
-        <Input id="email" label="Email" />
-        <Input id="phone" label="Número de telefone" />
-        <Input id="zipcode" label="CEP" />
-        <Input id="city" label="Cidade" />
-        <Input id="state" label="Estado" />
+        <FormGrid>
+          <Input id="name" label="Nome completo" />
+          <Input id="email" label="Email" />
+        </FormGrid>
+        <FormGrid>
+          <Input id="phone" label="Número de telefone" />
+          <Input id="zipcode" label="CEP" />
+        </FormGrid>
+        <FormGrid>
+          <Input id="city" label="Cidade" />
+          <Input id="state" label="Estado" />
+        </FormGrid>
         <Input id="neighborhood" label="Bairro" />
-        <Input id="street" label="Rua" />
-        <Input id="number" label="Número" />
+        <FormGrid>
+          <Input id="street" label="Rua" />
+          <Input id="number" label="Número" />
+        </FormGrid>
         <Input id="complement" label="Complemento" />
       </InputsGrid>
     </Container>

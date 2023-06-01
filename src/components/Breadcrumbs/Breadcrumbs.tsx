@@ -10,15 +10,18 @@ import createKey from "@/utilities/array/createKey"
 
 export interface BreadcrumbItem {
   path?: string
-  title: string
-  current?: boolean
+  title: String
 }
 
 interface BreadcrumbsProps {
   items: BreadcrumbItem[]
+  removeBottomPadding?: boolean
 }
 
-export default function Breadcrumbs({ items }: BreadcrumbsProps) {
+export default function Breadcrumbs({
+  items,
+  removeBottomPadding,
+}: BreadcrumbsProps) {
   const router = useRouter()
   const theme = useTheme()
   const isLargeScreen = useMediaQuery({
@@ -30,12 +33,12 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   }
 
   return (
-    <Container>
+    <Container $removeBottomPadding={removeBottomPadding}>
       {items.map((item, index) => (
         <Fragment key={createKey(index)}>
           <Item
-            $current={item.current}
-            disabled={item.current}
+            $current={!item.path}
+            disabled={!item.path}
             onClick={() => router.push(item.path!)}
           >
             {item.title}

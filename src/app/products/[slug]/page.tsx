@@ -12,10 +12,7 @@ import {
   ShowOnlyInSmall,
 } from "./components/utils"
 import ProductDescription from "./components/ProductDescription"
-import BuyNowButton from "./components/BuyNowButton/BuyNowButton"
-import Breadcrumbs, {
-  BreadcrumbItem,
-} from "./components/Breadcrumbs/Breadcrumbs"
+import Breadcrumbs, { BreadcrumbItem } from "@/components/Breadcrumbs"
 import ProductReviews from "./components/ProductReviews"
 import ProductsCarousel from "@/components/ProductsCarousel"
 
@@ -66,7 +63,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
     },
     {
       title: product.name!,
-      current: true,
     },
   ]
 

@@ -17,7 +17,7 @@ export const PageBox = styled.div`
   padding: ${rem(16)} 0;
 
   ${mediaQuery(css`
-    padding: ${rem(22)} 0;
+    padding: 0;
   `)}
 `
 
