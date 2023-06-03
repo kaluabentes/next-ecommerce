@@ -2,7 +2,7 @@
 
 import { BiMap, BiMenu, BiUser } from "react-icons/bi"
 import { useMediaQuery } from "react-responsive"
-import ContentContainer from "@/components/ContentContainer"
+import ContentContainer from "@/app/design-system/ContentContainer"
 import Link from "next/link"
 import { RiTruckLine } from "react-icons/ri"
 import { TbTruckDelivery } from "react-icons/tb"

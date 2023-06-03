@@ -1,4 +1,4 @@
-import Card from "@/components/Card"
+import Card from "@/app/design-system/Card"
 import mediaQuery from "@/utilities/styles/mediaQuery"
 import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"

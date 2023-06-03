@@ -1,6 +1,6 @@
 "use client"
 
-import Input from "@/components/Input"
+import Input from "@/app/design-system/Input"
 import { Container, FormGrid, InputsGrid } from "./ShippingForm.styles"
 import { Title } from "../utils"
 

@@ -1,12 +1,12 @@
 import { Metadata } from "next"
 
 import collectionItems from "@/config/collectionItems"
-import ProductsCarousel from "@/components/ProductsCarousel"
+import ProductsCarousel from "@/app/design-system/ProductsCarousel"
 
 import BannerCarousel from "./components/BannerCarousel"
 import CollectionsCarousel from "./components/CollectionsCarousel"
 import { getAllProducts } from "./content/products"
-import ContentContainer from "@/components/ContentContainer"
+import ContentContainer from "@/app/design-system/ContentContainer"
 
 export const metadata: Metadata = {
   title: "Bem-vindo à Kalux - Sua Loja Online de Variedades",

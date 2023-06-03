@@ -4,7 +4,7 @@ import mediaQuery from "@/utilities/styles/mediaQuery"
 import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"
 
-export const Grid = styled.div`
+export const Grid = styled.form`
   display: flex;
   flex-direction: column;
   gap: ${rem(16)};

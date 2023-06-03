@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mercadopago/sdk-js": "^0.0.2",
     "@prisma/client": "4.15.0",
     "@reach/dialog": "^0.18.0",
     "@types/node": "20.2.1",

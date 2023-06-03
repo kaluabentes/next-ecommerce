@@ -2,18 +2,18 @@
 
 import { FaTruckLoading } from "react-icons/fa"
 
-import Modal from "@/components/Modal/Modal"
+import Modal from "@/app/design-system/Modal/Modal"
 import {
   Result,
   ResultTitle,
   SpinnerBox,
   Title,
 } from "./CalculateShippingModal.styles"
-import Input from "@/components/Input"
-import Button from "@/components/Button"
+import Input from "@/app/design-system/Input"
+import Button from "@/app/design-system/Button"
 import rem from "@/utilities/styles/rem"
 import { useState } from "react"
-import { Spinner } from "@/components/PageSpinner/PageSpinner.styles"
+import { Spinner } from "@/app/design-system/PageSpinner/PageSpinner.styles"
 
 interface CalculateShippingModalProps {
   isOpen: boolean

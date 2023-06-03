@@ -2,7 +2,7 @@
 
 import { BsWhatsapp, BsChatLeftFill, BsPinMapFill } from "react-icons/bs"
 
-import ContentContainer from "@/components/ContentContainer"
+import ContentContainer from "@/app/design-system/ContentContainer"
 import {
   AppMax,
   ChatButton,
@@ -18,7 +18,7 @@ import {
   PaymentTitle,
   Title,
 } from "./Footer.styles"
-import ContactMethod from "@/components/ContactMethod"
+import ContactMethod from "@/app/design-system/ContactMethod"
 import rem from "@/utilities/styles/rem"
 import menuItems from "@/config/menuItems"
 import { RiCustomerService2Fill, RiWhatsappLine } from "react-icons/ri"

@@ -2,7 +2,7 @@
 
 import Product from "@/models/Product"
 import getAverage from "@/utilities/number/getAverage"
-import ReviewStars from "@/components/ReviewStars/ReviewStars"
+import ReviewStars from "@/app/design-system/ReviewStars/ReviewStars"
 import {
   FromPrice,
   FromText,
@@ -11,12 +11,12 @@ import {
   PriceContainer,
   ReviewContainer,
   ReviewRating,
-} from "@/components/ProductCard/ProductCard.styles"
+} from "@/app/design-system/ProductCard/ProductCard.styles"
 import formatCurrency from "@/utilities/number/formatCurrency"
 import { TbTruckDelivery } from "react-icons/tb"
-import Button from "@/components/Button"
+import Button from "@/app/design-system/Button"
 import { useRouter } from "next/navigation"
-import Badge from "@/components/Badge"
+import Badge from "@/app/design-system/Badge"
 import rem from "@/utilities/styles/rem"
 import useCartContext from "@/contexts/cart/useCartContext"
 import BuyNowButton from "../BuyNowButton/BuyNowButton"

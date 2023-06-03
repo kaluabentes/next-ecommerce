@@ -1,6 +1,6 @@
 "use client"
 
-import HorizontalCarousel from "@/components/HorizontalCarousel"
+import HorizontalCarousel from "@/app/design-system/HorizontalCarousel"
 import { Item, Image, Title } from "./CollectionsCarousel.styles"
 import rem from "@/utilities/styles/rem"
 import createKey from "@/utilities/array/createKey"

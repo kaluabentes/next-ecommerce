@@ -1,6 +1,6 @@
 "use client"
 
-import PageSpinner from "@/components/PageSpinner"
+import PageSpinner from "@/app/design-system/PageSpinner"
 
 export default function Loading() {
   return <PageSpinner />

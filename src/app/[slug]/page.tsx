@@ -1,4 +1,4 @@
-import ContentContainer from "@/components/ContentContainer"
+import ContentContainer from "@/app/design-system/ContentContainer"
 import { getAllPages, getPageBySlug } from "../content/pages"
 import ProductDescription from "../products/[slug]/components/ProductDescription"
 import PageContent from "./components/PageContent"

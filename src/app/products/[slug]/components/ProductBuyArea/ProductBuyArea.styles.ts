@@ -1,10 +1,10 @@
-import Button from "@/components/Button"
+import Button from "@/app/design-system/Button"
 import {
   DiscountFlag,
   FromPrice,
   PortionPrice,
   Price,
-} from "@/components/ProductCard/ProductCard.styles"
+} from "@/app/design-system/ProductCard/ProductCard.styles"
 import mediaQuery from "@/utilities/styles/mediaQuery"
 import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"

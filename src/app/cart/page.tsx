@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 
-import ContentContainer from "@/components/ContentContainer"
+import ContentContainer from "@/app/design-system/ContentContainer"
 import { Title } from "../[slug]/components/PageContent/PageContent.styles"
 import { Grid } from "./components/utils"
 import CartProducts from "./components/CartProducts/CartProducts"

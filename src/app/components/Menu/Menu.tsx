@@ -19,7 +19,7 @@ import {
   Overlay,
   Wrapper,
 } from "./Menu.styles"
-import ClickOutside from "@/components/ClickOutside/ClickOutside"
+import ClickOutside from "@/app/design-system/ClickOutside/ClickOutside"
 
 interface Item {
   path?: string

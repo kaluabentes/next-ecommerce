@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation"
 
-import Badge from "@/components/Badge"
+import Badge from "@/app/design-system/Badge"
 import {
   Container,
   EconomyText,
@@ -11,7 +11,7 @@ import {
   TotalLabel,
   TotalValue,
 } from "./CartSummary.styles"
-import Button from "@/components/Button"
+import Button from "@/app/design-system/Button"
 import rem from "@/utilities/styles/rem"
 import useCartContext from "@/contexts/cart/useCartContext"
 import formatCurrency from "@/utilities/number/formatCurrency"

@@ -11,7 +11,7 @@ import {
   PriceContainer,
   Title,
 } from "./ProductHero.styles"
-import Button from "@/components/Button"
+import Button from "@/app/design-system/Button"
 import formatCurrency from "@/utilities/number/formatCurrency"
 
 interface ProductHeroProps {

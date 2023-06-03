@@ -1,11 +1,12 @@
 import { Metadata } from "next"
 
-import ContentContainer from "@/components/ContentContainer"
+import ContentContainer from "@/app/design-system/ContentContainer"
 import { Title } from "../[slug]/components/PageContent/PageContent.styles"
-import ShippingItemsResume from "./components/ShippingItemsResume"
+import ShippingSummary from "./components/ShippingSummary"
 import { ContentGrid, Grid } from "./components/utils"
 import ShippingForm from "./components/ShippingForm"
 import PaymentForm from "./components/PaymentForm"
+import CheckoutProviders from "./providers"
 
 export const metadata: Metadata = {
   title: "Finalize sua compra",
@@ -15,15 +16,17 @@ export const metadata: Metadata = {
 
 export default function Cart() {
   return (
-    <ContentContainer>
-      <Title>Finalize sua compra</Title>
-      <Grid>
-        <ContentGrid>
-          <ShippingForm />
-          <PaymentForm />
-        </ContentGrid>
-        <ShippingItemsResume />
-      </Grid>
-    </ContentContainer>
+    <CheckoutProviders>
+      <ContentContainer>
+        <Title>Finalize sua compra</Title>
+        <Grid id="form-checkout">
+          <ContentGrid>
+            <ShippingForm />
+            <PaymentForm />
+          </ContentGrid>
+          <ShippingSummary />
+        </Grid>
+      </ContentContainer>
+    </CheckoutProviders>
   )
 }

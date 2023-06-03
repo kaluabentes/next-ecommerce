@@ -1,6 +1,6 @@
 "use client"
 
-import ReviewStars from "@/components/ReviewStars/ReviewStars"
+import ReviewStars from "@/app/design-system/ReviewStars/ReviewStars"
 import {
   HeaderBox,
   MaxContainer,
@@ -16,7 +16,7 @@ import {
   Title,
 } from "./ProductReviews.styles"
 import RatingSummary from "./RatingSummary"
-import Button from "@/components/Button"
+import Button from "@/app/design-system/Button"
 import Review from "@/models/Review"
 import getAverage from "@/utilities/number/getAverage"
 import createKey from "@/utilities/array/createKey"

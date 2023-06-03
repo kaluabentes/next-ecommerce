@@ -1,4 +1,4 @@
-import QuantityInput from "@/components/QuantityInput"
+import QuantityInput from "@/app/design-system/QuantityInput"
 import mediaQuery from "@/utilities/styles/mediaQuery"
 import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"

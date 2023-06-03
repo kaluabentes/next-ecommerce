@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 import formatCurrency from "@/utilities/number/formatCurrency"
-import QuantityInput from "@/components/QuantityInput"
+import QuantityInput from "@/app/design-system/QuantityInput"
 import { CartProduct as CartProductType } from "@/contexts/cart/CartContextProvider"
 import useCartContext from "@/contexts/cart/useCartContext"
 

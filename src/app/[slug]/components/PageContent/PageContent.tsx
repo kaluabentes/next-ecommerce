@@ -1,6 +1,6 @@
 "use client"
 
-import ContentContainer from "@/components/ContentContainer"
+import ContentContainer from "@/app/design-system/ContentContainer"
 import { Content, Title } from "./PageContent.styles"
 
 interface PageContentProps {

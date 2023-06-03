@@ -1,4 +1,4 @@
-import { DiscountFlag } from "@/components/ProductCard/ProductCard.styles"
+import { DiscountFlag } from "@/app/design-system/ProductCard/ProductCard.styles"
 import mediaQuery from "@/utilities/styles/mediaQuery"
 import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"

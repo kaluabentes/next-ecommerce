@@ -2,7 +2,7 @@ import { getAllProducts, getProductBySlug } from "@/app/content/products"
 import PhotoGallery from "./components/PhotoGallery"
 import createKey from "@/utilities/array/createKey"
 import { Image } from "./components/PhotoGallery/PhotoGallery"
-import ContentContainer from "@/components/ContentContainer"
+import ContentContainer from "@/app/design-system/ContentContainer"
 import ProductBuyArea from "./components/ProductBuyArea"
 import {
   ContentGrid,
@@ -12,9 +12,9 @@ import {
   ShowOnlyInSmall,
 } from "./components/utils"
 import ProductDescription from "./components/ProductDescription"
-import Breadcrumbs, { BreadcrumbItem } from "@/components/Breadcrumbs"
+import Breadcrumbs, { BreadcrumbItem } from "@/app/design-system/Breadcrumbs"
 import ProductReviews from "./components/ProductReviews"
-import ProductsCarousel from "@/components/ProductsCarousel"
+import ProductsCarousel from "@/app/design-system/ProductsCarousel"
 
 interface ProductPageProps {
   params: { slug: string }

@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components"
 
 import rem from "@/utilities/styles/rem"
-import ContentContainer from "@/components/ContentContainer"
+import ContentContainer from "@/app/design-system/ContentContainer"
 import mediaQuery from "@/utilities/styles/mediaQuery"
 
 export const Container = styled(ContentContainer)`
