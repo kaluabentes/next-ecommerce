@@ -1,11 +1,11 @@
 import { createContext, ReactNode, useState } from "react"
 
 export interface OptionsAccordionState {
-  openItem: number
+  openItem: number | undefined
 }
 
 export interface OptionsAccordionStateParam {
-  openItem?: number
+  openItem?: number | undefined
 }
 
 export type Callback = (
@@ -17,7 +17,7 @@ const DEFAULT_ACTION_STATE = {
 }
 
 const DEFAULT_VALUE_STATE = {
-  openItem: 0,
+  openItem: undefined,
 }
 
 export const OptionsAccordionValueContext =

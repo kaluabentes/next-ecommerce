@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter } from "next/navigation"
-import CartProduct from "../CartProduct/CartProduct"
+import CartProduct from "../../../design-system/CartProduct/CartProduct"
 import { Box, EmptyStateBox, EmptyStateText } from "./CartProducts.styles"
 import useCartContext from "@/contexts/cart/useCartContext"
 import { BiCart } from "react-icons/bi"

@@ -13,7 +13,7 @@ export const Item = styled.div``
 export const Image = styled.img``
 
 export const Header = styled.div`
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
   & > label {
     padding: ${rem(16)};
@@ -26,7 +26,7 @@ export const Header = styled.div`
 
 export const Content = styled.div<{ $isActive?: boolean }>`
   padding: ${rem(16)};
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   display: none;
 
   ${(props) =>

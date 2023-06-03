@@ -19,3 +19,20 @@ export const PaymentMethodContainer = styled.button``
 export const PaymentMethodRadio = styled.input``
 
 export const PaymentMethodLabel = styled.p``
+
+export const PaymentHeaderContainer = styled.div``
+
+export const PaymentHeaderTitle = styled.div`
+  font-weight: 600;
+  margin-bottom: ${rem(8)};
+`
+
+export const PaymentHeaderImage = styled.img<{ $creditCard?: boolean }>`
+  height: ${rem(14)};
+
+  ${(props) =>
+    props.$creditCard &&
+    css`
+      height: ${rem(19)};
+    `}
+`

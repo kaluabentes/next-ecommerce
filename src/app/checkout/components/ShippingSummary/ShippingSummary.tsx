@@ -11,7 +11,7 @@ import formatCurrency from "@/utilities/number/formatCurrency"
 import rem from "@/utilities/styles/rem"
 import useCartContext from "@/contexts/cart/useCartContext"
 import Product from "@/models/Product"
-import CartProduct from "@/app/cart/components/CartProduct/CartProduct"
+import CartProduct from "@/app/design-system/CartProduct/CartProduct"
 import { useRouter } from "next/navigation"
 import Button from "@/app/design-system/Button"
 import useMercadoPago from "../PaymentForm/hooks/useMercadoPago"
@@ -32,8 +32,8 @@ export default function ShippingItemsResume({}: ShippingItemsResumeProps) {
             key={product?.slug}
             product={product}
             onClick={() => router.push(`/products/${product.slug}`)}
-            quantityAlignBottom
             removeXPadding
+            hideQuantiy
           />
         ))}
         <TotalContainer>

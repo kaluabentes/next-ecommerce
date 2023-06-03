@@ -19,6 +19,7 @@ interface CartProductProps {
   onClick: () => void
   quantityAlignBottom?: boolean
   removeXPadding?: boolean
+  hideQuantiy?: boolean
 }
 
 export default function CartProduct({
@@ -26,6 +27,7 @@ export default function CartProduct({
   onClick,
   quantityAlignBottom,
   removeXPadding,
+  hideQuantiy = false,
 }: CartProductProps) {
   const { changeQuantity, removeProduct } = useCartContext()
   const [quantity, setQuantity] = useState(product?.quantity)
@@ -46,13 +48,16 @@ export default function CartProduct({
         <div>
           <Price>{formatCurrency(product?.price!)}</Price>
           <FromPrice>{formatCurrency(product?.fromPrice!)}</FromPrice>
+          {hideQuantiy && <div>{quantity}x</div>}
         </div>
       </Content>
-      <QuantityInput
-        onRemove={() => removeProduct(product?.slug!)}
-        onChange={handleQuantityChange}
-        value={quantity!}
-      />
+      {!hideQuantiy && (
+        <QuantityInput
+          onRemove={() => removeProduct(product?.slug!)}
+          onChange={handleQuantityChange}
+          value={quantity!}
+        />
+      )}
     </Container>
   )
 }
