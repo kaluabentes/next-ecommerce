@@ -10,11 +10,11 @@ import {
 import Product from "@/models/Product"
 
 export interface CheckoutState {
-  cardForm: any
+  shippingInfo?: any
 }
 
 export interface CheckoutStateParam {
-  cardForm?: any
+  shippingInfo?: any
 }
 
 export type Callback = (prevState: CheckoutState) => CheckoutState
@@ -24,7 +24,7 @@ const DEFAULT_ACTION_STATE = {
 }
 
 const DEFAULT_VALUE_STATE = {
-  cardForm: {},
+  shippingInfo: undefined,
 }
 
 export const CheckoutValueContext =

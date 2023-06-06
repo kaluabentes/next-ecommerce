@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components"
 
 import theme from "./styles/theme"
 import CartContextProvider from "@/contexts/cart/CartContextProvider"
+import ToastContextProvider from "./design-system/Toast/context/ToastContextProvider"
 
 interface ProvidersProps {
   children: ReactNode
@@ -13,7 +14,9 @@ interface ProvidersProps {
 export default function Providers({ children }: ProvidersProps) {
   return (
     <ThemeProvider theme={theme}>
-      <CartContextProvider>{children}</CartContextProvider>
+      <ToastContextProvider>
+        <CartContextProvider>{children}</CartContextProvider>
+      </ToastContextProvider>
     </ThemeProvider>
   )
 }

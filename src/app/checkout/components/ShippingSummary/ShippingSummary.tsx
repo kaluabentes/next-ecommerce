@@ -16,9 +16,13 @@ import { useRouter } from "next/navigation"
 import Button from "@/app/design-system/Button"
 import useMercadoPago from "../PaymentForm/hooks/useMercadoPago"
 
-interface ShippingItemsResumeProps {}
+interface ShippingItemsResumeProps {
+  isLoading?: boolean
+}
 
-export default function ShippingItemsResume({}: ShippingItemsResumeProps) {
+export default function ShippingItemsResume({
+  isLoading,
+}: ShippingItemsResumeProps) {
   const router = useRouter()
 
   const { totalProductsPrice, totalEconomyPrice, cart } = useCartContext()
@@ -50,7 +54,7 @@ export default function ShippingItemsResume({}: ShippingItemsResumeProps) {
           <TotalLabel>Total</TotalLabel>
           <TotalValue>{formatCurrency(totalProductsPrice)}</TotalValue>
         </TotalContainer>
-        <Button type="submit" variant="primary" full>
+        <Button type="submit" variant="primary" isLoading={isLoading} full>
           Confirmar
         </Button>
       </SummaryBox>

@@ -32,8 +32,4 @@ export default {
     id: "form-checkout__identificationNumber",
     placeholder: "Número do documento",
   },
-  cardholderEmail: {
-    id: "form-checkout__cardholderEmail",
-    placeholder: "E-mail",
-  },
 }

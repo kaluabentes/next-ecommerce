@@ -94,3 +94,9 @@ export const FromPrice = styled.p`
   color: rgba(0, 0, 0, 0.5);
   text-decoration: line-through;
 `
+
+export const Quantity = styled.p`
+  margin: ${rem(10)} 0 0 0;
+  font-weight: 600;
+  font-size: ${rem(14)};
+`

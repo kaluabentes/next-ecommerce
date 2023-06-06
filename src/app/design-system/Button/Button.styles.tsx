@@ -1,5 +1,6 @@
 import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"
+import { Spinner } from "@/app/design-system/PageSpinner/PageSpinner.styles"
 
 export const Container = styled.button<{
   $variant?: "default" | "primary" | "secondary"
@@ -15,6 +16,9 @@ export const Container = styled.button<{
   font-weight: 600;
   border: 1px solid transparent;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:disabled {
     cursor: not-allowed;
@@ -81,4 +85,11 @@ export const Container = styled.button<{
     css`
       width: 100%;
     `}
+`
+
+export const ButtonSpinner = styled(Spinner)`
+  height: ${rem(28)};
+  width: ${rem(28)};
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top: 4px solid rgba(255, 255, 255, 1);
 `

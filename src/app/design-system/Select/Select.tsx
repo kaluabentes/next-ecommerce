@@ -10,8 +10,9 @@ interface InputProps {
   onChange?: (event: ChangeEvent<HTMLSelectElement>) => void
   margin?: string
   label?: string
-  children: ReactNode
+  children?: ReactNode
   error?: string
+  disabled?: Boolean
 }
 
 export default function Select({
@@ -23,7 +24,8 @@ export default function Select({
   id,
   label,
   children,
-  error = "Este campo é obrigatório",
+  disabled,
+  error,
 }: InputProps) {
   return (
     <Container>
@@ -35,7 +37,8 @@ export default function Select({
         value={value}
         onChange={onChange}
         $margin={margin}
-        $error={error}
+        $error={Boolean(error)}
+        disabled={disabled}
       >
         {children}
       </Field>

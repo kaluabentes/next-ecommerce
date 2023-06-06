@@ -11,6 +11,7 @@ import {
   FromPrice,
   Image,
   Price,
+  Quantity,
   Title,
 } from "./CartProduct.styles"
 
@@ -44,11 +45,15 @@ export default function CartProduct({
     >
       <Image src={product?.thumb} alt={product?.name} />
       <Content>
-        <Title onClick={onClick}>{product?.name}</Title>
+        <Title type="button" onClick={onClick}>
+          {product?.name}
+        </Title>
         <div>
           <Price>{formatCurrency(product?.price!)}</Price>
-          <FromPrice>{formatCurrency(product?.fromPrice!)}</FromPrice>
-          {hideQuantiy && <div>{quantity}x</div>}
+          {!hideQuantiy && (
+            <FromPrice>{formatCurrency(product?.fromPrice!)}</FromPrice>
+          )}
+          {hideQuantiy && <Quantity>{quantity}x</Quantity>}
         </div>
       </Content>
       {!hideQuantiy && (

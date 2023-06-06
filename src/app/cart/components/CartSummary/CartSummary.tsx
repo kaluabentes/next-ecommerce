@@ -29,12 +29,16 @@ export default function CartSummary() {
         <TotalValue $fontSize={rem(16)}>Grátis</TotalValue>
       </TotalContainer>
       <TotalContainer>
+        <TotalLabel>Você economizou</TotalLabel>
+        <TotalValue $fontSize={rem(16)}>
+          {formatCurrency(totalEconomyPrice)}
+        </TotalValue>
+      </TotalContainer>
+      <TotalContainer>
         <TotalLabel>Total</TotalLabel>
         <TotalValue>{formatCurrency(totalProductsPrice)}</TotalValue>
       </TotalContainer>
-      {/* <EconomyText>
-        Você economizou {formatCurrency(totalEconomyPrice)} + Frete Grátis
-      </EconomyText>
+      {/* 
       <Badge variant="greenvogue" margin={`0 0 ${rem(32)} 0`}>
         Pague no PIX ou Cartão e receba 3 dias antes
       </Badge> */}

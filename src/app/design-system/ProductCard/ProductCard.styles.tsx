@@ -43,7 +43,7 @@ export const Item = styled.button`
 export const DiscountFlag = styled.div<{ $static?: boolean }>`
   font-weight: 600;
   font-size: ${rem(12)};
-  background: ${(props) => props.theme.colors.primary};
+  background: ${(props) => props.theme.colors.blue};
   color: white;
   padding: ${rem(2)} ${rem(4)};
   border-radius: ${rem(4)};

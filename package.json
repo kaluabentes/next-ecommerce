@@ -9,12 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.1.0",
     "@mercadopago/sdk-js": "^0.0.2",
     "@prisma/client": "4.15.0",
     "@reach/dialog": "^0.18.0",
     "@types/node": "20.2.1",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
+    "cep-promise": "^4.4.0",
     "embla-carousel-autoplay": "^8.0.0-rc04",
     "embla-carousel-react": "^8.0.0-rc04",
     "gray-matter": "^4.0.3",
@@ -23,13 +25,15 @@
     "next": "13.4.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.44.3",
     "react-icons": "^4.8.0",
     "react-responsive": "^9.0.2",
     "remark": "^14.0.3",
     "remark-html": "^15.0.2",
     "styled-components": "^6.0.0-rc.1",
     "styled-normalize": "^8.0.7",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.195",

@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react"
+import { ChangeEvent, forwardRef } from "react"
 import { Container, Error, Field, Label } from "./Input.styles"
 
 interface InputProps {
@@ -6,25 +6,28 @@ interface InputProps {
   name?: string
   type?: string
   placeholder?: string
-  value: string
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void
+  value?: string
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void
   margin?: string
   label?: string
   error?: string
 }
 
-export default function Input({
-  name,
-  type,
-  placeholder,
-  value,
-  onChange,
-  margin,
-  id,
-  label,
-  error = "Este campo é obrigatório",
-}: InputProps) {
-  return (
+const Input = forwardRef(
+  (
+    {
+      name,
+      type,
+      placeholder,
+      value,
+      onChange,
+      margin,
+      id,
+      label,
+      error,
+    }: InputProps,
+    ref
+  ) => (
     <Container>
       {label && <Label htmlFor={id}>{label}</Label>}
       <Field
@@ -36,8 +39,11 @@ export default function Input({
         onChange={onChange}
         $margin={margin}
         $error={Boolean(error)}
+        ref={ref as any}
       />
       {error && <Error>{error}</Error>}
     </Container>
   )
-}
+)
+
+export default Input

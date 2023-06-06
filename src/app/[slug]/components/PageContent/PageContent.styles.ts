@@ -1,7 +1,6 @@
 "use client"
 
 import typography from "@/app/styles/typography"
-import ContentContainer from "@/app/design-system/ContentContainer"
 import mediaQuery from "@/utilities/styles/mediaQuery"
 import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"
@@ -17,7 +16,7 @@ export const Content = styled.div`
 export const Title = styled.h2`
   margin: ${rem(22)} 0;
   font-size: ${rem(22)};
-  font-weight: 600;
+  font-weight: 700;
 
   ${mediaQuery(css`
     font-size: ${rem(32)};

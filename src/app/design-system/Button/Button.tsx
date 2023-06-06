@@ -2,7 +2,7 @@
 
 import { ReactNode } from "react"
 
-import { Container } from "./Button.styles"
+import { ButtonSpinner, Container } from "./Button.styles"
 
 interface ButtonProps {
   children: ReactNode
@@ -13,6 +13,7 @@ interface ButtonProps {
   className?: string
   disabled?: boolean
   type?: "submit" | "button" | "reset"
+  isLoading?: boolean
 }
 
 export default function Button({
@@ -24,6 +25,7 @@ export default function Button({
   className,
   disabled,
   type,
+  isLoading,
 }: ButtonProps) {
   return (
     <Container
@@ -35,7 +37,7 @@ export default function Button({
       onClick={onClick}
       disabled={disabled}
     >
-      {children}
+      {isLoading ? <ButtonSpinner /> : children}
     </Container>
   )
 }

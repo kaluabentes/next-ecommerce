@@ -1,7 +1,9 @@
 export default {
   colors: {
-    primary: "#6200ee",
-    primaryVariant: "#3700b3",
+    primary: "#042c62",
+    primaryVariant: "#03214a",
+    blue: "#6200ee",
+    blueVariant: "#3700b3",
     secondary: "#13b510",
     secondaryVariant: "#0d950b",
     secondaryVariantActive: "#0b6a0a",
