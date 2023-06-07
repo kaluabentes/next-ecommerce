@@ -1,4 +1,4 @@
-import { getAllProducts, getProductBySlug } from "@/app/content/products"
+import { getAllProducts, getProductBySlug } from "@/infra/content/products"
 import PhotoGallery from "./components/PhotoGallery"
 import createKey from "@/utilities/array/createKey"
 import { Image } from "./components/PhotoGallery/PhotoGallery"

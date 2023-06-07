@@ -15,7 +15,7 @@ export default [
   {
     title: "Frete Grátis",
     description:
-      "O produto será entregue no prazo de 7 a 10 dias, acompanhe seu pedido com código de rastreio.",
+      "O produto será entregue no prazo de 15 a 30 dias, acompanhe seu pedido com código de rastreio.",
     icon: <TbTruckDelivery />,
   },
   {
