@@ -21,6 +21,9 @@ import createCardForm from "./lib/createCardForm"
 import useCartContext from "@/contexts/cart/useCartContext"
 import useToast from "../design-system/Toast/context/useToast"
 import { BiAlarmExclamation } from "react-icons/bi"
+import { CartProduct } from "@/contexts/cart/CartContextProvider"
+import PaymentMessage from "./components/PaymentMessage"
+import { Title } from "@/app/[slug]/components/PageContent/PageContent.styles"
 
 export interface CheckoutFieldValues {
   name: string
@@ -43,20 +46,23 @@ const checkoutFormSchema = Yup.object({
   number: Yup.string().required(FIELD_REQUIRED_ERROR),
 })
 
-const REQUIRED_SHIPPING_INFO = [
-  "city",
-  "email",
-  "name",
-  "neighborhood",
-  "number",
-  "phone",
-  "state",
-  "street",
-  "zipcode",
-]
+const getPhoneObj = (phone: string) => {
+  const number = phone.substring(4)
+  const area_code = phone.replace(number, "").substring(2)
+
+  return { number, area_code }
+}
+
+const generateDescription = (products: CartProduct[]) =>
+  products.reduce(
+    (prev: string, curr: CartProduct) =>
+      `${prev}, ${curr.quantity}x ${curr.name}`,
+    ""
+  )
 
 export default function CheckoutForm() {
   const [isLoading, setIsLoading] = useState(false)
+  const [paymentStatus, setPaymentStatus] = useState()
   const { totalProductsPrice, cart } = useCartContext()
   const { mp, setErrors, errors: mpErrors } = useMercadoPago()
   const toast = useToast()
@@ -94,7 +100,11 @@ export default function CheckoutForm() {
         mp,
         amount: totalProductsPrice,
         onError: (error: any) => {
-          const fields = error.map((err: any) => err.message.split(" ")[0])
+          const fields = error
+            .map((err: any) => err.message.split(" ")[0])
+            .map((field: string) =>
+              field === "parameter" ? "cardholderName" : field
+            )
 
           setErrors(
             fields.reduce(
@@ -116,7 +126,7 @@ export default function CheckoutForm() {
           const shippingInfo: Key = getValues()
 
           const shippingKeys = Object.keys(shippingInfo).filter(
-            (key) => key !== "complement"
+            (key) => !["complement"].includes(key)
           )
 
           if (
@@ -135,7 +145,6 @@ export default function CheckoutForm() {
           const {
             paymentMethodId: payment_method_id,
             issuerId: issuer_id,
-            cardholderEmail: email,
             amount,
             token,
             installments,
@@ -143,43 +152,46 @@ export default function CheckoutForm() {
             identificationType,
           } = cardForm.getCardFormData()
 
+          if (!installments) {
+            setErrors({ installments: FIELD_REQUIRED_ERROR })
+            return
+          }
+
+          setIsLoading(true)
+
           const paymentInfo = {
             token,
             issuer_id,
             payment_method_id,
+            transaction_amount: Number(amount),
             installments: Number(installments),
+            description: generateDescription(cart.products),
             payer: {
+              email: shippingInfo.email,
               identification: {
                 type: identificationType,
                 number: identificationNumber,
               },
             },
-            additional_info: {
-              items: cart.products.map((product) => ({
-                title: product.name,
-                quantity: product.quantity,
-                unit_price: product.price,
-              })),
-              payer: {
-                phone: shippingInfo.phone,
-                address: shippingInfo.street,
-              },
-              registration_date: new Date().toISOString(),
-              shipments: {
-                receiver_address: `${shippingInfo.street}, ${shippingInfo.number}`,
-              },
-            },
           }
 
           try {
-            const response = await fetch("/checkout/api/payment")
+            const response = await fetch("/checkout/api/payment", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                paymentInfo,
+              }),
+            })
+            const data = await response.json()
+            setPaymentStatus(data.status)
           } catch (error: any) {
             console.log("fetch createpayment error", error)
+          } finally {
+            setIsLoading(false)
           }
-
-          console.log("getCardFormData: ", data)
-          console.log("createCardToken: ", token)
-          console.log("shippingInfo: ", shippingInfo)
         },
       })
     }
@@ -193,29 +205,31 @@ export default function CheckoutForm() {
 
   useEffect(() => {
     toast({
-      title: "Ambiente Seguro",
-      description: (
-        <>
-          Você está em um ambiente seguro integrado ao{" "}
-          <strong style={{ color: "white" }}>Mercado Pago</strong>
-        </>
-      ),
+      title: "Mercado Pago",
+      description: "Ambiente seguro ativo",
       icon: <SiMercadopago />,
     })
   }, [])
 
+  if (paymentStatus) {
+    return <PaymentMessage status={paymentStatus} />
+  }
+
   return (
-    <Grid id="form-checkout" onSubmit={handleSubmit(handleSubmitCallback)}>
-      <ContentGrid>
-        <ShippingForm
-          register={register}
-          errors={errors}
-          watch={watch}
-          setValue={setValue}
-        />
-        <PaymentForm errors={mpErrors} />
-      </ContentGrid>
-      <ShippingSummary isLoading={isLoading} />
-    </Grid>
+    <>
+      <Title>Finalize sua compra</Title>
+      <Grid id="form-checkout" onSubmit={handleSubmit(handleSubmitCallback)}>
+        <ContentGrid>
+          <ShippingForm
+            register={register}
+            errors={errors}
+            watch={watch}
+            setValue={setValue}
+          />
+          <PaymentForm errors={mpErrors} />
+        </ContentGrid>
+        <ShippingSummary isLoading={isLoading} />
+      </Grid>
+    </>
   )
 }

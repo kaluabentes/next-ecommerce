@@ -7,6 +7,7 @@ export const Container = styled.header`
   padding: ${rem(16)} 0;
   background: white;
   color: white;
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.07);
 
   ${mediaQuery(css`
     padding: ${rem(28)} 0;

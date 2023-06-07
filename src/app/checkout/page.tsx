@@ -1,7 +1,6 @@
 import { Metadata } from "next"
 
 import ContentContainer from "@/app/design-system/ContentContainer"
-import { Title } from "../[slug]/components/PageContent/PageContent.styles"
 import CheckoutProviders from "./providers"
 import CheckoutForm from "./CheckoutForm"
 
@@ -15,7 +14,6 @@ export default function Checkout() {
   return (
     <CheckoutProviders>
       <ContentContainer>
-        <Title>Finalize sua compra</Title>
         <CheckoutForm />
       </ContentContainer>
     </CheckoutProviders>

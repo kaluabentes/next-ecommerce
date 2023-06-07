@@ -8,7 +8,6 @@ export const Container = styled.div<{ $isOpen: boolean }>`
   height: 100%;
   top: 0;
   width: 220px;
-  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
   left: -220px;
   opacity: 0;
   visibility: hidden;
@@ -31,7 +30,7 @@ export const Container = styled.div<{ $isOpen: boolean }>`
     width: 100%;
     display: flex;
     justify-content: center;
-    box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 3px 3px 0.05px rgba(0, 0, 0, 0.05);
   `)}
 `
 

@@ -88,8 +88,8 @@ export const Container = styled.button<{
 `
 
 export const ButtonSpinner = styled(Spinner)`
-  height: ${rem(28)};
-  width: ${rem(28)};
-  border: 4px solid rgba(255, 255, 255, 0.2);
-  border-top: 4px solid rgba(255, 255, 255, 1);
+  height: ${rem(28)} !important;
+  width: ${rem(28)} !important;
+  border: 3px solid rgba(255, 255, 255, 0.2) !important;
+  border-top: 3px solid rgba(255, 255, 255, 1) !important;
 `

@@ -7,11 +7,14 @@ export async function POST(request: Request) {
   try {
     const body = await request.json()
 
-    const { shippingInfo, token } = body
+    const { paymentInfo } = body
 
-    const response = await mercadopago.payment.save(body)
-    return NextResponse.json({ response: response.body })
+    const {
+      response: { status, status_detail, id },
+    } = await mercadopago.payment.save(paymentInfo)
+
+    return NextResponse.json({ status, status_detail, id })
   } catch (error: any) {
-    return NextResponse.json({ error })
+    return NextResponse.json({ error: error.message })
   }
 }

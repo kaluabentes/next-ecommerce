@@ -35,7 +35,7 @@ export default function Footer() {
       <ContentContainer>
         <FlexBox>
           <Item>
-            <Image src="/logo-dark.svg" alt="Droptron" />
+            <Image src="/logo.svg" alt="Droptron" />
             <Title>Atendimento ao Cliente</Title>
             <ContactMethod
               icon={<BiMailSend />}
@@ -89,7 +89,7 @@ export default function Footer() {
           <PaymentTitle>Pagamento seguro com</PaymentTitle>
         </PaymentContainer>
         <PaymentContainer>
-          <AppMax src="/mercado-pago-dark.png" />
+          <AppMax src="/mercado-pago-logo.png" />
           <PaymentMethods src="/payment-methods-dark.png" />
         </PaymentContainer>
         <PaymentContainer>

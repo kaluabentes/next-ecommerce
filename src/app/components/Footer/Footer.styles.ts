@@ -4,8 +4,7 @@ import rem from "@/utilities/styles/rem"
 import mediaQuery from "@/utilities/styles/mediaQuery"
 
 export const Container = styled.footer`
-  background: ${(props) => props.theme.colors.greenvogue};
-  color: white;
+  background: white;
   padding: ${rem(60)} 0;
 `
 
@@ -58,14 +57,14 @@ export const MenuItem = styled.button`
   text-align: left;
   padding: 0;
   background: transparent;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.7);
   outline: none;
   border: none;
   font-size: ${rem(14)};
   cursor: pointer;
 
   &:hover {
-    color: white;
+    color: black;
     text-decoration: underline;
   }
 `
@@ -102,7 +101,6 @@ export const PaymentTitle = styled.p`
 
 export const Copyright = styled.p`
   font-size: ${rem(12)};
-  color: rgba(255, 255, 255, 0.5);
 `
 
 export const ChatButton = styled.button`

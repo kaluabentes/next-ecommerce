@@ -20,7 +20,7 @@ export const Container = styled.div<{ $margin?: string }>`
 
 export const Text = styled.p`
   margin: 0;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.7);
   font-size: ${rem(14)};
   font-weight: 400;
   line-height: 1.3em;
