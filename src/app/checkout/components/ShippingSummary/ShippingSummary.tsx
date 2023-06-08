@@ -37,7 +37,7 @@ export default function ShippingItemsResume({
             product={product}
             onClick={() => router.push(`/products/${product.slug}`)}
             removeXPadding
-            hideQuantiy
+            hideQuantityInput
           />
         ))}
         <TotalContainer>

@@ -6,7 +6,7 @@ import styled, { css } from "styled-components"
 export const Title = styled.button`
   font-size: ${rem(14)};
   margin: 0 0 ${rem(16)} 0;
-  font-weight: 600;
+  font-weight: 500;
   background: transparent;
   border: 0;
   outline: 0;
@@ -23,12 +23,11 @@ export const Image = styled.img`
   width: 100px;
   height: 100px;
   object-fit: contain;
-  padding: ${rem(16)};
+  padding: ${rem(12)};
 
   ${mediaQuery(css`
-    padding: ${rem(28)};
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
   `)}
 `
 
@@ -83,7 +82,7 @@ export const Container = styled.div<{
 
 export const Price = styled.p`
   font-size: ${rem(18)};
-  font-weight: 500;
+  font-weight: 600;
   margin: 0;
 `
 

@@ -24,6 +24,7 @@ import { BiAlarmExclamation } from "react-icons/bi"
 import { CartProduct } from "@/contexts/cart/CartContextProvider"
 import PaymentMessage from "./components/PaymentMessage"
 import { Title } from "@/app/[slug]/components/PageContent/PageContent.styles"
+import Order from "@/models/Order"
 
 export interface CheckoutFieldValues {
   name: string
@@ -46,13 +47,6 @@ const checkoutFormSchema = Yup.object({
   number: Yup.string().required(FIELD_REQUIRED_ERROR),
 })
 
-const getPhoneObj = (phone: string) => {
-  const number = phone.substring(4)
-  const area_code = phone.replace(number, "").substring(2)
-
-  return { number, area_code }
-}
-
 const generateDescription = (products: CartProduct[]) =>
   products.reduce(
     (prev: string, curr: CartProduct) =>
@@ -63,6 +57,7 @@ const generateDescription = (products: CartProduct[]) =>
 export default function CheckoutForm() {
   const [isLoading, setIsLoading] = useState(false)
   const [paymentStatus, setPaymentStatus] = useState()
+  const [order, setOrder] = useState<Order | undefined>()
   const { totalProductsPrice, cart } = useCartContext()
   const { mp, setErrors, errors: mpErrors } = useMercadoPago()
   const toast = useToast()
@@ -175,6 +170,11 @@ export default function CheckoutForm() {
             },
           }
 
+          const orderInfo = {
+            paymentMethod: "card",
+            products: cart.products,
+          }
+
           try {
             const response = await fetch("/checkout/api/payment", {
               method: "POST",
@@ -183,10 +183,25 @@ export default function CheckoutForm() {
               },
               body: JSON.stringify({
                 paymentInfo,
+                shippingInfo,
+                orderInfo,
               }),
             })
             const data = await response.json()
+            console.log("data", data)
             setPaymentStatus(data.status)
+            setOrder(data.order)
+
+            if (
+              data.error &&
+              data.error === "Invalid user identification number"
+            ) {
+              toast({
+                title: "Atenção",
+                description: "O número do documento é inválido",
+                icon: <FiAlertTriangle />,
+              })
+            }
           } catch (error: any) {
             console.log("fetch createpayment error", error)
           } finally {
@@ -212,7 +227,17 @@ export default function CheckoutForm() {
   }, [])
 
   if (paymentStatus) {
-    return <PaymentMessage status={paymentStatus} />
+    return (
+      <PaymentMessage
+        status={paymentStatus}
+        transationDate={order?.createdAt}
+        products={order?.products}
+        total={order?.products?.reduce(
+          (prev, curr) => prev + curr?.quantity! * curr?.price!,
+          0
+        )}
+      />
+    )
   }
 
   return (

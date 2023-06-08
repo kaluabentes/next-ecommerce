@@ -17,10 +17,10 @@ import {
 
 interface CartProductProps {
   product: CartProductType
-  onClick: () => void
+  onClick?: () => void
   quantityAlignBottom?: boolean
   removeXPadding?: boolean
-  hideQuantiy?: boolean
+  hideQuantityInput?: boolean
 }
 
 export default function CartProduct({
@@ -28,7 +28,7 @@ export default function CartProduct({
   onClick,
   quantityAlignBottom,
   removeXPadding,
-  hideQuantiy = false,
+  hideQuantityInput = false,
 }: CartProductProps) {
   const { changeQuantity, removeProduct } = useCartContext()
   const [quantity, setQuantity] = useState(product?.quantity)
@@ -50,13 +50,13 @@ export default function CartProduct({
         </Title>
         <div>
           <Price>{formatCurrency(product?.price!)}</Price>
-          {!hideQuantiy && (
+          {!hideQuantityInput && product?.fromPrice && (
             <FromPrice>{formatCurrency(product?.fromPrice!)}</FromPrice>
           )}
-          {hideQuantiy && <Quantity>{quantity}x</Quantity>}
+          {hideQuantityInput && <Quantity>{quantity}x</Quantity>}
         </div>
       </Content>
-      {!hideQuantiy && (
+      {!hideQuantityInput && (
         <QuantityInput
           onRemove={() => removeProduct(product?.slug!)}
           onChange={handleQuantityChange}

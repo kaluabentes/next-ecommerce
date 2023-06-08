@@ -14,9 +14,10 @@ model Order {
   trackingCode      String?
   paymentStatus     String?
   paymentMethod     String
+  createdAt DateTime @default(now())
   
-  userId  String
-  user    User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId  String?
+  user    User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
   
   products OrderProduct[]
 

@@ -1,14 +1,16 @@
 import PageMessage from "@/app/design-system/PageMessage"
 import { BiCheckCircle, BiCreditCard, BiDisc, BiSad } from "react-icons/bi"
 import { TbTransferIn } from "react-icons/tb"
-import { Container, Wrapper } from "./PaymentMessage.styles"
+import { Container, ContentBox, Wrapper } from "./PaymentMessage.styles"
 import { ReactNode, useEffect } from "react"
+import ProductReceipt from "@/app/design-system/ProductReceipt"
+import OrderProduct from "@/models/OrderProduct"
 
 const ApprovedMessage = () => (
   <PageMessage
     icon={<BiCheckCircle />}
     title="Obrigado pelo seu pedido!"
-    description="A confirmação do pedido foi enviada para kaluanbentes@gmail.com. Em breve enviaremos o código de rastreio via email e em Minha Conta. Lembrando que o prazo para o processamento do pedido é de 1 a 3 dias."
+    description="A confirmação do pedido foi enviada para kaluanbentes@gmail.com. Em breve enviaremos o código de rastreio via email e em Minha Conta. Lembrando que o prazo para o processamento do pedido é de 1 a 3 dias úteis."
     variant="success"
   />
 )
@@ -32,12 +34,29 @@ const RejectedMessage = () => (
 
 interface PaymentMessageProps {
   status?: "rejected" | "in_process" | "approved"
+  transationDate?: string
+  products?: OrderProduct[]
+  total?: number
 }
 
-export default function PaymentMessage({ status }: PaymentMessageProps) {
-  const renderShell = (children: ReactNode) => (
+export default function PaymentMessage({
+  status,
+  transationDate,
+  products,
+  total,
+}: PaymentMessageProps) {
+  const renderShell = (children: ReactNode, receipt = false) => (
     <Wrapper>
-      <Container>{children}</Container>
+      <Container>
+        <ContentBox $receipt={receipt}>{children}</ContentBox>
+        {receipt && (
+          <ProductReceipt
+            transactionDate={transationDate}
+            products={products}
+            total={total}
+          />
+        )}
+      </Container>
     </Wrapper>
   )
 
@@ -50,8 +69,8 @@ export default function PaymentMessage({ status }: PaymentMessageProps) {
   }
 
   if (status === "in_process") {
-    return renderShell(<InProcessMessage />)
+    return renderShell(<InProcessMessage />, true)
   }
 
-  return renderShell(<ApprovedMessage />)
+  return renderShell(<ApprovedMessage />, true)
 }

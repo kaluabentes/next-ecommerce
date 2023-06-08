@@ -21,6 +21,7 @@
     "cep-promise": "^4.4.0",
     "embla-carousel-autoplay": "^8.0.0-rc04",
     "embla-carousel-react": "^8.0.0-rc04",
+    "encoding": "^0.1.13",
     "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
     "mercadopago": "^1.5.16",

@@ -6,7 +6,7 @@ import CardFormInput from "../CardFormInput"
 
 export type PaymentFormErrors = {
   cardNumber?: string
-  expirationDate?: string
+  expirationMonth?: string
   securityCode?: string
   cardholderName?: string
   issuer?: string
@@ -32,7 +32,7 @@ export default function CardForm({ errors }: CardFormProps) {
         <CardFormInput
           id="form-checkout__expirationDate"
           label="Data de validade"
-          error={errors?.expirationDate}
+          error={errors?.expirationMonth}
         />
       </FormGrid>
       <FormGrid>

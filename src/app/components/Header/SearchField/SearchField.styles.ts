@@ -27,6 +27,8 @@ export const Input = styled.input`
   border: 0;
   outline: 0;
   width: 100px;
+  font-size: ${rem(14)};
+  font-weight: 500;
 `
 
 export const IconButton = styled.button`

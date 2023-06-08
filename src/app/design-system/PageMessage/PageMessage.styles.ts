@@ -11,7 +11,7 @@ export const Container = styled.div<{
   gap: ${rem(16)};
 
   & svg {
-    font-size: ${rem(82)};
+    font-size: ${rem(122)};
     color: ${(props) => props.theme.colors.secondary};
   }
 
@@ -42,6 +42,7 @@ export const Container = styled.div<{
 
 export const Title = styled.h2`
   margin: 0;
+  text-align: center;
 `
 
 export const Description = styled.p`
@@ -50,4 +51,5 @@ export const Description = styled.p`
   text-align: center;
   line-height: 1.5rem;
   font-weight: 500;
+  font-size: ${rem(14)};
 `
