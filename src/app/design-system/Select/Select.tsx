@@ -38,7 +38,7 @@ export default function Select({
         onChange={onChange}
         $margin={margin}
         $error={Boolean(error)}
-        disabled={disabled}
+        disabled={Boolean(disabled)}
       >
         {children}
       </Field>

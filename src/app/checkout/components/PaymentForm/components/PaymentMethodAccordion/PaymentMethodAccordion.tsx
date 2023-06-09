@@ -1,3 +1,4 @@
+import { ReactNode } from "react"
 import {
   Container,
   Content,
@@ -5,7 +6,17 @@ import {
   Image,
 } from "./PaymentMethodAccordion.styles"
 
-export default function PaymentMethodAccordion({ title, image, children }) {
+interface PaymentMethodAccordionProps {
+  title?: string
+  image?: string
+  children?: ReactNode
+}
+
+export default function PaymentMethodAccordion({
+  title,
+  image,
+  children,
+}: PaymentMethodAccordionProps) {
   return (
     <Container>
       <Header>{title}</Header>

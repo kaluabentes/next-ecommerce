@@ -31,7 +31,7 @@ export default function formatDate(dateString: string) {
   const month = months[date.getMonth()]
   const year = date.getFullYear()
   const hours = String(date.getHours()).padStart(2, "0")
-  const minutes = date.getMinutes()
+  const minutes = String(date.getMinutes()).padStart(2, "0")
 
   return `${weekDay}, ${day} de ${month}, ${year} ás ${hours}:${minutes}`
 }

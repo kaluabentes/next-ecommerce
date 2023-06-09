@@ -10,11 +10,9 @@ import { Container, SummaryBox } from "./ShippingSummary.styles"
 import formatCurrency from "@/utilities/number/formatCurrency"
 import rem from "@/utilities/styles/rem"
 import useCartContext from "@/contexts/cart/useCartContext"
-import Product from "@/models/Product"
 import CartProduct from "@/app/design-system/CartProduct/CartProduct"
 import { useRouter } from "next/navigation"
 import Button from "@/app/design-system/Button"
-import useMercadoPago from "../PaymentForm/hooks/useMercadoPago"
 
 interface ShippingItemsResumeProps {
   isLoading?: boolean

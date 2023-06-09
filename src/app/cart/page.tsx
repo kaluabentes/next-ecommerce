@@ -5,7 +5,6 @@ import { Title } from "../[slug]/components/PageContent/PageContent.styles"
 import { Grid } from "./components/utils"
 import CartProducts from "./components/CartProducts/CartProducts"
 import CartSummary from "./components/CartSummary/CartSummary"
-import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs"
 
 export const metadata: Metadata = {
   title: "Seu carrinho de compras",
