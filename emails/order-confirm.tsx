@@ -31,7 +31,7 @@ const receiptContainer = {
 }
 
 const logoContainer = {
-  padding: "32px 0px 16px 0px",
+  padding: "32px 0px",
 }
 
 const logo = {
