@@ -49,7 +49,7 @@ export default function CartProduct({
           {product?.name}
         </Title>
         <div>
-          <Price>{formatCurrency(product?.price!)}</Price>
+          <Price>{formatCurrency(Number(product?.price!))}</Price>
           {!hideQuantityInput && product?.fromPrice && (
             <FromPrice>{formatCurrency(product?.fromPrice!)}</FromPrice>
           )}
