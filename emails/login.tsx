@@ -11,7 +11,6 @@ import {
 import OrderProduct from "../src/models/OrderProduct"
 import formatDate from "../src/utilities/date/formatDate"
 import DefaultLayout from "../src/emails/layouts/DefaultLayout"
-import formatCurrency from "../src/utilities/number/formatCurrency"
 
 const logo = {
   margin: "0 auto",
@@ -98,7 +97,7 @@ const button = {
   fontWeight: 600,
 }
 
-interface OrderConfirmProps {
+interface LoginProps {
   transactionDate?: string
   paymentMethod?: string
   shippingMethod?: string
@@ -106,7 +105,7 @@ interface OrderConfirmProps {
   total?: number
 }
 
-export default function OrderConfirm({
+export default function Login({
   transactionDate = "2023-06-08T07:41:11.890Z",
   paymentMethod = "Cartão de crédito",
   shippingMethod = "Entrega padrão (15-30 dias úteis)",
@@ -127,7 +126,7 @@ export default function OrderConfirm({
     },
   ],
   total = 2022.5,
-}: OrderConfirmProps) {
+}: LoginProps) {
   return (
     <DefaultLayout>
       <Img
@@ -162,9 +161,9 @@ export default function OrderConfirm({
             />
           </Column>
           <Column>
-            <Text style={productTitle}>{product.name}</Text>
-            <Text style={productPrice}>{formatCurrency(product.price!)}</Text>
-            <Text style={productQuantity}>{product.quantity}x</Text>
+            <Text style={productTitle}>Garrafa Térmica Inteligente 500ML</Text>
+            <Text style={productPrice}>R$ 99.9</Text>
+            <Text style={productQuantity}>1x</Text>
           </Column>
         </Section>
       ))}
@@ -174,7 +173,7 @@ export default function OrderConfirm({
           <Text style={yourOrderLabel}>Total</Text>
         </Column>
         <Column align="right">
-          <Text style={yourOrderValue}>{formatCurrency(total)}</Text>
+          <Text style={yourOrderValue}>{total}</Text>
         </Column>
       </Section>
       <Button

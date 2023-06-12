@@ -30,7 +30,7 @@ export async function POST(request: Request) {
     })
 
     const emailPayload = {
-      from: "onboarding@resend.dev",
+      from: process.env.EMAIL_FROM!,
       react: OrderConfirm({
         transactionDate: order.createdAt.toISOString(),
         products: order.products.map((product) => ({
