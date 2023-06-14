@@ -16,6 +16,7 @@ import CartProduct from "../CartProduct/CartProduct"
 import formatCurrency from "@/utilities/number/formatCurrency"
 import Button from "../Button"
 import formatDate from "@/utilities/date/formatDate"
+import { useRouter } from "next/navigation"
 
 interface ProductReceiptProps {
   transactionDate?: string
@@ -23,7 +24,6 @@ interface ProductReceiptProps {
   shippingMethod?: string
   products?: OrderProduct[]
   total?: number
-  action?: ReactNode
 }
 
 export default function ProductReceipt({
@@ -39,8 +39,9 @@ export default function ProductReceipt({
     },
   ],
   total = 2022.5,
-  action = <Button variant="primary">Ir para Minha Conta</Button>,
 }: ProductReceiptProps) {
+  const router = useRouter()
+
   return (
     <Container>
       <OrderDetailItem>
@@ -70,7 +71,9 @@ export default function ProductReceipt({
         <YourOrderItemLabel>Total</YourOrderItemLabel>
         <YourOrderItemValue>{formatCurrency(total)}</YourOrderItemValue>
       </YourOrderItem>
-      {action}
+      <Button variant="primary" onClick={() => router.push("/my-account")}>
+        Ir para Minha Conta
+      </Button>
     </Container>
   )
 }

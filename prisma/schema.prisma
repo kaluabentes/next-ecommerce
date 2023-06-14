@@ -13,7 +13,15 @@ model Order {
   id                String  @id @default(cuid())
   trackingCode      String?
   paymentStatus     String?
+  status            String?
   paymentMethod     String
+  zipcode String
+  state String
+  city String
+  neighborhood String
+  street String
+  number String
+  complement String?
   createdAt DateTime @default(now())
   
   userId  String?
@@ -74,13 +82,6 @@ model User {
   name String
   email         String?   @unique
   phone String
-  zipcode String
-  state String
-  city String
-  neighborhood String
-  street String
-  number String
-  complement String?
   emailVerified DateTime?
   image         String?
   accounts      Account[]

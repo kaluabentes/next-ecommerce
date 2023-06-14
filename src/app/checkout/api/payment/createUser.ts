@@ -1,17 +1,15 @@
-import { CartProduct } from "@/contexts/cart/CartContextProvider"
 import prisma from "@/infra/database/prisma"
-import { Prisma, User } from "@prisma/client"
+import User from "@/models/User"
 
 export default async function createUser({
-  shippingInfo,
+  email,
+  name,
+  phone,
   orderId,
-}: {
-  shippingInfo: any
-  orderId: string
-}) {
+}: User) {
   const existingUser = await prisma.user.findFirst({
     where: {
-      email: shippingInfo.email,
+      email,
     },
   })
 
@@ -21,8 +19,9 @@ export default async function createUser({
         id: existingUser.id,
       },
       data: {
-        ...existingUser,
-        ...shippingInfo,
+        email: email || existingUser.email,
+        name: name || existingUser.name,
+        phone: phone || existingUser.phone,
         orders: {
           connect: [{ id: orderId }],
         },
@@ -32,7 +31,9 @@ export default async function createUser({
 
   return prisma.user.create({
     data: {
-      ...shippingInfo,
+      email,
+      name: name!,
+      phone: phone!,
       orders: {
         connect: [{ id: orderId }],
       },

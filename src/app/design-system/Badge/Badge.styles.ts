@@ -2,28 +2,28 @@ import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"
 
 export const Container = styled.span<{
-  $variant?: "secundary" | "greenvogue" | "primary"
+  $variant?: "secondary" | "blue" | "primary"
   $margin?: string
 }>`
   margin: 0;
   font-size: ${rem(12)};
   display: inline-block;
   color: white;
-  padding: ${rem(5)} ${rem(10)};
+  padding: ${rem(2)} ${rem(8)};
   border-radius: ${rem(5)};
   font-weight: 600;
-  display: inline-block;
+  display: inline-flex;
 
   ${(props) =>
-    props.$variant === "secundary" &&
+    props.$variant === "secondary" &&
     css`
-      background: ${(props) => props.theme.colors.secundary};
+      background: ${(props) => props.theme.colors.secondary};
     `}
 
   ${(props) =>
-    props.$variant === "greenvogue" &&
+    props.$variant === "blue" &&
     css`
-      background: ${(props) => props.theme.colors.greenvogue};
+      background: ${(props) => props.theme.colors.blue};
     `}
 
     ${(props) =>

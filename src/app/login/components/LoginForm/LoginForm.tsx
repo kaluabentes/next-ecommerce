@@ -3,13 +3,16 @@
 import * as Yup from "yup"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
-import { signIn } from "next-auth/react"
+import { signIn, useSession } from "next-auth/react"
 import { useState } from "react"
 
 import Input from "@/app/design-system/Input"
 import { Container, Text, Title } from "./LoginForm.styles"
 import Button from "@/app/design-system/Button"
 import ContentContainer from "@/app/design-system/ContentContainer"
+import { useRouter } from "next/navigation"
+import PageMessage from "@/app/design-system/PageMessage"
+import { BiCheckCircle } from "react-icons/bi"
 
 const signinSchema = Yup.object({
   email: Yup.string()
@@ -23,41 +26,58 @@ interface SignInData {
 
 export default function LoginForm() {
   const [isLoading, setIsLoading] = useState(false)
+  const [isSent, setIsSent] = useState(false)
+  const { data: session } = useSession()
+  const router = useRouter()
 
   const {
     register,
     handleSubmit,
     formState: { errors },
+    getValues,
   } = useForm<SignInData>({
     resolver: yupResolver(signinSchema),
   })
 
-  const handleSubmitCallback = (data: SignInData) => {
+  const handleSubmitCallback = async (data: SignInData) => {
     setIsLoading(true)
-    signIn("email", {
+    await signIn("email", {
       email: data.email,
-      callbackUrl: "/login/success",
+      redirect: false,
+      callbackUrl: "/my-account",
     })
+    setIsSent(true)
+    setIsLoading(false)
   }
 
   return (
-    <form onClick={handleSubmit(handleSubmitCallback)}>
-      <ContentContainer>
-        <Container>
-          <Title>Entrar</Title>
-          <Text>
-            Para fazer o seu login digite o seu email utilizado no checkout
-          </Text>
-          <Input
-            placeholder="Digite seu email"
-            {...register("email")}
-            error={errors.email?.message}
+    <ContentContainer>
+      <Container>
+        {isSent && (
+          <PageMessage
+            icon={<BiCheckCircle />}
+            title="Verifique seu email"
+            description={`Para conectar a sua conta por favor verifique sua caixa de entrada, enviamos um email contendo o link para você logar na sua conta.`}
+            variant="success"
           />
-          <Button variant="primary" full isLoading={isLoading} type="submit">
-            Continuar
-          </Button>
-        </Container>
-      </ContentContainer>
-    </form>
+        )}
+        {!isSent && (
+          <form onClick={handleSubmit(handleSubmitCallback)}>
+            <Title>Entrar</Title>
+            <Text>
+              Para fazer o seu login digite o seu email utilizado no checkout
+            </Text>
+            <Input
+              placeholder="Digite seu email"
+              {...register("email")}
+              error={errors.email?.message}
+            />
+            <Button variant="primary" full isLoading={isLoading} type="submit">
+              Continuar
+            </Button>
+          </form>
+        )}
+      </Container>
+    </ContentContainer>
   )
 }

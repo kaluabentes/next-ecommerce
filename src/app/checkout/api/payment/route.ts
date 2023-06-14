@@ -17,26 +17,56 @@ export async function POST(request: Request) {
     const { paymentInfo, shippingInfo, orderInfo } = body
 
     const {
-      response: { status, status_detail, id },
+      response: {
+        status: paymentStatus,
+        status_detail: paymentStatusDetail,
+        id: paymentId,
+      },
     } = await mercadopago.payment.save(paymentInfo)
 
+    if (paymentStatus === "rejected") {
+      return NextResponse.json({
+        paymentStatus,
+        paymentStatusDetail,
+        paymentId,
+      })
+    }
+
     const order = await createOrder({
-      orderInfo,
-      paymentStatus: status,
+      paymentStatus: paymentStatus,
+      status: orderInfo.status,
+      paymentMethod: orderInfo.paymentMethod,
+      zipcode: shippingInfo.zipcode,
+      state: shippingInfo.state,
+      city: shippingInfo.city,
+      neighborhood: shippingInfo.neighborhood,
+      street: shippingInfo.street,
+      number: shippingInfo.number,
+      complement: shippingInfo.complement,
+      products: orderInfo.products,
     })
+
     const user = await createUser({
-      shippingInfo,
+      email: shippingInfo.email,
+      name: shippingInfo.name,
+      phone: shippingInfo.phone,
       orderId: order.id,
     })
 
     const emailPayload = {
       from: process.env.EMAIL_FROM!,
       react: OrderConfirm({
+        paymentMethod: order.paymentMethod,
         transactionDate: order.createdAt.toISOString(),
         products: order.products.map((product) => ({
           ...product,
           price: Number(product.price.toFixed(2)),
         })),
+        total: order?.products?.reduce(
+          (prev, curr) =>
+            prev + curr?.quantity! * Number(curr?.price!.toFixed(2)),
+          0
+        ),
       }),
     }
 
@@ -52,7 +82,13 @@ export async function POST(request: Request) {
       subject: "Kalux: Obrigado pelo seu pedido",
     })
 
-    return NextResponse.json({ status, status_detail, id, user, order })
+    return NextResponse.json({
+      paymentStatus,
+      paymentStatusDetail,
+      paymentId,
+      user,
+      order,
+    })
   } catch (error: any) {
     return NextResponse.json({ error: error.message })
   }

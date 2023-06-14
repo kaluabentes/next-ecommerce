@@ -4,7 +4,7 @@ import { Container } from "./Badge.styles"
 
 interface BadgeProps {
   children: ReactNode
-  variant?: "secundary" | "greenvogue" | "primary"
+  variant?: "secondary" | "blue" | "primary"
   margin?: string
 }
 

@@ -4,7 +4,7 @@ import { Container, Description, Title } from "./PageMessage.styles"
 interface PageMessageProps {
   icon: ReactNode
   title: string
-  description: string
+  description: string | ReactNode
   variant?: "error" | "info" | "success"
 }
 

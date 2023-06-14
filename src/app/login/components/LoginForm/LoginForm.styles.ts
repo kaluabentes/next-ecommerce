@@ -5,7 +5,7 @@ import styled, { css } from "styled-components"
 
 export const Container = styled(Card)`
   max-width: ${rem(400)};
-  padding: ${rem(18)};
+  padding: ${rem(16)};
   margin: ${rem(16)} auto;
 
   ${mediaQuery(css`

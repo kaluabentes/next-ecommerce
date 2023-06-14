@@ -7,7 +7,7 @@ import { ButtonSpinner, Container } from "./Button.styles"
 interface ButtonProps {
   children: ReactNode
   variant?: "default" | "primary" | "secondary"
-  size?: "lg"
+  size?: "lg" | "sm"
   full?: boolean
   onClick?: () => void
   className?: string

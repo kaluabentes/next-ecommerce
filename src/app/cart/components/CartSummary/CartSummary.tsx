@@ -43,7 +43,7 @@ export default function CartSummary() {
         Pague no PIX ou Cartão e receba 3 dias antes
       </Badge> */}
       <Button
-        variant="secondary"
+        variant="primary"
         disabled={!totalProductsQuantity}
         onClick={() => router.push("/checkout")}
         full

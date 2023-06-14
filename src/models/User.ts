@@ -5,12 +5,6 @@ export default interface User {
   name?: string
   email?: string
   phone?: string
-  zipcode?: string
-  state?: string
-  city?: string
-  neighborhood?: string
-  street?: string
-  number?: string
-  complement?: string
   orders?: Order[]
+  orderId?: string
 }

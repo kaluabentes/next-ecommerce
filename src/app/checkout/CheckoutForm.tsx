@@ -25,6 +25,7 @@ import { CartProduct } from "@/contexts/cart/CartContextProvider"
 import PaymentMessage from "./components/PaymentMessage"
 import { Title } from "@/app/[slug]/components/PageContent/PageContent.styles"
 import Order from "@/models/Order"
+import { PaymentStatus } from "./components/PaymentMessage/PaymentMessage"
 
 export interface CheckoutFieldValues {
   name: string
@@ -171,8 +172,15 @@ export default function CheckoutForm() {
           }
 
           const orderInfo = {
-            paymentMethod: "card",
+            paymentMethod: "Cartão de crédito",
+            status: "delivery",
             products: cart.products,
+          }
+
+          const body = {
+            paymentInfo,
+            shippingInfo,
+            orderInfo,
           }
 
           try {
@@ -181,16 +189,18 @@ export default function CheckoutForm() {
               headers: {
                 "Content-Type": "application/json",
               },
-              body: JSON.stringify({
-                paymentInfo,
-                shippingInfo,
-                orderInfo,
-              }),
+              body: JSON.stringify(body),
             })
             const data = await response.json()
-            console.log("data", data)
-            setPaymentStatus(data.status)
-            setOrder(data.order)
+
+            setPaymentStatus(data.paymentStatus)
+
+            if (data.order) {
+              setOrder({
+                ...data.order,
+                user: data.user,
+              })
+            }
 
             if (
               data.error &&
@@ -229,6 +239,7 @@ export default function CheckoutForm() {
   if (paymentStatus) {
     return (
       <PaymentMessage
+        email={order?.user?.email!}
         status={paymentStatus}
         transationDate={order?.createdAt}
         products={order?.products}

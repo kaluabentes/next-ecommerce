@@ -2,9 +2,16 @@ import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"
 import { Spinner } from "@/app/design-system/PageSpinner/PageSpinner.styles"
 
+export const ButtonSpinner = styled(Spinner)`
+  height: ${rem(24)} !important;
+  width: ${rem(24)} !important;
+  border: 3px solid rgba(255, 255, 255, 0.2) !important;
+  border-top: 3px solid rgba(255, 255, 255, 1) !important;
+`
+
 export const Container = styled.button<{
   $variant?: "default" | "primary" | "secondary"
-  $size?: "lg"
+  $size?: "lg" | "sm"
   $full?: boolean
 }>`
   height: ${rem(40)};
@@ -19,6 +26,7 @@ export const Container = styled.button<{
   display: flex;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
 
   &:disabled {
     cursor: not-allowed;
@@ -34,6 +42,11 @@ export const Container = styled.button<{
 
       &:hover {
         border: 1px solid rgba(0, 0, 0, 0.3);
+      }
+
+      & ${ButtonSpinner} {
+        border-color: rgba(0, 0, 0, 0.2) !important;
+        border-top-color: rgba(0, 0, 0, 0.8) !important;
       }
     `};
 
@@ -81,15 +94,17 @@ export const Container = styled.button<{
     `};
 
   ${(props) =>
+    props.$size &&
+    props.$size === "sm" &&
+    css`
+      font-size: ${rem(14)};
+      height: ${rem(32)};
+      padding: 0 ${rem(12)};
+    `};
+
+  ${(props) =>
     props.$full &&
     css`
       width: 100%;
     `}
-`
-
-export const ButtonSpinner = styled(Spinner)`
-  height: ${rem(28)} !important;
-  width: ${rem(28)} !important;
-  border: 3px solid rgba(255, 255, 255, 0.2) !important;
-  border-top: 3px solid rgba(255, 255, 255, 1) !important;
 `

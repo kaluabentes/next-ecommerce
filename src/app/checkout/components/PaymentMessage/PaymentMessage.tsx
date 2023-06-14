@@ -6,11 +6,18 @@ import { ReactNode, useEffect } from "react"
 import ProductReceipt from "@/app/design-system/ProductReceipt"
 import OrderProduct from "@/models/OrderProduct"
 
-const ApprovedMessage = () => (
+const ApprovedMessage = ({ email = "" }) => (
   <PageMessage
     icon={<BiCheckCircle />}
     title="Obrigado pelo seu pedido!"
-    description="A confirmação do pedido foi enviada para kaluanbentes@gmail.com. Em breve enviaremos o código de rastreio via email e em Minha Conta. Lembrando que o prazo para o processamento do pedido é de 1 a 3 dias úteis."
+    description={
+      <>
+        A confirmação do pedido foi enviada para <strong>{email}</strong>. Em
+        breve enviaremos o código de rastreio via email e em Minha Conta.
+        Lembrando que o prazo para o processamento do pedido é de 1 a 3 dias
+        úteis.
+      </>
+    }
     variant="success"
   />
 )
@@ -32,11 +39,14 @@ const RejectedMessage = () => (
   />
 )
 
+export type PaymentStatus = "rejected" | "in_process" | "approved"
+
 interface PaymentMessageProps {
-  status?: "rejected" | "in_process" | "approved"
+  status?: PaymentStatus
   transationDate?: string
   products?: OrderProduct[]
   total?: number
+  email?: string
 }
 
 export default function PaymentMessage({
@@ -44,12 +54,13 @@ export default function PaymentMessage({
   transationDate,
   products,
   total,
+  email,
 }: PaymentMessageProps) {
-  const renderShell = (children: ReactNode, receipt = false) => (
+  const renderShell = (children: ReactNode, showReceipt = false) => (
     <Wrapper>
       <Container>
-        <ContentBox $receipt={receipt}>{children}</ContentBox>
-        {receipt && (
+        <ContentBox $receipt={showReceipt}>{children}</ContentBox>
+        {showReceipt && (
           <ProductReceipt
             transactionDate={transationDate}
             products={products}
@@ -72,5 +83,5 @@ export default function PaymentMessage({
     return renderShell(<InProcessMessage />, true)
   }
 
-  return renderShell(<ApprovedMessage />, true)
+  return renderShell(<ApprovedMessage email={email} />, true)
 }
