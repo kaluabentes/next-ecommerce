@@ -79,10 +79,12 @@ export default function OrderDetailModal({
         <OrderDetailItemLabel>Número</OrderDetailItemLabel>
         <OrderDetailItemValue>{order?.number}</OrderDetailItemValue>
       </OrderDetailItem>
-      <OrderDetailItem>
-        <OrderDetailItemLabel>Complemento</OrderDetailItemLabel>
-        <OrderDetailItemValue>{order?.complement}</OrderDetailItemValue>
-      </OrderDetailItem>
+      {order?.complement && (
+        <OrderDetailItem>
+          <OrderDetailItemLabel>Complemento</OrderDetailItemLabel>
+          <OrderDetailItemValue>{order?.complement}</OrderDetailItemValue>
+        </OrderDetailItem>
+      )}
       <YourOrderTitle>Seu Pedido</YourOrderTitle>
       {order?.products?.map((product) => (
         <CartProduct
