@@ -2,6 +2,8 @@ import { CartProduct } from "@/contexts/cart/CartContextProvider"
 import Order from "@/models/Order"
 import { Prisma } from "@prisma/client"
 
+import prisma from "@/infra/database/prisma"
+
 export default async function createOrder({
   paymentStatus,
   status,
