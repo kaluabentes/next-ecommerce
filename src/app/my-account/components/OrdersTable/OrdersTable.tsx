@@ -36,8 +36,8 @@ interface KeyVariant {
 }
 
 export const statusVariant: KeyVariant = {
-  processing: "primary",
-  waiting_payment: "blue",
+  processing: "blue",
+  waiting_payment: "primary",
   delivery: "secondary",
 }
 

@@ -11,6 +11,7 @@ interface InputProps {
   margin?: string
   label?: string
   error?: string
+  disabled?: boolean
 }
 
 const Input = forwardRef(
@@ -25,6 +26,7 @@ const Input = forwardRef(
       id,
       label,
       error,
+      disabled,
     }: InputProps,
     ref
   ) => (
@@ -40,6 +42,7 @@ const Input = forwardRef(
         $margin={margin}
         $error={Boolean(error)}
         ref={ref as any}
+        disabled={disabled}
       />
       {error && <Error>{error}</Error>}
     </Container>

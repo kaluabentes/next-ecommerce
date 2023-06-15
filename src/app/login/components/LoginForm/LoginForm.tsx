@@ -62,7 +62,7 @@ export default function LoginForm() {
           />
         )}
         {!isSent && (
-          <form onClick={handleSubmit(handleSubmitCallback)}>
+          <form onSubmit={handleSubmit(handleSubmitCallback)}>
             <Title>Entrar</Title>
             <Text>
               Para fazer o seu login digite o seu email utilizado no checkout

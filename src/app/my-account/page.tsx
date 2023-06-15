@@ -8,6 +8,7 @@ import OrdersTable from "./components/OrdersTable/OrdersTable"
 import Header from "./components/Header"
 import prisma from "@/infra/database/prisma"
 import Order from "@/models/Order"
+import User from "@/models/User"
 
 export const metadata: Metadata = {
   title: "Minha Conta",
@@ -37,7 +38,7 @@ export default async function MyAccount() {
 
   return (
     <ContentContainer>
-      <Header name={session?.user?.name!} />
+      <Header user={user as unknown as User} />
       <h3>Pedidos</h3>
       <OrdersTable orders={user?.orders! as unknown as Order[]} />
     </ContentContainer>

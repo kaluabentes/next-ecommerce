@@ -6,19 +6,24 @@ import { Title } from "@/app/[slug]/components/PageContent/PageContent.styles"
 import { ButtonGrid, Container } from "./Header.styles"
 import Button from "@/app/design-system/Button"
 import { useState } from "react"
+import EditProfileModal from "../EditProfileModal"
+import User from "@/models/User"
 
 interface HeaderProps {
-  name?: string
+  user?: User
 }
 
-export default function Header({ name }: HeaderProps) {
+export default function Header({ user }: HeaderProps) {
   const [isLoggingOut, setIsLoggingOut] = useState(false)
+  const [isEditProfileOpen, setIsEditProfileOpen] = useState(false)
 
   return (
     <Container>
-      <Title>Olá, {name}</Title>
+      <Title>Olá, {user?.name}</Title>
       <ButtonGrid>
-        <Button>Editar perfil</Button>
+        <Button onClick={() => setIsEditProfileOpen(true)}>
+          Editar perfil
+        </Button>
         <Button
           isLoading={isLoggingOut}
           onClick={() => {
@@ -29,6 +34,11 @@ export default function Header({ name }: HeaderProps) {
           Sair
         </Button>
       </ButtonGrid>
+      <EditProfileModal
+        user={user!}
+        isOpen={isEditProfileOpen}
+        onClose={() => setIsEditProfileOpen(false)}
+      />
     </Container>
   )
 }
