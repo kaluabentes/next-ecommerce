@@ -11,8 +11,8 @@ export default function useGetAddressByZipcode() {
   const [shippingInfo, setShippingInfo] = useState<CEP | undefined>()
 
   useEffect(() => {
-    if (zipcode) {
-      const findAddress = async () => {
+    const findAddress = async () => {
+      if (zipcode) {
         try {
           await cep(zipcode.replace(/[^0-9]/g, "")).then((data: CEP) =>
             setShippingInfo(data)
@@ -25,9 +25,9 @@ export default function useGetAddressByZipcode() {
           })
         }
       }
-
-      findAddress()
     }
+
+    findAddress()
   }, [zipcode])
 
   return { setZipcode, shippingInfo }
