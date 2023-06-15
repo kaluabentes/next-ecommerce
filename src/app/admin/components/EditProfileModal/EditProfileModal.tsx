@@ -72,8 +72,6 @@ export default function EditProfileModal({
         description: "Seus dados foram salvos",
         icon: <BiCheck />,
       })
-
-      location.reload()
     } catch (error: any) {
       console.log("Update error: ", error)
     } finally {

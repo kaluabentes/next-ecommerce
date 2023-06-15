@@ -1,4 +1,4 @@
-import { ChangeEvent, ReactNode } from "react"
+import { ChangeEvent, ReactNode, forwardRef } from "react"
 import { Container, Field, Label } from "./Select.styles"
 import { Error } from "../Input/Input.styles"
 
@@ -15,19 +15,22 @@ interface InputProps {
   disabled?: Boolean
 }
 
-export default function Select({
-  name,
-  placeholder,
-  value,
-  onChange,
-  margin,
-  id,
-  label,
-  children,
-  disabled,
-  error,
-}: InputProps) {
-  return (
+const Select = forwardRef(
+  (
+    {
+      name,
+      placeholder,
+      value,
+      onChange,
+      margin,
+      id,
+      label,
+      children,
+      disabled,
+      error,
+    }: InputProps,
+    ref
+  ) => (
     <Container>
       {label && <Label htmlFor={id}>{label}</Label>}
       <Field
@@ -39,10 +42,13 @@ export default function Select({
         $margin={margin}
         $error={Boolean(error)}
         disabled={Boolean(disabled)}
+        ref={ref as any}
       >
         {children}
       </Field>
       {error && <Error>{error}</Error>}
     </Container>
   )
-}
+)
+
+export default Select

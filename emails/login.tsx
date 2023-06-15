@@ -1,16 +1,6 @@
 import React from "react"
 import { Heading, Img, Text, Button } from "@react-email/components"
-import OrderProduct from "../src/models/OrderProduct"
 import DefaultLayout from "../src/emails/layouts/DefaultLayout"
-
-const logo = {
-  margin: "0 auto",
-}
-
-const check = {
-  ...logo,
-  marginBottom: "16px",
-}
 
 const title = {
   textAlign: "center" as const,

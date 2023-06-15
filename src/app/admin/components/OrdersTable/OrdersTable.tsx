@@ -16,6 +16,8 @@ import generateDescription from "@/app/products/lib/generateDescription"
 import Badge from "@/app/design-system/Badge"
 import subWord from "@/utilities/string/subString"
 import { useState } from "react"
+import { ButtonGrid } from "../Header/Header.styles"
+import EditOrderModal from "../EditOrderModal"
 import { statusText, statusVariant } from "@/app/common/constants"
 
 interface OrdersTableProps {
@@ -23,7 +25,8 @@ interface OrdersTableProps {
 }
 
 export default function OrdersTable({ orders }: OrdersTableProps) {
-  const [activeOrder, setActiveOrder] = useState<Order | undefined>()
+  const [detailOrder, setDetailOrder] = useState<Order | undefined>()
+  const [editOrder, setEditOrder] = useState<Order | undefined>()
 
   return (
     <TableContainer>
@@ -51,24 +54,34 @@ export default function OrdersTable({ orders }: OrdersTableProps) {
                 </Badge>
               </TableData>
               <TableData>
-                <Button onClick={() => setActiveOrder(order)} size="sm">
-                  Detalhes
-                </Button>
+                <ButtonGrid>
+                  <Button onClick={() => setDetailOrder(order)} size="sm">
+                    Detalhes
+                  </Button>
+                  <Button onClick={() => setEditOrder(order)} size="sm">
+                    Editar
+                  </Button>
+                </ButtonGrid>
               </TableData>
             </TableRow>
           ))}
         </TableBody>
       </Table>
       <OrderDetailModal
-        order={activeOrder!}
-        isOpen={Boolean(activeOrder)}
-        onClose={() => setActiveOrder(undefined)}
+        order={detailOrder!}
+        isOpen={Boolean(detailOrder)}
+        onClose={() => setDetailOrder(undefined)}
         total={
-          activeOrder?.products?.reduce(
+          detailOrder?.products?.reduce(
             (prev, curr) => prev + curr?.quantity! * curr?.price!,
             0
           )!
         }
+      />
+      <EditOrderModal
+        isOpen={Boolean(editOrder)}
+        onClose={() => setEditOrder(undefined)}
+        order={editOrder!}
       />
     </TableContainer>
   )

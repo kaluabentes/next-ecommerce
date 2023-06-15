@@ -82,6 +82,7 @@ model User {
   name String
   email         String?   @unique
   phone String
+  role         String? @default("customer")
   emailVerified DateTime?
   image         String?
   accounts      Account[]
