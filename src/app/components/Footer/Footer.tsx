@@ -96,7 +96,11 @@ export default function Footer() {
           <Copyright>&copy; Kalux | CNPJ: 0000-00000-0000-0001</Copyright>
         </PaymentContainer>
       </ContentContainer>
-      <ChatButton>
+      <ChatButton
+        href="https://api.whatsapp.com/send?phone=92981467183&text=Ol%C3%A1,%20tudo%20bom?%20Gostaria%20de%20tirar%20algumas%20d%C3%BAvidas."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <RiCustomerService2Fill />
       </ChatButton>
     </Container>

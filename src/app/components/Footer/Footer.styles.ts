@@ -103,7 +103,7 @@ export const Copyright = styled.p`
   font-size: ${rem(12)};
 `
 
-export const ChatButton = styled.button`
+export const ChatButton = styled.a`
   height: ${rem(64)};
   width: ${rem(64)};
   background: white;
