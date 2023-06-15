@@ -18,6 +18,7 @@ import Button from "@/app/design-system/Button"
 import { statusText, statusVariant } from "../OrdersTable/OrdersTable"
 import Badge from "@/app/design-system/Badge"
 import formatDate from "@/utilities/date/formatDate"
+import { useRouter } from "next/navigation"
 
 interface OrderDetailModalProps {
   isOpen: boolean
@@ -32,6 +33,8 @@ export default function OrderDetailModal({
   order,
   total,
 }: OrderDetailModalProps) {
+  const router = useRouter()
+
   return (
     <Modal size="md" isOpen={isOpen} onClose={onClose}>
       <Title>Detalhes do pedido</Title>
@@ -88,6 +91,7 @@ export default function OrderDetailModal({
       <YourOrderTitle>Seu Pedido</YourOrderTitle>
       {order?.products?.map((product) => (
         <CartProduct
+          onClick={() => router.push(`/products/${product.slug}`)}
           key={product.id}
           product={product}
           removeXPadding

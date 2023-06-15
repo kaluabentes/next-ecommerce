@@ -2,10 +2,8 @@
 
 import { useRouter } from "next/navigation"
 
-import Badge from "@/app/design-system/Badge"
 import {
   Container,
-  EconomyText,
   Title,
   TotalContainer,
   TotalLabel,
@@ -38,10 +36,6 @@ export default function CartSummary() {
         <TotalLabel>Total</TotalLabel>
         <TotalValue>{formatCurrency(totalProductsPrice)}</TotalValue>
       </TotalContainer>
-      {/* 
-      <Badge variant="greenvogue" margin={`0 0 ${rem(32)} 0`}>
-        Pague no PIX ou Cartão e receba 3 dias antes
-      </Badge> */}
       <Button
         variant="primary"
         disabled={!totalProductsQuantity}

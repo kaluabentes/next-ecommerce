@@ -94,7 +94,7 @@ export const ShippingGroup = styled.div``
 
 export const ShippingTitle = styled.p`
   font-size: ${rem(16)};
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.blue};
   margin: 0 0 ${rem(4)} 0;
   padding: 0;
   background: transparent;

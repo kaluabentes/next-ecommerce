@@ -84,7 +84,7 @@ export default function ProductBuyArea({ product }: ProductBuyAreaProps) {
           {formatCurrency(product.portionPrice!)}
         </span>
       </PortionPrice>
-      <Badge variant="greenvogue" margin={`0 0 ${rem(32)} 0`}>
+      <Badge variant="primary" margin={`0 0 ${rem(32)} 0`}>
         Economia de {formatCurrency(product.economyPrice!)}
       </Badge>
       <ShippingBox>
