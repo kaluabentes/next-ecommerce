@@ -38,5 +38,6 @@ export default css`
   & li {
     line-height: 1.6em;
     margin: 0 0 ${rem(16)} 0;
+    color: rgba(0, 0, 0, 0.61);
   }
 `
