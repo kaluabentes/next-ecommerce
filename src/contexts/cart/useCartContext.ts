@@ -17,19 +17,23 @@ interface CartContextApi {
   incrementQuantity: (slug: string) => void
   decrementQuantity: (slug: string) => void
   removeProduct: (slug: string) => void
+  clearProducts: () => void
 }
 
 export default function useCartContext(): CartContextApi {
   const { setCart } = useContext(CartActionContext)
   const cart = useContext(CartValueContext)
+
   const totalProductsQuantity = cart.products.reduce(
     (prev, curr) => prev + (curr?.quantity || 0),
     0
   )
+
   const totalProductsPrice = cart.products.reduce(
     (prev, curr) => prev + (curr.price || 0) * (curr.quantity || 0),
     0
   )
+
   const totalEconomyPrice = cart.products.reduce(
     (prev, curr) => prev + (curr.economyPrice || 0) * (curr.quantity || 0),
     0
@@ -101,6 +105,13 @@ export default function useCartContext(): CartContextApi {
     }))
   }
 
+  const clearProducts = () => {
+    setCart((prevCart) => ({
+      ...prevCart,
+      products: [],
+    }))
+  }
+
   return {
     cart,
     totalProductsQuantity,
@@ -111,5 +122,6 @@ export default function useCartContext(): CartContextApi {
     decrementQuantity,
     changeQuantity,
     removeProduct,
+    clearProducts,
   }
 }

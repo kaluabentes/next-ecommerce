@@ -59,7 +59,7 @@ export default function CheckoutForm() {
   const [isLoading, setIsLoading] = useState(false)
   const [paymentStatus, setPaymentStatus] = useState()
   const [order, setOrder] = useState<Order | undefined>()
-  const { totalProductsPrice, cart } = useCartContext()
+  const { totalProductsPrice, cart, clearProducts } = useCartContext()
   const { mp, setErrors, errors: mpErrors } = useMercadoPago()
   const toast = useToast()
 
@@ -196,6 +196,7 @@ export default function CheckoutForm() {
             setPaymentStatus(data.paymentStatus)
 
             if (data.order) {
+              clearProducts()
               setOrder({
                 ...data.order,
                 user: data.user,
