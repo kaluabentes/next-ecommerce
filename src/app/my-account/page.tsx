@@ -35,12 +35,19 @@ export default async function MyAccount() {
       },
     },
   })
+  const orders = user?.orders.map((order) => ({
+    ...order,
+    products: order.products.map((product) => ({
+      ...product,
+      price: Number(product.price.toFixed(2)),
+    })),
+  }))
 
   return (
     <ContentContainer>
       <Header user={user as unknown as User} />
       <h3>Pedidos</h3>
-      <OrdersTable orders={user?.orders! as unknown as Order[]} />
+      <OrdersTable orders={orders! as unknown as Order[]} />
     </ContentContainer>
   )
 }

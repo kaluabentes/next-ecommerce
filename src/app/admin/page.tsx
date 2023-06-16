@@ -40,12 +40,20 @@ export default async function MyAccount() {
     redirect("/restricted-access")
   }
 
-  const orders = await prisma.order.findMany({
-    include: {
-      products: true,
-      user: true,
-    },
-  })
+  const orders = (
+    await prisma.order.findMany({
+      include: {
+        products: true,
+        user: true,
+      },
+    })
+  ).map((order) => ({
+    ...order,
+    products: order.products.map((product) => ({
+      ...product,
+      price: Number(product.price.toFixed(2)),
+    })),
+  }))
 
   return (
     <ContentContainer>
