@@ -3,6 +3,10 @@ import { NextResponse } from "next/server"
 
 import { authOptions } from "@/app/api/auth/[...nextauth]/route"
 import prisma from "@/infra/database/prisma"
+import { Resend } from "resend"
+import TrackingCode from "@root/emails/tracking-code"
+
+const APP_URL = process.env.APP_URL!
 
 export async function PATCH(request: Request) {
   try {
@@ -23,14 +27,31 @@ export async function PATCH(request: Request) {
       return NextResponse.json({ error: "You don't have permissions" })
     }
 
-    const result = await prisma.order.update({
+    const order = await prisma.order.update({
       where: {
         id: body.id,
       },
       data: body,
+      include: {
+        user: true,
+      },
     })
 
-    return NextResponse.json(result)
+    if (order.trackingCode) {
+      const resend = new Resend(process.env.RESEND_API_KEY!)
+
+      resend.sendEmail({
+        to: order.user?.email!,
+        from: process.env.EMAIL_FROM!,
+        subject: "Kalux: Código de rastreio disponível",
+        react: TrackingCode({
+          trackingCode: order.trackingCode,
+          url: `${APP_URL}/track-order`,
+        }),
+      })
+    }
+
+    return NextResponse.json(order)
   } catch (error: any) {
     return NextResponse.json({ error: error.message })
   }
