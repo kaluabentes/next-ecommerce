@@ -50,13 +50,11 @@ const trackingCodeBox = {
 }
 
 interface TrackingCodeProps {
-  url?: string
   trackingCode?: string
   products?: OrderProduct[]
 }
 
 export default function TrackingCode({
-  url,
   trackingCode = "PC123456789BR, PC123456789BR",
   products = [
     {

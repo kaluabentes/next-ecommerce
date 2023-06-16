@@ -50,7 +50,7 @@ export default function ProductList({
             <Column style={{ width: "136px" }}>
               <Img
                 style={productImage}
-                src={`https://kaluxshop.vercel.app/${product.thumb}`}
+                src={`https://kaluxshop.vercel.app${product.thumb}`}
               />
             </Column>
             <Column>
