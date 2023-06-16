@@ -5,7 +5,7 @@ import { signOut } from "next-auth/react"
 import { Title } from "@/app/[slug]/components/PageContent/PageContent.styles"
 import { ButtonGrid, Container } from "./Header.styles"
 import Button from "@/app/design-system/Button"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import EditProfileModal from "../EditProfileModal"
 import User from "@/models/User"
 
@@ -16,6 +16,12 @@ interface HeaderProps {
 export default function Header({ user }: HeaderProps) {
   const [isLoggingOut, setIsLoggingOut] = useState(false)
   const [isEditProfileOpen, setIsEditProfileOpen] = useState(false)
+
+  useEffect(() => {
+    if (!user?.name) {
+      setIsEditProfileOpen(true)
+    }
+  }, [user])
 
   return (
     <Container>

@@ -40,14 +40,30 @@ export default function LoginForm() {
   })
 
   const handleSubmitCallback = async (data: SignInData) => {
-    setIsLoading(true)
-    await signIn("email", {
-      email: data.email,
-      redirect: false,
-      callbackUrl: "/my-account",
-    })
-    setIsSent(true)
-    setIsLoading(false)
+    try {
+      setIsLoading(true)
+
+      await signIn("email", {
+        email: data.email,
+        redirect: false,
+        callbackUrl: "/my-account",
+      })
+
+      await fetch("/login/api/create-user", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: data.email,
+        }),
+      })
+
+      setIsSent(true)
+      setIsLoading(false)
+    } catch (error: any) {
+      console.log("Login error: ", error)
+    }
   }
 
   return (
