@@ -76,7 +76,9 @@ export default function ProductBuyArea({ product }: ProductBuyAreaProps) {
         <ReviewStars rating={reviewsAverage} />
       </ReviewContainer>
       <Separator />
-      <Badge margin={`0 0 ${rem(10)} 0`}>{product.discount}</Badge>
+      <Badge variant="blue" margin={`0 0 ${rem(10)} 0`}>
+        {product.discount}
+      </Badge>
       <FromText>A partir de</FromText>
       <PriceContainer>
         <Price>{formatCurrency(product.price!)}</Price>
@@ -94,10 +96,8 @@ export default function ProductBuyArea({ product }: ProductBuyAreaProps) {
       <ShippingBox>
         <TbTruckDelivery />
         <ShippingGroup>
-          <ShippingTitle>Prazo de entrega entre 15 á 30 dias</ShippingTitle>
-          <ShippingText>
-            Compre sem preocupação, o frete é por nossa conta.
-          </ShippingText>
+          <ShippingTitle>Frete Grátis</ShippingTitle>
+          <ShippingText>Prazo de entrega de 15 á 30 dias</ShippingText>
         </ShippingGroup>
       </ShippingBox>
       <BuyButtonContainer>

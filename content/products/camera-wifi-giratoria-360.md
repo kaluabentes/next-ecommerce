@@ -4,7 +4,7 @@ slug: camera-wifi-giratoria-360
 collection: dispositivos
 price: 229.9
 fromPrice: 429.9
-portionPrice: 22.5
+portionPrice: 23.3
 discount: '-53%'
 freeShipping: true
 hero: true

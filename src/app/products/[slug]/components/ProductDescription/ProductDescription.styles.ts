@@ -15,7 +15,6 @@ export const Container = styled.div`
 
   & h3 {
     font-size: ${rem(28)};
-    text-transform: uppercase;
     text-align: center;
   }
 

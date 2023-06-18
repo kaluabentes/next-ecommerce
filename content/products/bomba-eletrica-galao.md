@@ -4,7 +4,7 @@ slug: bomba-eletrica-galao
 collection: casa-jardim
 price: 99.9
 fromPrice: 149.9
-portionPrice: 22.5
+portionPrice: 10.12
 discount: '-35%'
 freeShipping: true
 hero: true

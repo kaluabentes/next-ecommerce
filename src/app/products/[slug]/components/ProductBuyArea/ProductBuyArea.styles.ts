@@ -79,8 +79,8 @@ export const ShippingBox = styled.div`
   padding: ${rem(16)};
   gap: ${rem(12)};
   border-radius: ${rem(8)};
-  box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.15);
   margin-bottom: ${rem(16)};
+  border: 1px solid rgba(0, 0, 0, 0.2);
 
   & svg {
     font-size: ${rem(80)};
@@ -94,7 +94,7 @@ export const ShippingGroup = styled.div``
 
 export const ShippingTitle = styled.p`
   font-size: ${rem(16)};
-  color: ${(props) => props.theme.colors.blue};
+  color: ${(props) => props.theme.colors.primary};
   margin: 0 0 ${rem(4)} 0;
   padding: 0;
   background: transparent;
