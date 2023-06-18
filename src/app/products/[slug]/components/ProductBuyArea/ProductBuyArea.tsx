@@ -89,7 +89,7 @@ export default function ProductBuyArea({ product }: ProductBuyAreaProps) {
         </span>
       </PortionPrice>
       <Badge variant="primary" margin={`0 0 ${rem(32)} 0`}>
-        Economia de {formatCurrency(product.economyPrice!)}
+        Economia de {formatCurrency(product.fromPrice! - product.price!)}
       </Badge>
       <ShippingBox>
         <TbTruckDelivery />

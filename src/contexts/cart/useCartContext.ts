@@ -22,7 +22,8 @@ export default function useCartContext() {
   )
 
   const totalEconomyPrice = cart.products.reduce(
-    (prev, curr) => prev + (curr.economyPrice || 0) * (curr.quantity || 0),
+    (prev, curr) =>
+      prev + (curr.fromPrice! - curr.price! || 0) * (curr.quantity || 0),
     0
   )
 

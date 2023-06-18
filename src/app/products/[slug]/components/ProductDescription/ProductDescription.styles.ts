@@ -20,8 +20,8 @@ export const Container = styled.div`
   }
 
   & h4 {
-    font-size: ${rem(22)};
-    font-weight: 600;
+    font-size: ${rem(18)};
+    font-weight: 700;
   }
 
   ${mediaQuery(css`

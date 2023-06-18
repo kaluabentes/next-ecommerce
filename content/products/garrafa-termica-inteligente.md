@@ -5,7 +5,6 @@ collection: casa-jardim
 price: 99.9
 fromPrice: 149.9
 portionPrice: 22.5
-economyPrice: 50
 discount: '-35%'
 freeShipping: true
 hero: true
@@ -87,7 +86,7 @@ Não perca mais tempo com garrafas térmicas comuns. Eleve a sua experiência co
 
 #### Conteúdo da caixa
 
-- 01 Garrafa Térmica Smart
+- 1x Garrafa Térmica Smart
 
 Aliada à capacidade de conservar quente ou frio por até 12 horas, a garrafa térmica é inteiramente em aço inox, o que a torna inquebrável e impossível de enferrujar em condições normais. Com abertura de rosquear é super fácil e pratica de usar, com selamento por silicone que não deixa 
 a temperatura se perder. Sem contar o charme especial do termômetro digital na tampa de sua garrafa.

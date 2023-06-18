@@ -5,6 +5,7 @@ import { css } from "styled-components"
 export default css`
   & img {
     width: 100%;
+    border-radius: ${rem(8)};
   }
 
   & h3,
