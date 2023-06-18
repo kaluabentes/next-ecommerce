@@ -70,21 +70,17 @@ export async function POST(request: Request) {
       }),
     }
 
-    const result = await resend.sendEmail({
+    await resend.sendEmail({
       ...emailPayload,
       to: "kaluanbentes@gmail.com",
       subject: "Droptron: Você recebeu um novo pedido",
     })
 
-    console.log("resend result 1", result)
-
-    const result2 = await resend.sendEmail({
+    await resend.sendEmail({
       ...emailPayload,
       to: user.email!,
       subject: "Kalux: Obrigado pelo seu pedido",
     })
-
-    console.log("resend result 2", result2)
 
     return NextResponse.json({
       paymentStatus,
