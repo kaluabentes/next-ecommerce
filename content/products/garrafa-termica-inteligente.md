@@ -56,7 +56,7 @@ Se você é uma pessoa ativa, sempre em movimento, essa garrafa térmica é perf
 
 ![Garrafa Termica Inteligente](/products/garrafa-termica-inteligente/photo-10.jpg)
 
-#### Aproveite todos os recursos que somente a garrafa térmica inteligente pode te oferecer
+#### Aproveite todos os recursos que somente a garrafa térmica inteligente tem a oferecer
 
 Com o seu display de temperatura digital em LED, você terá controle total sobre a temperatura das suas bebidas. Mantenha a água quente para um delicioso chá ou café revigorante. Ou mantenha as bebidas geladas e refrescantes durante todo o dia. A escolha é sua! E o melhor de tudo: essa garrafa térmica é capaz de manter a temperatura por até 12 horas, garantindo que suas bebidas estejam sempre perfeitas, do primeiro ao último gole.
 
