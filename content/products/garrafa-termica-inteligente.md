@@ -91,6 +91,12 @@ Não perca mais tempo com garrafas térmicas comuns. Eleve a sua experiência co
 Aliada à capacidade de conservar quente ou frio por até 12 horas, a garrafa térmica é inteiramente em aço inox, o que a torna inquebrável e impossível de enferrujar em condições normais. Com abertura de rosquear é super fácil e pratica de usar, com selamento por silicone que não deixa 
 a temperatura se perder. Sem contar o charme especial do termômetro digital na tampa de sua garrafa.
 
+![Garantia](/garantia-badge.png)
+
+### Oferecemos garantia de 7 dias
+
+Caso você tenha uma má experiência com o produto ou não goste, você terá até 7 dias para devolver, faremos o reembolso de 100% do valor pago, sem complicações!
+
 #### Perguntas Frequentes
 
 **Quanto tempo leva para o meu pedido ser entregue?**

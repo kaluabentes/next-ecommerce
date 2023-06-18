@@ -88,6 +88,12 @@ Com um peso leve de apenas 400g, essa bomba é fácil de transportar e usar. Seu
 
 Não perca mais tempo com o antigo bebedouro que causa desconforto e dificuldades. Eleve a sua experiência com a nossa bomba elétrica recarregável para galão de água. Desfrute de água fresca e pura de forma prática, conveniente e sem esforço. Adquira agora mesmo a sua bomba e descubra o verdadeiro significado de conforto e comodidade na hora de se hidratar!
 
+![Garantia](/garantia-badge.png)
+
+### Oferecemos garantia de 7 dias
+
+Caso você tenha uma má experiência com o produto ou não goste, você terá até 7 dias para devolver, faremos o reembolso de 100% do valor pago, sem complicações!
+
 #### Perguntas Frequentes
 
 **Quanto tempo leva para o meu pedido ser entregue?**

@@ -114,6 +114,12 @@ Proteja o que é mais importante para você com a mais avançada tecnologia em m
 - 1x Manual de instruções
 - 1x Kit Parafusos
 
+![Garantia](/garantia-badge.png)
+
+### Oferecemos garantia de 7 dias
+
+Caso você tenha uma má experiência com o produto ou não goste, você terá até 7 dias para devolver, faremos o reembolso de 100% do valor pago, sem complicações!
+
 #### Perguntas Frequentes
 
 **Quanto tempo leva para o meu pedido ser entregue?**
