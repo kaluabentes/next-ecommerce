@@ -6,7 +6,9 @@ interface QuantityInputProps {
   value: number
   className?: string
   onChange: (nextValue: number) => void
-  onRemove: () => void
+  onRemove?: () => void
+  size?: "lg"
+  hideTrash?: boolean
 }
 
 export default function QuantityInput({
@@ -14,6 +16,8 @@ export default function QuantityInput({
   onChange,
   onRemove,
   className,
+  size,
+  hideTrash = false,
 }: QuantityInputProps) {
   const handleSubtract = (event: MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation()
@@ -35,9 +39,13 @@ export default function QuantityInput({
   }
 
   return (
-    <Container className={["quantity-input", className].join(" ")}>
-      <Button onClick={value === 1 ? onRemove : handleSubtract}>
-        {value === 1 ? <BiTrash /> : <BiMinus />}
+    <Container className={["quantity-input", className].join(" ")} $size={size}>
+      <Button
+        onClick={value === 1 ? onRemove : handleSubtract}
+        $hideTrash={hideTrash}
+        $value={value}
+      >
+        {value === 1 && !hideTrash ? <BiTrash /> : <BiMinus />}
       </Button>
       <Quantity>{value}</Quantity>
       <Button onClick={handleAdd}>

@@ -124,11 +124,16 @@ export const PaymentMethodBox = styled.div`
 `
 
 export const AppMax = styled.img`
-  height: 50px;
+  height: ${rem(32)};
   margin: 0 0 ${rem(16)} 0;
 `
 
 export const PaymentMethods = styled.img`
   width: 100%;
   max-width: ${rem(350)};
+`
+
+export const BuyButtonContainer = styled.div`
+  display: flex;
+  gap: ${rem(16)};
 `

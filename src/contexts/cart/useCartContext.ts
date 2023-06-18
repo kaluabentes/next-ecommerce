@@ -7,20 +7,7 @@ import {
 } from "./CartContextProvider"
 import Product from "@/models/Product"
 
-interface CartContextApi {
-  cart: CartState
-  totalProductsQuantity: number
-  totalProductsPrice: number
-  totalEconomyPrice: number
-  addProduct: (product: Product) => void
-  changeQuantity: (slug: string, value: number) => void
-  incrementQuantity: (slug: string) => void
-  decrementQuantity: (slug: string) => void
-  removeProduct: (slug: string) => void
-  clearProducts: () => void
-}
-
-export default function useCartContext(): CartContextApi {
+export default function useCartContext() {
   const { setCart } = useContext(CartActionContext)
   const cart = useContext(CartValueContext)
 
@@ -43,10 +30,10 @@ export default function useCartContext(): CartContextApi {
     throw new Error("Wrap CartContextProvider in the root component")
   }
 
-  const addProduct = (product: Product) => {
+  const addProduct = (product: Product, quantity?: number) => {
     setCart((prevCart) => ({
       ...prevCart,
-      products: [...prevCart.products, { ...product, quantity: 1 }],
+      products: [...prevCart.products, { ...product, quantity: quantity || 1 }],
     }))
   }
 
@@ -66,14 +53,14 @@ export default function useCartContext(): CartContextApi {
     }))
   }
 
-  const incrementQuantity = (slug: string) => {
+  const incrementQuantity = (slug: string, quantity?: number) => {
     setCart((prevCart) => ({
       ...prevCart,
       products: prevCart.products.map((cartProduct: CartProduct) => {
         if (cartProduct.slug === slug) {
           return {
             ...cartProduct,
-            quantity: cartProduct.quantity! + 1,
+            quantity: cartProduct.quantity! + (quantity || 1),
           }
         }
 

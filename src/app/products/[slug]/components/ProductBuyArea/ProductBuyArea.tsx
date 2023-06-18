@@ -23,6 +23,7 @@ import BuyNowButton from "../BuyNowButton/BuyNowButton"
 
 import {
   AppMax,
+  BuyButtonContainer,
   Container,
   EconomyPrice,
   PaymentMethodBox,
@@ -35,6 +36,8 @@ import {
   ShippingTitle,
   Title,
 } from "./ProductBuyArea.styles"
+import QuantityInput from "@/app/design-system/QuantityInput"
+import { useState } from "react"
 
 interface ProductBuyAreaProps {
   product: Product
@@ -42,6 +45,7 @@ interface ProductBuyAreaProps {
 }
 
 export default function ProductBuyArea({ product }: ProductBuyAreaProps) {
+  const [quantity, setQuantity] = useState(1)
   const { cart, incrementQuantity, addProduct } = useCartContext()
   const router = useRouter()
   const reviewsAverage = getAverage(product.reviews?.map((r) => r.rating)!)
@@ -52,9 +56,9 @@ export default function ProductBuyArea({ product }: ProductBuyAreaProps) {
     )
 
     if (existingProduct) {
-      incrementQuantity(product.slug!)
+      incrementQuantity(product.slug!, quantity)
     } else {
-      addProduct(product)
+      addProduct(product, quantity)
     }
 
     setTimeout(() => {
@@ -96,15 +100,23 @@ export default function ProductBuyArea({ product }: ProductBuyAreaProps) {
           </ShippingText>
         </ShippingGroup>
       </ShippingBox>
-      <Button
-        className="buy-now"
-        variant="secondary"
-        size="lg"
-        onClick={handleBuyNow}
-        full
-      >
-        Comprar agora
-      </Button>
+      <BuyButtonContainer>
+        <QuantityInput
+          onChange={(value) => setQuantity(value)}
+          value={quantity}
+          size="lg"
+          hideTrash
+        />
+        <Button
+          className="buy-now"
+          variant="secondary"
+          size="lg"
+          onClick={handleBuyNow}
+          full
+        >
+          Comprar agora
+        </Button>
+      </BuyButtonContainer>
       <PaymentMethodBox>
         <PaymentTitle>Pagamento seguro com</PaymentTitle>
         <AppMax src="/mercado-pago-logo.png" alt="Logo da AppMax" />
