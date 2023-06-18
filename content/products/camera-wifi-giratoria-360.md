@@ -146,6 +146,6 @@ Nosso suporte ao cliente está disponível para ajudar com qualquer dúvida ou p
 
 **Vocês oferecem garantia nos produtos?**
 
-Sim, trabalhamos com fornecedores confiáveis que oferecem garantia em seus produtos. A duração e os termos da garantia podem variar de acordo com o produto e o fornecedor específico.
+Sim, damos aos nossos clientes garantia de 7 dias grátis após a entrega do produto.
 
 Se você tiver alguma outra pergunta ou precisar de mais assistência, não hesite em entrar em contato conosco. Estamos aqui para ajudar!
