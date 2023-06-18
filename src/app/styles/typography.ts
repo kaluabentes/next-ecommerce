@@ -12,10 +12,11 @@ export default css`
   & h4,
   p,
   ul {
-    margin: 0 0 ${rem(22)} 0;
+    margin: 0 0 ${rem(28)} 0;
   }
 
   & p {
+    margin: 0 0 ${rem(28)} 0;
     line-height: 1.6em;
   }
 
@@ -25,14 +26,14 @@ export default css`
   }
 
   & h3 {
-    font-size: ${rem(22)};
+    font-size: ${rem(28)};
   }
 
   & ul,
   & ol {
     margin: 0 0 0 ${rem(0)};
-    padding: 0 0 0 ${rem(32)};
-    margin: 0 0 ${rem(32)} 0;
+    padding: 0 0 0 ${rem(28)};
+    margin: 0 0 ${rem(28)} 0;
   }
 
   & li {

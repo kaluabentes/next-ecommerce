@@ -17,7 +17,7 @@ images:
   - /products/bomba-eletrica-galao/photo-2.jpg
   - /products/bomba-eletrica-galao/photo-3.jpg
   - /products/bomba-eletrica-galao/photo-4.jpg
-  - /products/bomba-eletrica-galao/photo-5.jpg
+  - /products/bomba-eletrica-galao/photo-10.jpg
 reviews:
   - {
       name: Thais Bastos,
@@ -45,25 +45,81 @@ reviews:
     }
 ---
 
-### Lorem ipsum dolor sit amet, consectetur adipiscing elit
+### Chega de sofrer com o peso e a dificuldade de virar o galão no antigo bebedouro! 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut volutpat lorem, a laoreet metus. Nam malesuada, lacus eu molestie congue, metus est vehicula neque, et vehicula mauris turpis in nisl. Integer in interdum risus, et bibendum turpis. Donec non leo a nisi posuere aliquet.
+Apresentamos a solução perfeita: a bomba elétrica recarregável para galão de água. Um dispositivo inovador e prático, que permite que você leve seu bebedouro para qualquer lugar e encaixe em qualquer modelo de galão com total tranquilidade. Desfrute de água fresca e pura de forma simples e conveniente!
 
-Pellentesque ultrices urna ac eros dignissim, ut elementum metus luctus. Sed elit erat, iaculis a arcu non, vestibulum blandit risus. Mauris tincidunt, ipsum sit amet porttitor aliquet, ligula dolor semper orci, in mollis nibh ex ut nisi. Curabitur sed lectus eros. Phasellus eget nisi id ligula porttitor ultrices. Quisque quis elit non felis convallis gravida sed eu mi.
+![Recursos da camera](/products/bomba-eletrica-galao/photo-6.jpg)
 
-![Recursos da camera](/products/bomba-eletrica-galao/photo-5.jpg)
+#### O seu novo parceiro na cozinha
 
-### Lorem ipsum dolor sit amet, consectetur adipiscing elit
+Esqueça os problemas e a inconveniência de lidar com galões pesados. Com a nossa bomba elétrica, você não precisa mais se preocupar com isso. Ela é universal, servindo para galões e garrafões de 5L, 10L, 20L e similares. Independentemente do tamanho do seu galão, nossa bomba vai se adaptar perfeitamente.
 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit
+![Recursos da camera](/products/bomba-eletrica-galao/photo-4.jpg)
 
-![Recursos da camera](/products/bomba-eletrica-galao/photo-3.jpg)
+#### Segurança e praticidade no seu dia-a-dia
 
-Pellentesque ultrices urna ac eros dignissim, ut elementum metus luctus. Sed elit erat, iaculis a arcu non, vestibulum blandit risus. Mauris tincidunt, ipsum sit amet porttitor aliquet, ligula dolor semper orci, in mollis nibh ex ut nisi. Curabitur sed lectus eros. Phasellus eget nisi id ligula porttitor ultrices. Quisque quis elit non felis convallis gravida sed eu mi.
+Nossa bomba elétrica é fabricada com materiais seguros e duráveis. Com aço inoxidável 304, plásticos de alta qualidade, silicones, alumínio e uma bateria de lítio-íon, garantimos a sua total satisfação e segurança. Além disso, ela possui uma voltagem bivolt, funcionando tanto em 110V quanto em 220V, para maior conveniência.
+
+Com um peso leve de apenas 400g, essa bomba é fácil de transportar e usar. Seu tamanho compacto de 13cm de comprimento e 5cm de largura permite que você a leve para qualquer lugar, seja em casa, no escritório, em acampamentos, festas ou viagens. A praticidade está garantida!
+
+![Recursos da camera](/products/bomba-eletrica-galao/photo-8.jpg)
+![Recursos da camera](/products/bomba-eletrica-galao/photo-13.jpg)
+
+#### Características
+
+- Bateria Forte: Dura até 8 galões de água de 20 Litros. Carga: 3 Horas.
+- Pode ser usada quando estiver carregando.
+- Uso Universal: Serve todos os tamanhos de galões e garrafões, 5L, 10L, 20L e similares
+- Materiais seguros: Aço Inox 304, Plásticos (PP, ABS, EVA), Silicones, Alumínio, Bateria de Li-Ion, Circuito eletrônico
+- Voltagem: Bivolt 110V - 220V
+- Peso leve: 400gr;
+- Líquido = 300gr
+- Tamanho: 13 cm de comprimento e 5 cm de largura
+- Voltagem: Bivolt 110V - 220V
+
+#### Itens inclusos
+
+- 1 Bomba filtro
+- 1 Manual de Instrução;
+- 1 Haste em Inox;
+- 1 Cabo USB;
+- 1 Mangueira de Silicone.
+
+Não perca mais tempo com o antigo bebedouro que causa desconforto e dificuldades. Eleve a sua experiência com a nossa bomba elétrica recarregável para galão de água. Desfrute de água fresca e pura de forma prática, conveniente e sem esforço. Adquira agora mesmo a sua bomba e descubra o verdadeiro significado de conforto e comodidade na hora de se hidratar!
+
+#### Perguntas Frequentes
+
+**Quanto tempo leva para o meu pedido ser entregue?**
+
+O tempo de entrega pode variar dependendo do local de entrega e do produto adquirido. Normalmente, nosso prazo de processamento é de 1 a 3 dias úteis. Após o envio, o prazo de entrega estimado é de 15 a 30 dias úteis. No entanto, tenha em mente que esses prazos podem ser afetados por circunstâncias imprevistas, como feriados ou problemas logísticos.
+
+**Posso rastrear o meu pedido?**
+
+Sim, você poderá rastrear seu pedido. Assim que seu pedido for enviado, enviaremos um e-mail de confirmação com as informações de rastreamento. Basta clicar no link fornecido ou visitar a seção "Rastrear Pedido" em nosso site e inserir o número de rastreamento fornecido.
+
+**O que devo fazer se houver algum problema com o meu pedido?**
+
+Se houver algum problema com seu pedido, como produtos danificados ou não recebidos, entre em contato conosco imediatamente. Estamos aqui para ajudar! Envie-nos um e-mail ou entre em contato através do WhatsApp ambos encontrados abaixo na seção de contato. Faremos o possível para resolver qualquer problema o mais rápido possível.
+
+**Vocês oferecem reembolsos ou trocas?**
+
+Sim, oferecemos reembolsos e trocas em certas situações. Se você não estiver satisfeito com seu pedido, entre em contato conosco e informe o motivo. Avaliaremos cada solicitação individualmente e faremos o possível para resolver da melhor maneira possível.
+
+**Quais são os métodos de pagamento aceitos?**
+
+Aceitamos os seguintes meios de pagamento:
+
+- Cartões de crédito (Visa, Mastercard, American Express, entre outros)
+
+Os pagamentos são processados de forma segura pelo **Mercado Pago**.
+
+**Como posso entrar em contato com o suporte ao cliente?**
+
+Nosso suporte ao cliente está disponível para ajudar com qualquer dúvida ou preocupação que você possa ter. Você pode entrar em contato conosco por meio de nosso e-mail **kaluxshop01@gmail.com** ou através do WhatsApp **(92) 9-8146-7183**, disponível durante o horário comercial. Faremos o possível para responder o mais rápido possível e ajudá-lo(a) da melhor maneira possível.
+
+**Vocês oferecem garantia nos produtos?**
+
+Sim, trabalhamos com fornecedores confiáveis que oferecem garantia em seus produtos. A duração e os termos da garantia podem variar de acordo com o produto e o fornecedor específico.
+
+Se você tiver alguma outra pergunta ou precisar de mais assistência, não hesite em entrar em contato conosco. Estamos aqui para ajudar!
