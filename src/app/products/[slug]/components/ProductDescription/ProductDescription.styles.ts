@@ -13,6 +13,17 @@ export const Container = styled.div`
 
   ${typography}
 
+  & h3 {
+    font-size: ${rem(28)};
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  & h4 {
+    font-size: ${rem(22)};
+    font-weight: 600;
+  }
+
   ${mediaQuery(css`
     padding: ${rem(32)};
   `)}

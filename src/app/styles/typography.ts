@@ -16,7 +16,6 @@ export default css`
 
   & p {
     line-height: 1.6em;
-    color: rgba(0, 0, 0, 0.61);
   }
 
   & h3,
@@ -38,6 +37,9 @@ export default css`
   & li {
     line-height: 1.6em;
     margin: 0 0 ${rem(16)} 0;
-    color: rgba(0, 0, 0, 0.61);
+
+    &:last-of-type {
+      margin: 0;
+    }
   }
 `
