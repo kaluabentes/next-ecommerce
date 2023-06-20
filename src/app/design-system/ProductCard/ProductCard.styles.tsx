@@ -58,7 +58,6 @@ export const FromText = styled.p`
   font-size: ${rem(12)};
   font-weight: 600;
   margin-bottom: ${rem(4)};
-  color: ${(props) => props.theme.colors.secondary};
 `
 
 export const PriceSection = styled.div`
@@ -79,7 +78,6 @@ export const Price = styled.p`
   margin: 0;
   font-size: ${rem(22)};
   font-weight: 600;
-  color: ${(props) => props.theme.colors.secondary};
 `
 
 export const FromPrice = styled.p`

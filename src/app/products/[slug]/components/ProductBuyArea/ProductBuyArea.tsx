@@ -97,7 +97,7 @@ export default function ProductBuyArea({ product }: ProductBuyAreaProps) {
         <TbTruckDelivery />
         <ShippingGroup>
           <ShippingTitle>Frete Grátis</ShippingTitle>
-          <ShippingText>Prazo de entrega de 15 á 30 dias</ShippingText>
+          <ShippingText>Prazo de entrega de 15 á 30 dias úteis</ShippingText>
         </ShippingGroup>
       </ShippingBox>
       <BuyButtonContainer>

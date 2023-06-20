@@ -84,6 +84,7 @@ Não perca mais tempo com garrafas térmicas comuns. Eleve a sua experiência co
 - Design inovador e moderno
 - Vedação de silicone super resistente
 
+
 #### Conteúdo da caixa
 
 - 1x Garrafa Térmica Smart
@@ -125,7 +126,7 @@ Os pagamentos são processados de forma segura pelo **Mercado Pago**.
 
 **Como posso entrar em contato com o suporte ao cliente?**
 
-Nosso suporte ao cliente está disponível para ajudar com qualquer dúvida ou preocupação que você possa ter. Você pode entrar em contato conosco por meio de nosso e-mail **kaluxshop01@gmail.com** ou através do WhatsApp **(92) 9-8146-7183**, disponível durante o horário comercial. Faremos o possível para responder o mais rápido possível e ajudá-lo(a) da melhor maneira possível.
+Nosso suporte ao cliente está disponível para ajudar com qualquer dúvida ou preocupação que você possa ter. Você pode entrar em contato conosco por meio de nosso e-mail **kaluxshop01@gmail.com** ou através do WhatsApp **92981467183**, disponível durante o horário comercial. Faremos o possível para responder o mais rápido possível e ajudá-lo(a) da melhor maneira possível.
 
 **Vocês oferecem garantia nos produtos?**
 

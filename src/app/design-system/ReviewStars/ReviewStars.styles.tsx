@@ -4,6 +4,7 @@ import rem from "@/utilities/styles/rem"
 
 export const Container = styled.div`
   display: flex;
+  align-items: center;
 `
 
 export const StarBox = styled.div<{
@@ -39,5 +40,7 @@ export const Star = styled(AiFillStar)<{
 
 export const StarContainer = styled.div`
   position: relative;
+  display: flex;
+  align-items: center;
   width: 18px;
 `

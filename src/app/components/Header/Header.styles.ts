@@ -22,7 +22,7 @@ export const TopContainer = styled.div`
 export const IconButtonLabel = styled.p`
   margin: 0;
   font-size: ${rem(14)};
-  font-weight: 700;
+  font-weight: 600;
 `
 
 export const IconButton = styled.button`

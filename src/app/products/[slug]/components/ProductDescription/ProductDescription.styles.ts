@@ -20,7 +20,7 @@ export const Container = styled.div`
 
   & h4 {
     font-size: ${rem(18)};
-    font-weight: 700;
+    text-align: center;
   }
 
   ${mediaQuery(css`

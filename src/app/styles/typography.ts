@@ -12,28 +12,33 @@ export default css`
   & h4,
   p,
   ul {
-    margin: 0 0 ${rem(28)} 0;
+    margin: 0 0 ${rem(32)} 0;
   }
 
   & p {
-    margin: 0 0 ${rem(28)} 0;
+    margin: 0 0 ${rem(32)} 0;
     line-height: 1.6em;
   }
 
   & h3,
   & h4 {
     line-height: 1.3em;
+    font-weight: 600;
   }
 
   & h3 {
-    font-size: ${rem(28)};
+    font-size: ${rem(32)};
   }
 
   & ul,
   & ol {
     margin: 0 0 0 ${rem(0)};
-    padding: 0 0 0 ${rem(28)};
-    margin: 0 0 ${rem(28)} 0;
+    padding: 0 0 0 ${rem(32)};
+    margin: 0 0 ${rem(32)} 0;
+  }
+
+  strong {
+    font-weight: 600;
   }
 
   & li {

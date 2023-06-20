@@ -62,7 +62,7 @@ export const Title = styled.h2`
   font-weight: 600;
 
   ${mediaQuery(css`
-    font-size: ${rem(32)};
+    font-size: ${rem(39)};
   `)}
 `
 
@@ -80,7 +80,7 @@ export const ShippingBox = styled.div`
   gap: ${rem(12)};
   border-radius: ${rem(8)};
   margin-bottom: ${rem(16)};
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 
   & svg {
     font-size: ${rem(80)};
