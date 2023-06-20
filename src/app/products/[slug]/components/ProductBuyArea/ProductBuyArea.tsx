@@ -117,14 +117,6 @@ export default function ProductBuyArea({ product }: ProductBuyAreaProps) {
           Comprar agora
         </Button>
       </BuyButtonContainer>
-      <PaymentMethodBox>
-        <PaymentTitle>Pagamento seguro com</PaymentTitle>
-        <AppMax src="/mercado-pago-logo.png" alt="Logo da AppMax" />
-        <PaymentMethods
-          src="/payment-methods.png"
-          alt="Métodos de Pagamentos Aceitos"
-        />
-      </PaymentMethodBox>
       <BuyNowButton onClick={handleBuyNow} />
     </Container>
   )

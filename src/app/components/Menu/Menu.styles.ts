@@ -144,12 +144,6 @@ export const DropdownMenu = styled.div<{ $isOpen: boolean }>`
         border: none;
       `)}
     `}
-
-  ${mediaQuery(css`
-    & ${MenuItem} {
-      color: rgba(0, 0, 0, 0.8);
-    }
-  `)}
 `
 
 export const Overlay = styled.button<{ $isOpen: boolean }>`

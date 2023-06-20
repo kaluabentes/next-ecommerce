@@ -1,6 +1,4 @@
-import Button from "@/app/design-system/Button"
 import {
-  DiscountFlag,
   FromPrice,
   PortionPrice,
   Price,
@@ -30,10 +28,6 @@ export const Container = styled.div`
 
   & ${PortionPrice} {
     margin-bottom: ${rem(12)};
-  }
-
-  & .buy-now {
-    margin-bottom: ${rem(32)};
   }
 
   ${mediaQuery(css`
