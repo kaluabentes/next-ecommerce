@@ -1,7 +1,7 @@
 "use client"
 
 import Input from "@/app/design-system/Input"
-import { Container, FormGrid, InputsGrid } from "./ShippingForm.styles"
+import { Container, FormGrid, InputsGrid, Terms } from "./ShippingForm.styles"
 import { Title } from "../utils"
 import {
   FieldErrors,
@@ -13,6 +13,7 @@ import useGetAddressByZipcode from "../../hooks/useGetAddressByZipcode"
 import { ChangeEvent, useEffect } from "react"
 import { CheckoutFieldValues } from "../../CheckoutForm"
 import useCheckoutContext from "../../contexts/checkout/useCheckoutContext"
+import Link from "next/link"
 
 interface ShippingFormProps {
   register: UseFormRegister<CheckoutFieldValues>
@@ -163,6 +164,11 @@ export default function ShippingForm({
             setValue("complement", event.currentTarget.value)
           }}
         />
+        <Terms>
+          Ao continuar você declara que está de acordo com os nossos{" "}
+          <Link href="/terms-of-use">Termos de Uso</Link> e{" "}
+          <Link href="/privacy-policy">Política de Privacidade</Link>
+        </Terms>
       </InputsGrid>
     </Container>
   )

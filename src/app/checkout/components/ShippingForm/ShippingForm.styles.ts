@@ -27,3 +27,9 @@ export const FormGrid = styled.div`
     gap: ${rem(28)};
   `)}
 `
+
+export const Terms = styled.p`
+  margin: 0;
+  font-weight: 400;
+  font-size: ${rem(14)};
+`
