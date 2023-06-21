@@ -5,7 +5,7 @@ import styled, { css } from "styled-components"
 export const HeaderBox = styled.div`
   padding: ${rem(16)};
   background-color: white;
-  box-shadow: 0px 3px 3px 0.05px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05);
   border-radius: ${rem(8)};
   margin-top: ${rem(22)};
   margin-bottom: ${rem(32)};
@@ -101,7 +101,7 @@ export const ReviewItem = styled.article`
   background: white;
   overflow: hidden;
   background-color: white;
-  box-shadow: 0px 3px 3px 0.05px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05);
   border-radius: ${rem(8)};
   min-width: 250px;
   margin-bottom: ${rem(18)};

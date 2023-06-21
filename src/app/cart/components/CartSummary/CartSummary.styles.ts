@@ -3,7 +3,7 @@ import rem from "@/utilities/styles/rem"
 import styled, { css } from "styled-components"
 
 export const Container = styled.div`
-  box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05);
   background-color: white;
   border-radius: ${rem(8)};
   overflow: hidden;

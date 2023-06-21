@@ -32,7 +32,7 @@ export const Item = styled.button`
   background: white;
   padding: ${rem(20)};
   border-radius: ${rem(12)};
-  box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05);
   position: relative;
 
   &:hover {
@@ -89,7 +89,7 @@ export const FromPrice = styled.p`
 
 export const PortionPrice = styled.p`
   margin: 0;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.8);
   font-size: ${rem(12)};
   margin-bottom: ${rem(8)};
   font-weight: 500;

@@ -117,7 +117,7 @@ export const ChatButton = styled.a`
   position: fixed;
   bottom: ${rem(10)};
   right: ${rem(10)};
-  box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05);
   cursor: pointer;
   color: ${(props) => props.theme.colors.secondary};
 
