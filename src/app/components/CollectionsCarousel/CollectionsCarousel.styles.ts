@@ -8,8 +8,8 @@ export const Image = styled.img``
 export const Title = styled.h2`
   font-size: ${rem(14)};
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.5);
   margin: 0;
+  letter-spacing: 0.5px;
 `
 
 export const Item = styled.button`

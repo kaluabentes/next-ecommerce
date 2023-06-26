@@ -20,13 +20,16 @@ export const Container = styled.button<{
   background: transparent;
   outline: 0;
   border: 0;
-  font-weight: 600;
+  font-weight: 700;
   border: 1px solid transparent;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+  font-size: ${rem(14)};
 
   &:disabled {
     cursor: not-allowed;
@@ -88,7 +91,7 @@ export const Container = styled.button<{
     props.$size &&
     props.$size === "lg" &&
     css`
-      font-size: ${rem(18)};
+      font-size: ${rem(14)};
       height: ${rem(48)};
       padding: 0 ${rem(24)};
     `};
@@ -97,7 +100,7 @@ export const Container = styled.button<{
     props.$size &&
     props.$size === "sm" &&
     css`
-      font-size: ${rem(14)};
+      font-size: ${rem(12)};
       height: ${rem(32)};
       padding: 0 ${rem(12)};
     `};

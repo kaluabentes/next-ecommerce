@@ -8,8 +8,8 @@ export const Container = styled.div<{
 }>`
   overflow-y: hidden;
   overflow-x: auto;
-  padding-top: ${rem(16)};
-  padding-bottom: ${rem(16)};
+  padding-top: ${rem(32)};
+  padding-bottom: ${rem(32)};
 
   ${mediaQuery(css`
     overflow: visible;

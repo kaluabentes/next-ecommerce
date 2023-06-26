@@ -14,7 +14,6 @@ export const Container = styled.nav<{ $removeBottomPadding?: boolean }>`
 
   & svg {
     font-size: ${rem(22)};
-    color: ${(props) => props.theme.colors.secondary};
 
     &:last-of-type {
       display: none;

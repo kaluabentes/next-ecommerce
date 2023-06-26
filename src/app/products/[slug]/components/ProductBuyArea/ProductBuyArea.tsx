@@ -76,20 +76,11 @@ export default function ProductBuyArea({ product }: ProductBuyAreaProps) {
         <ReviewStars rating={reviewsAverage} />
       </ReviewContainer>
       <Separator />
-      <Badge variant="blue" margin={`0 0 ${rem(10)} 0`}>
-        {product.discount}
-      </Badge>
       <FromText>A partir de</FromText>
       <PriceContainer>
         <Price>{formatCurrency(product.price!)}</Price>
         <FromPrice>{formatCurrency(product.fromPrice!)}</FromPrice>
       </PriceContainer>
-      <PortionPrice>
-        em até <strong>12x</strong> de{" "}
-        <span className="portion-price">
-          {formatCurrency(product.portionPrice!)}
-        </span>
-      </PortionPrice>
       <Badge variant="primary" margin={`0 0 ${rem(32)} 0`}>
         Economia de {formatCurrency(product.fromPrice! - product.price!)}
       </Badge>

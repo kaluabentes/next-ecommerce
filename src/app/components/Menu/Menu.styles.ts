@@ -75,12 +75,14 @@ export const MenuItem = styled.button<{
   outline: 0;
   border: 0;
   padding: ${rem(16)};
-  font-size: ${rem(14)};
+  font-size: ${rem(12)};
   color: ${(props) => props.theme.colors.gray800};
-  font-weight: 600;
+  font-weight: 700;
   text-align: left;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
 
   ${(props) =>
     props.$isDropdownTrigger &&
@@ -97,7 +99,6 @@ export const MenuItem = styled.button<{
   ${(props) =>
     props.$isOpen &&
     css`
-      font-weight: 600;
       color: rgba(0, 0, 0, 0.9);
     `}
 
@@ -106,7 +107,6 @@ export const MenuItem = styled.button<{
     css`
       font-weight: 600;
       color: rgba(0, 0, 0, 0.9);
-      text-transform: none;
       text-indent: 10px;
     `}
 

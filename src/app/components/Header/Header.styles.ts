@@ -21,8 +21,11 @@ export const TopContainer = styled.div`
 
 export const IconButtonLabel = styled.p`
   margin: 0;
-  font-size: ${rem(14)};
-  font-weight: 600;
+  font-size: ${rem(12)};
+  font-weight: 700;
+  text-transform: uppercase;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
 `
 
 export const IconButton = styled.button`
